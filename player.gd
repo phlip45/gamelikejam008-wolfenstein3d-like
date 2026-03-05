@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Player
 
 @export var sprint = 1.0
 @export var sprint_max = 3.0
@@ -6,6 +7,11 @@ const speed = 5.0
 const JUMP_VELOCITY = 4.5
 @onready var camera_3d: Camera3D = $Head/Camera3D
 var mouse_move:Vector2 = Vector2.ZERO
+const BUZZSAW_PROJECTILE = preload("uid://c7xmo3ao5xow1")
+@export var inventory:Inventory
+@onready var gun_cloaca: Node3D = $Head/Camera3D/GunCloaca
+
+@onready var ui: CanvasLayer = $UI
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -18,7 +24,10 @@ func _input(event: InputEvent) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		
 func _process(delta: float) -> void:
-
+	if Input.is_action_just_pressed("click"):
+		var projectile:Projectile = BUZZSAW_PROJECTILE.instantiate()
+		get_tree().current_scene.add_child(projectile)
+		projectile.setup(gun_cloaca.global_position, camera_3d.rotation)
 	move(delta)
 	mouse_look(delta)
 	
@@ -41,7 +50,6 @@ func move(_delta:float):
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.y = 0
 		velocity.z = move_toward(velocity.z, 0, speed)
-	var prior_global_postion:Vector3 = global_position
 	if input_dir.length_squared() > 0 and Input.is_action_pressed("shift"):
 		velocity *= sprint_max
 	move_and_slide()

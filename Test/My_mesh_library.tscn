@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://ckaxpyixwhts4"]
+
+[ext_resource type="Script" uid="uid://ci4t8rbesal7x" path="res://Test/testTest.gd" id="1_tew70"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_31nif"]
+size = Vector2(1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tew70"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1rcw2"]
+
+[sub_resource type="MeshLibrary" id="MeshLibrary_r4e4q"]
+item/0/name = "Floor"
+item/0/mesh = SubResource("PlaneMesh_31nif")
+item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/mesh_cast_shadow = 1
+item/0/shapes = []
+item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/navigation_layers = 1
+item/1/name = "Wall"
+item/1/mesh = SubResource("BoxMesh_tew70")
+item/1/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+item/1/mesh_cast_shadow = 1
+item/1/shapes = [SubResource("BoxShape3D_1rcw2"), Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1, 0)]
+item/1/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/1/navigation_layers = 1
+
+[node name="Node3D" type="Node3D" unique_id=1958016564]
+script = ExtResource("1_tew70")
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1618487028]
+mesh_library = SubResource("MeshLibrary_r4e4q")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2103093785]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=293695187]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 47.0
+offset_top = 83.0
+offset_right = 47.0
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemList2" type="ItemList" parent="CanvasLayer/Control" unique_id=1088344396]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -38.0
+offset_top = -120.0
+offset_right = -38.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 2
+item_0/text = "New Item"
+item_1/text = "Second New Item"
+
+[node name="HFlowContainer" type="FlowContainer" parent="CanvasLayer/Control" unique_id=730122438]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 139.0
+
+[node name="Card" type="Control" parent="CanvasLayer/Control/HFlowContainer" unique_id=537168029]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Control/HFlowContainer/Card" unique_id=787637618]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 2
+item_0/text = "New Item"
+item_1/text = "Second New Item"
+
+[node name="Card2" type="Control" parent="CanvasLayer/Control/HFlowContainer" unique_id=1524962938]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Control/HFlowContainer/Card2" unique_id=2002745305]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 1
+item_0/text = "New Item"
+
+[node name="Card3" type="Control" parent="CanvasLayer/Control/HFlowContainer" unique_id=1562264250]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Control/HFlowContainer/Card3" unique_id=1648850378]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 1
+item_0/text = "New Item"
+
+[node name="Card4" type="Control" parent="CanvasLayer/Control/HFlowContainer" unique_id=2073121796]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Control/HFlowContainer/Card4" unique_id=424511213]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 1
+item_0/text = "New Item"
+
+[node name="Card5" type="Control" parent="CanvasLayer/Control/HFlowContainer" unique_id=633926835]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Control/HFlowContainer/Card5" unique_id=2087470471]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 1
+item_0/text = "New Item"
+
+[connection signal="focus_entered" from="CanvasLayer/Control/ItemList2" to="." method="_on_item_list_focus_entered"]
+[connection signal="focus_entered" from="CanvasLayer/Control/HFlowContainer/Card/ItemList" to="." method="_on_item_list_focus_entered"]

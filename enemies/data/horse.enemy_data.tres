@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://plnwob4rggpp"]
+
+[ext_resource type="Script" uid="uid://bns6cm0drf1q5" path="res://enemies/enemy_data.gd" id="1_51g2h"]
+[ext_resource type="SpriteFrames" uid="uid://b3dey4ynd2yla" path="res://enemies/sprite_frames/horse/horse_front.sprite_frames.tres" id="1_f2x2e"]
+[ext_resource type="SpriteFrames" uid="uid://b3dry5t53qyr4" path="res://enemies/sprite_frames/horse/horse_front_left.sprite_frames.tres" id="2_3nwyk"]
+[ext_resource type="Script" uid="uid://687e3s1qkp6l" path="res://enemies/enemy_state_machine.gd" id="2_4x8ma"]
+[ext_resource type="SpriteFrames" uid="uid://bxxuhwmjd7h7v" path="res://enemies/sprite_frames/horse/horse_left.sprite_frames.tres" id="3_ppi3p"]
+[ext_resource type="SpriteFrames" uid="uid://co3oo85qbc1f2" path="res://enemies/sprite_frames/horse/horse_back_left.sprite_frames.tres" id="4_btrvv"]
+[ext_resource type="SpriteFrames" uid="uid://da1q28gnjvf8p" path="res://enemies/sprite_frames/horse/horse_back.sprite_frames.tres" id="5_d8btw"]
+[ext_resource type="SpriteFrames" uid="uid://c4mpqv1bghfnq" path="res://enemies/sprite_frames/horse/horse_back_right.sprite_frames.tres" id="6_kjg3y"]
+[ext_resource type="SpriteFrames" uid="uid://dx6wwk2dhfq0" path="res://enemies/sprite_frames/horse/horse_right.sprite_frames.tres" id="7_vjxm2"]
+[ext_resource type="SpriteFrames" uid="uid://dwydf8femgvvi" path="res://enemies/sprite_frames/horse/horse_front_right.sprite_frames.tres" id="8_n61up"]
+
+[sub_resource type="Resource" id="Resource_340dm"]
+script = ExtResource("2_4x8ma")
+metadata/_custom_type_script = "uid://687e3s1qkp6l"
+
+[resource]
+script = ExtResource("1_51g2h")
+name = "horse"
+state_machine = SubResource("Resource_340dm")
+animation_sprite_frames = Dictionary[int, SpriteFrames]({
+1: ExtResource("1_f2x2e"),
+2: ExtResource("2_3nwyk"),
+3: ExtResource("3_ppi3p"),
+4: ExtResource("4_btrvv"),
+5: ExtResource("5_d8btw"),
+6: ExtResource("6_kjg3y"),
+7: ExtResource("7_vjxm2"),
+8: ExtResource("8_n61up")
+})
+metadata/_custom_type_script = "uid://bns6cm0drf1q5"

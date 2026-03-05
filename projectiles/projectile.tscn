@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c25ded6srhx3e"]
+
+[ext_resource type="Script" uid="uid://bcr4kwox7xw8" path="res://projectile.gd" id="1_ighsu"]
+[ext_resource type="Texture2D" uid="uid://dnrx8ktupoxb8" path="res://icon.svg" id="2_7nr1q"]
+[ext_resource type="SpriteFrames" uid="uid://bwg2ujydyp2t3" path="res://assets/guns/buzzsaw.sprite_frames.tres" id="3_7nr1q"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7ypqm"]
+radius = 0.435
+
+[node name="Projectile" type="Area3D" unique_id=1194395827]
+script = ExtResource("1_ighsu")
+speed = 3.5
+texture = ExtResource("2_7nr1q")
+damage_min = 4
+damage_max = 8
+sprite_frames = ExtResource("3_7nr1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1007230949]
+shape = SubResource("SphereShape3D_7ypqm")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=2014430673]
+billboard = 2
+double_sided = false
+texture_filter = 0
+sprite_frames = ExtResource("3_7nr1q")
+animation = &"Idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

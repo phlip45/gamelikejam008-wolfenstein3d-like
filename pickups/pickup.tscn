@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://d31xovg6w2ev2"]
+
+[ext_resource type="Script" uid="uid://miucqn4adp7g" path="res://pickups/pickup.gd" id="1_0ketk"]
+[ext_resource type="Texture2D" uid="uid://dnrx8ktupoxb8" path="res://icon.svg" id="1_ra232"]
+[ext_resource type="Script" uid="uid://ce46xvs5q7gxt" path="res://pickups/pickup_data.gd" id="2_i5kuo"]
+[ext_resource type="Texture2D" uid="uid://mx26tmwddeys" path="res://assets/pickups.png" id="4_pbiw3"]
+
+[sub_resource type="Resource" id="Resource_pbiw3"]
+script = ExtResource("2_i5kuo")
+name = "Default"
+type = 1
+subtype = 1
+texture = ExtResource("1_ra232")
+metadata/_custom_type_script = "uid://ce46xvs5q7gxt"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0ketk"]
+radius = 0.15
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6t5v"]
+atlas = ExtResource("4_pbiw3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="Animation" id="Animation_i5kuo"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.25892204, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_pbiw3"]
+resource_name = "bob"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.083333336, 0, 0, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2),
+"points": PackedFloat32Array(0.25892204, 0, 0, 0.16666667, 0, 0.38077563, -0.16666667, 0, 0.16666667, 0, 0.25892204, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.083333336, 0, 0, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x6t5v"]
+_data = {
+&"RESET": SubResource("Animation_i5kuo"),
+&"bob": SubResource("Animation_pbiw3")
+}
+
+[node name="Pickup" type="Area3D" unique_id=2051472674]
+script = ExtResource("1_0ketk")
+pickup_data = SubResource("Resource_pbiw3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1124354488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25892204, 0)
+shape = SubResource("SphereShape3D_0ketk")
+
+[node name="Sprite3D" type="Sprite3D" parent="CollisionShape3D" unique_id=1173993398]
+transform = Transform3D(0.21756178, 0, 0, 0, 0.21756178, 0, 0, 0, 1, 0, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = SubResource("AtlasTexture_x6t5v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1749460910]
+libraries/ = SubResource("AnimationLibrary_x6t5v")
+autoplay = &"bob"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

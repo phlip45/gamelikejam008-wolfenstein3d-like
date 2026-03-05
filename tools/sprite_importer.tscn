@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c8b8208nmvhob"]
+
+[ext_resource type="Script" uid="uid://43typgoay2jh" path="res://tools/sprite_importer.gd" id="1_vftd0"]
+
+[node name="SpriteImporter" type="Node2D" unique_id=920173017]
+script = ExtResource("1_vftd0")
+json_paths = Array[String](["res://assets/enemies/horse/horse_back.json", "res://assets/enemies/horse/horse_back_left.json", "res://assets/enemies/horse/horse_back_right.json", "res://assets/enemies/horse/horse_front.json", "res://assets/enemies/horse/horse_front_left.json", "res://assets/enemies/horse/horse_front_right.json", "res://assets/enemies/horse/horse_left.json", "res://assets/enemies/horse/horse_right.json"])
+save_path_name = "horse_back_left"
