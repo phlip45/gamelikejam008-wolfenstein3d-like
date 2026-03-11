@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BuzzsawGunData" format=3 uid="uid://d0dlr3ieah3h5"]
+
+[ext_resource type="Texture2D" uid="uid://dfttt21kk3y2f" path="res://assets/pickups.atlastex" id="1_bujtm"]
+[ext_resource type="Script" uid="uid://b1al1cmtqqisr" path="res://assets/guns/buzzsaw.gun_data.gd" id="1_c887a"]
+[ext_resource type="PackedScene" uid="uid://c7xmo3ao5xow1" path="res://assets/guns/buzzsaw.projectile.tscn" id="2_hud16"]
+[ext_resource type="SpriteFrames" uid="uid://bwg2ujydyp2t3" path="res://assets/guns/buzzsaw.sprite_frames.tres" id="4_bmwu2"]
+
+[resource]
+script = ExtResource("1_c887a")
+name = "Buzzsaw"
+projectile = ExtResource("2_hud16")
+pickup_sprite = ExtResource("1_bujtm")
+ui_sprite_frames = ExtResource("4_bmwu2")
+ammo_type = 1
+fire_rate = 1.5
+type = 1
+reload = Vector2(0.75, 0.75)
+metadata/_custom_type_script = "uid://b1al1cmtqqisr"

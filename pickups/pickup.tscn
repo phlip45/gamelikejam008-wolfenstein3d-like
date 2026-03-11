@@ -1,17 +1,7 @@
 [gd_scene format=3 uid="uid://d31xovg6w2ev2"]
 
 [ext_resource type="Script" uid="uid://miucqn4adp7g" path="res://pickups/pickup.gd" id="1_0ketk"]
-[ext_resource type="Texture2D" uid="uid://dnrx8ktupoxb8" path="res://icon.svg" id="1_ra232"]
-[ext_resource type="Script" uid="uid://ce46xvs5q7gxt" path="res://pickups/pickup_data.gd" id="2_i5kuo"]
 [ext_resource type="Texture2D" uid="uid://mx26tmwddeys" path="res://assets/pickups.png" id="4_pbiw3"]
-
-[sub_resource type="Resource" id="Resource_pbiw3"]
-script = ExtResource("2_i5kuo")
-name = "Default"
-type = 1
-subtype = 1
-texture = ExtResource("1_ra232")
-metadata/_custom_type_script = "uid://ce46xvs5q7gxt"
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0ketk"]
 radius = 0.15
@@ -101,7 +91,6 @@ _data = {
 
 [node name="Pickup" type="Area3D" unique_id=2051472674]
 script = ExtResource("1_0ketk")
-pickup_data = SubResource("Resource_pbiw3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1124354488]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25892204, 0)

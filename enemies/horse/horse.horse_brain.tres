@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="HorseSM" format=3 uid="uid://b1kg8ieiaethb"]
+
+[ext_resource type="Script" uid="uid://bbt6w2ml0t5dh" path="res://enemies/horse/horse.brain.gd" id="1_a16oi"]
+
+[resource]
+script = ExtResource("1_a16oi")
+name = "Horse"
+metadata/_custom_type_script = "uid://bbt6w2ml0t5dh"

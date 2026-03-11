@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://2c408020tnen"]
+
+[ext_resource type="Script" uid="uid://bo7y48t0ddukq" path="res://scene_changer.gd" id="1_7s0lh"]
+
+[node name="SceneChanger" type="CanvasLayer" unique_id=814196711]
+script = ExtResource("1_7s0lh")
+
+[node name="Blinder" type="Control" parent="." unique_id=1285825618]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Blinder" unique_id=2054870526]
+z_index = 4096
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Blinder" unique_id=168719248]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[tornado]LOADING"
+horizontal_alignment = 1
+vertical_alignment = 1

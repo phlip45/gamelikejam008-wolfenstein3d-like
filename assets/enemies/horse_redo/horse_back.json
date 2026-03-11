@@ -1,0 +1,981 @@
+{ "frames": {
+   "horse_back #Death 0.ase": {
+    "frame": { "x": 0, "y": 0, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 1.ase": {
+    "frame": { "x": 115, "y": 0, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 2.ase": {
+    "frame": { "x": 230, "y": 0, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 3.ase": {
+    "frame": { "x": 345, "y": 0, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 4.ase": {
+    "frame": { "x": 460, "y": 0, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 5.ase": {
+    "frame": { "x": 575, "y": 0, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 6.ase": {
+    "frame": { "x": 690, "y": 0, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 7.ase": {
+    "frame": { "x": 805, "y": 0, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 8.ase": {
+    "frame": { "x": 920, "y": 0, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 9.ase": {
+    "frame": { "x": 1035, "y": 0, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 10.ase": {
+    "frame": { "x": 1150, "y": 0, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 11.ase": {
+    "frame": { "x": 0, "y": 152, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 12.ase": {
+    "frame": { "x": 115, "y": 152, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 13.ase": {
+    "frame": { "x": 230, "y": 152, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 14.ase": {
+    "frame": { "x": 345, "y": 152, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 15.ase": {
+    "frame": { "x": 460, "y": 152, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 16.ase": {
+    "frame": { "x": 575, "y": 152, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 17.ase": {
+    "frame": { "x": 690, "y": 152, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 18.ase": {
+    "frame": { "x": 805, "y": 152, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 19.ase": {
+    "frame": { "x": 920, "y": 152, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 20.ase": {
+    "frame": { "x": 1035, "y": 152, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 21.ase": {
+    "frame": { "x": 1150, "y": 152, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 22.ase": {
+    "frame": { "x": 0, "y": 304, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Death 23.ase": {
+    "frame": { "x": 115, "y": 304, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 0.ase": {
+    "frame": { "x": 230, "y": 304, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 1.ase": {
+    "frame": { "x": 345, "y": 304, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 2.ase": {
+    "frame": { "x": 460, "y": 304, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 3.ase": {
+    "frame": { "x": 575, "y": 304, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 4.ase": {
+    "frame": { "x": 690, "y": 304, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 5.ase": {
+    "frame": { "x": 805, "y": 304, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 6.ase": {
+    "frame": { "x": 920, "y": 304, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 7.ase": {
+    "frame": { "x": 1035, "y": 304, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 8.ase": {
+    "frame": { "x": 1150, "y": 304, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 9.ase": {
+    "frame": { "x": 0, "y": 456, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 10.ase": {
+    "frame": { "x": 115, "y": 456, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 11.ase": {
+    "frame": { "x": 230, "y": 456, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 12.ase": {
+    "frame": { "x": 345, "y": 456, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 13.ase": {
+    "frame": { "x": 460, "y": 456, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 14.ase": {
+    "frame": { "x": 575, "y": 456, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 15.ase": {
+    "frame": { "x": 690, "y": 456, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 16.ase": {
+    "frame": { "x": 805, "y": 456, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 17.ase": {
+    "frame": { "x": 920, "y": 456, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 18.ase": {
+    "frame": { "x": 1035, "y": 456, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #MeleeAttack 19.ase": {
+    "frame": { "x": 1150, "y": 456, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 0.ase": {
+    "frame": { "x": 0, "y": 608, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 1.ase": {
+    "frame": { "x": 115, "y": 608, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 2.ase": {
+    "frame": { "x": 230, "y": 608, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 3.ase": {
+    "frame": { "x": 345, "y": 608, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 4.ase": {
+    "frame": { "x": 460, "y": 608, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 5.ase": {
+    "frame": { "x": 575, "y": 608, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 6.ase": {
+    "frame": { "x": 690, "y": 608, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 7.ase": {
+    "frame": { "x": 805, "y": 608, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 8.ase": {
+    "frame": { "x": 920, "y": 608, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 9.ase": {
+    "frame": { "x": 1035, "y": 608, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 10.ase": {
+    "frame": { "x": 1150, "y": 608, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 11.ase": {
+    "frame": { "x": 0, "y": 760, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 12.ase": {
+    "frame": { "x": 115, "y": 760, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 13.ase": {
+    "frame": { "x": 230, "y": 760, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 14.ase": {
+    "frame": { "x": 345, "y": 760, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 15.ase": {
+    "frame": { "x": 460, "y": 760, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 16.ase": {
+    "frame": { "x": 575, "y": 760, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 17.ase": {
+    "frame": { "x": 690, "y": 760, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 18.ase": {
+    "frame": { "x": 805, "y": 760, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 19.ase": {
+    "frame": { "x": 920, "y": 760, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 20.ase": {
+    "frame": { "x": 1035, "y": 760, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 21.ase": {
+    "frame": { "x": 1150, "y": 760, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 22.ase": {
+    "frame": { "x": 0, "y": 912, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 23.ase": {
+    "frame": { "x": 115, "y": 912, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 24.ase": {
+    "frame": { "x": 230, "y": 912, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 25.ase": {
+    "frame": { "x": 345, "y": 912, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 26.ase": {
+    "frame": { "x": 460, "y": 912, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 27.ase": {
+    "frame": { "x": 575, "y": 912, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 28.ase": {
+    "frame": { "x": 690, "y": 912, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 29.ase": {
+    "frame": { "x": 805, "y": 912, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Idle 30.ase": {
+    "frame": { "x": 920, "y": 912, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 0.ase": {
+    "frame": { "x": 1035, "y": 912, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 1.ase": {
+    "frame": { "x": 1150, "y": 912, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 2.ase": {
+    "frame": { "x": 0, "y": 1064, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 3.ase": {
+    "frame": { "x": 115, "y": 1064, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 4.ase": {
+    "frame": { "x": 230, "y": 1064, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 5.ase": {
+    "frame": { "x": 345, "y": 1064, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 6.ase": {
+    "frame": { "x": 460, "y": 1064, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 7.ase": {
+    "frame": { "x": 575, "y": 1064, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 8.ase": {
+    "frame": { "x": 690, "y": 1064, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 9.ase": {
+    "frame": { "x": 805, "y": 1064, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 10.ase": {
+    "frame": { "x": 920, "y": 1064, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 11.ase": {
+    "frame": { "x": 1035, "y": 1064, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 12.ase": {
+    "frame": { "x": 1150, "y": 1064, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 13.ase": {
+    "frame": { "x": 0, "y": 1216, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 14.ase": {
+    "frame": { "x": 115, "y": 1216, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 15.ase": {
+    "frame": { "x": 230, "y": 1216, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 16.ase": {
+    "frame": { "x": 345, "y": 1216, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 17.ase": {
+    "frame": { "x": 460, "y": 1216, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 18.ase": {
+    "frame": { "x": 575, "y": 1216, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 19.ase": {
+    "frame": { "x": 690, "y": 1216, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 20.ase": {
+    "frame": { "x": 805, "y": 1216, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 21.ase": {
+    "frame": { "x": 920, "y": 1216, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 22.ase": {
+    "frame": { "x": 1035, "y": 1216, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 23.ase": {
+    "frame": { "x": 1150, "y": 1216, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 24.ase": {
+    "frame": { "x": 0, "y": 1368, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 25.ase": {
+    "frame": { "x": 115, "y": 1368, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 26.ase": {
+    "frame": { "x": 230, "y": 1368, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 27.ase": {
+    "frame": { "x": 345, "y": 1368, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 28.ase": {
+    "frame": { "x": 460, "y": 1368, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 29.ase": {
+    "frame": { "x": 575, "y": 1368, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 30.ase": {
+    "frame": { "x": 690, "y": 1368, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 31.ase": {
+    "frame": { "x": 805, "y": 1368, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 32.ase": {
+    "frame": { "x": 920, "y": 1368, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #RangedAttack 33.ase": {
+    "frame": { "x": 1035, "y": 1368, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Hurt 0.ase": {
+    "frame": { "x": 1150, "y": 1368, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Hurt 1.ase": {
+    "frame": { "x": 0, "y": 1520, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Hurt 2.ase": {
+    "frame": { "x": 115, "y": 1520, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Hurt 3.ase": {
+    "frame": { "x": 230, "y": 1520, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Hurt 4.ase": {
+    "frame": { "x": 345, "y": 1520, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Hurt 5.ase": {
+    "frame": { "x": 1150, "y": 1368, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Hurt 6.ase": {
+    "frame": { "x": 460, "y": 1520, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Hurt 7.ase": {
+    "frame": { "x": 575, "y": 1520, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Hurt 8.ase": {
+    "frame": { "x": 690, "y": 1520, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Hurt 9.ase": {
+    "frame": { "x": 805, "y": 1520, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "horse_back #Hurt 10.ase": {
+    "frame": { "x": 920, "y": 1520, "w": 115, "h": 152 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 75, "y": 48, "w": 115, "h": 152 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.17-x64",
+  "image": "horse_back.png",
+  "format": "I8",
+  "size": { "w": 1265, "h": 1672 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Death", "from": 0, "to": 23, "direction": "forward", "color": "#000000ff" },
+   { "name": "MeleeAttack", "from": 24, "to": 43, "direction": "forward", "color": "#000000ff" },
+   { "name": "Idle", "from": 44, "to": 74, "direction": "forward", "color": "#000000ff" },
+   { "name": "RangedAttack", "from": 75, "to": 108, "direction": "forward", "color": "#000000ff" },
+   { "name": "Hurt", "from": 109, "to": 119, "direction": "forward", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ]
+ }
+}

@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dknijbi4yy3j"]
+
+[ext_resource type="Texture2D" uid="uid://dfttt21kk3y2f" path="res://assets/pickups.atlastex" id="1_3v721"]
+[ext_resource type="Script" uid="uid://p1iat1fe7w5h" path="res://assets/effects/blood_spurt.gd" id="1_u7cos"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7cos"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+diffuse_mode = 3
+disable_specular_occlusion = true
+albedo_texture = ExtResource("1_3v721")
+uv1_scale = Vector3(0.055, 0.055, 1)
+uv1_offset = Vector3(0.063, 0.125, 0)
+texture_filter = 0
+disable_receive_shadows = true
+billboard_mode = 2
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_8ef5s"]
+material = SubResource("StandardMaterial3D_u7cos")
+size = Vector2(0.1, 0.1)
+
+[sub_resource type="Curve" id="Curve_5njvh"]
+_data = [Vector2(0, 1), 0.0, -3.2314627, 0, 0, Vector2(0.6211539, 0), -1.6501095, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cj8yv"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+diffuse_mode = 3
+disable_specular_occlusion = true
+albedo_texture = ExtResource("1_3v721")
+uv1_scale = Vector3(0.055, 0.055, 1)
+uv1_offset = Vector3(0.002, 0.125, 0)
+texture_filter = 0
+disable_receive_shadows = true
+billboard_mode = 2
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_ybcsq"]
+material = SubResource("StandardMaterial3D_cj8yv")
+size = Vector2(0.1, 0.1)
+
+[node name="BloodSpurt" type="Node3D" unique_id=2038172413]
+script = ExtResource("1_u7cos")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=1945041082]
+emitting = false
+lifetime = 1.5
+one_shot = true
+explosiveness = 0.9
+randomness = 1.0
+lifetime_randomness = 0.23
+fract_delta = false
+mesh = SubResource("QuadMesh_8ef5s")
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 0.1
+emission_ring_radius = 0.1
+emission_ring_inner_radius = 0.15
+emission_ring_cone_angle = 69.3
+direction = Vector3(-0.3, -0.5, 0)
+spread = 180.0
+gravity = Vector3(0, 9.8, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 10.0
+damping_min = 0.33
+damping_max = 5.967
+scale_amount_min = 0.3
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_5njvh")
+
+[node name="CPUParticles3D3" type="CPUParticles3D" parent="." unique_id=638282033]
+emitting = false
+lifetime = 1.5
+one_shot = true
+explosiveness = 0.9
+randomness = 1.0
+lifetime_randomness = 0.23
+fract_delta = false
+mesh = SubResource("QuadMesh_ybcsq")
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 0.1
+emission_ring_radius = 0.1
+emission_ring_inner_radius = 0.15
+emission_ring_cone_angle = 69.3
+direction = Vector3(-0.3, -0.5, 0)
+spread = 180.0
+gravity = Vector3(0, 9.8, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 10.0
+damping_min = 0.33
+damping_max = 5.967
+scale_amount_min = 0.3
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_5njvh")

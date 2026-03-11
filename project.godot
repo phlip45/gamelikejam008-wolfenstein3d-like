@@ -11,14 +11,18 @@ config_version=5
 [application]
 
 config/name="WolfensteinLike"
-run/main_scene="uid://flnlf1svj8lh"
+run/main_scene="uid://dyoc073gxdrh1"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://c2fmijc4tve6p"
+
 [display]
 
-window/size/viewport_width=384
-window/size/viewport_height=216
+window/size/viewport_width=320
+window/size/viewport_height=180
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
@@ -32,6 +36,7 @@ enabled=PackedStringArray("res://addons/fancy_editor_sounds/plugin.cfg", "res://
 player="its the player"
 wall=""
 enemy=""
+nav=""
 
 [gui]
 
@@ -136,6 +141,10 @@ shift={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[navigation]
+
+3d/default_cell_size=0.1
 
 [physics]
 

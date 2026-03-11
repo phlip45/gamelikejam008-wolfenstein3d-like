@@ -4,13 +4,13 @@
 
 [resource]
 resource_name = "level_1"
-shading_mode = 2
+cull_mode = 2
 diffuse_mode = 3
-specular_mode = 1
+disable_specular_occlusion = true
 albedo_texture = ExtResource("1_knmh3")
+roughness = 0.0
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
 texture_filter = 2
 texture_repeat = false
-grow_amount = -0.319
-stencil_flags = 2
-stencil_color = Color(0.42436036, 0.65320116, 0.8415758, 1)
-stencil_outline_thickness = 0.1
+disable_receive_shadows = true

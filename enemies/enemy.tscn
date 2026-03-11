@@ -1,32 +1,45 @@
 [gd_scene format=3 uid="uid://0p3hbqc0k8ah"]
 
 [ext_resource type="Script" uid="uid://nsfcwe4uo4cq" path="res://enemies/enemy.gd" id="1_7frlh"]
-[ext_resource type="Resource" uid="uid://plnwob4rggpp" path="res://enemies/data/horse.enemy_data.tres" id="2_a6vjd"]
-[ext_resource type="SpriteFrames" uid="uid://b3dey4ynd2yla" path="res://enemies/sprite_frames/horse/horse_front.sprite_frames.tres" id="2_orwns"]
+[ext_resource type="Resource" uid="uid://plnwob4rggpp" path="res://enemies/horse/horse.enemy_data.tres" id="2_orwns"]
+[ext_resource type="SpriteFrames" uid="uid://cxtsjxds7lldi" path="res://enemies/horse/horse_back_left.sprite_frames.tres" id="3_orwns"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_a6vjd"]
-radius = 0.4
+height = 2.8032227
 
 [sub_resource type="PrismMesh" id="PrismMesh_7frlh"]
 
 [node name="Enemy" type="CharacterBody3D" unique_id=1625287854 groups=["enemy"]]
 script = ExtResource("1_7frlh")
-enemy_data = ExtResource("2_a6vjd")
+data = ExtResource("2_orwns")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1261121391]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4016113, 0)
 shape = SubResource("CylinderShape3D_a6vjd")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1847465004]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3534582, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.3534582, 0)
 billboard = 2
 double_sided = false
 texture_filter = 0
-sprite_frames = ExtResource("2_orwns")
+sprite_frames = ExtResource("3_orwns")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.73019844
 
 [node name="DebugFacingArrow" type="MeshInstance3D" parent="." unique_id=490926000]
 transform = Transform3D(-0.29999998, -2.6226832e-08, 1.1464111e-15, 0, -1.3113415e-08, -0.29999998, 2.6226832e-08, -0.29999998, 1.3113415e-08, 0, 1, -0.9)
+visible = false
 mesh = SubResource("PrismMesh_7frlh")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=188573817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+target_position = Vector3(0, 0, -10)
+debug_shape_custom_color = Color(1, 0.85490197, 0, 1)
+debug_shape_thickness = 5
+
+[node name="NavAgent" type="NavigationAgent3D" parent="." unique_id=1911997036]
+
+[node name="DebugLabel" type="Label3D" parent="." unique_id=1206567599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.047869682, 2.2487843, 0)
+billboard = 2
+text = "This is example"

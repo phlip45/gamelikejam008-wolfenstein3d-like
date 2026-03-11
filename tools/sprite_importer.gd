@@ -3,7 +3,7 @@ extends Node
 @export_file("*.json") var json_paths:Array[String]
 var json_path:String
 var texture_path:String
-@export var save_path_name:String
+var save_path_name:String
 
 func _ready() -> void:
 	_assemble()

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c2fmijc4tve6p"]
+
+[ext_resource type="Script" uid="uid://bq3fi3kpu4x6t" path="res://global.gd" id="1_qxp0b"]
+[ext_resource type="PackedScene" uid="uid://2c408020tnen" path="res://scene_changer.tscn" id="2_2wtbm"]
+
+[node name="Global" type="Node" unique_id=1840471441]
+script = ExtResource("1_qxp0b")
+
+[node name="SceneChanger" parent="." unique_id=1546265640 instance=ExtResource("2_2wtbm")]
+follow_viewport_enabled = true

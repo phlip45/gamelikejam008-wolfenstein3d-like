@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://df8x7d56xifs0"]
+
+[ext_resource type="Script" uid="uid://befiei686fjyw" path="res://assets/guns/cleaver.projectile.gd" id="1_488xg"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_488xg"]
+radius = 0.7305013
+
+[sub_resource type="Animation" id="Animation_5wty6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_r5kli"]
+resource_name = "swing"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.11440436, 0.117659196, 0.3, 0.3166667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, false, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ewibc"]
+_data = {
+&"RESET": SubResource("Animation_5wty6"),
+&"swing": SubResource("Animation_r5kli")
+}
+
+[node name="CleaverProjectile" type="Area3D" unique_id=972365294]
+script = ExtResource("1_488xg")
+metadata/_custom_type_script = "uid://bcr4kwox7xw8"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1758587287]
+transform = Transform3D(0.8928847, 0.45028546, 0, -0.45028546, 0.8928847, 0, 0, 0, 1, 0, 0, -0.9591052)
+rotation_edit_mode = 1
+shape = SubResource("SphereShape3D_488xg")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1732541978]
+libraries/ = SubResource("AnimationLibrary_ewibc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://plnwob4rggpp"]
+
+[ext_resource type="SpriteFrames" uid="uid://dspjiesq0lvpf" path="res://enemies/horse/horse_forward.sprite_frames.tres" id="1_u0jtl"]
+[ext_resource type="SpriteFrames" uid="uid://cn6i3og318clb" path="res://enemies/horse/horse_forward_left.sprite_frames.tres" id="2_qvq6a"]
+[ext_resource type="SpriteFrames" uid="uid://cr7d3r1big0fh" path="res://enemies/horse/horse_left.sprite_frames.tres" id="3_gfr6w"]
+[ext_resource type="SpriteFrames" uid="uid://cxtsjxds7lldi" path="res://enemies/horse/horse_back_left.sprite_frames.tres" id="4_3h6hu"]
+[ext_resource type="SpriteFrames" uid="uid://cccvs3rjcseh5" path="res://enemies/horse/horse_back.sprite_frames.tres" id="5_dnvuv"]
+[ext_resource type="SpriteFrames" uid="uid://idoomt8ln0bv" path="res://enemies/horse/horse_back_right.sprite_frames.tres" id="6_mv83o"]
+[ext_resource type="SpriteFrames" uid="uid://b63yc7noex6ss" path="res://enemies/horse/horse_right.sprite_frames.tres" id="7_70gw4"]
+[ext_resource type="SpriteFrames" uid="uid://l8l1pgdg1mwt" path="res://enemies/horse/horse_forward_right.sprite_frames.tres" id="8_nm0lh"]
+[ext_resource type="Script" uid="uid://bns6cm0drf1q5" path="res://enemies/enemy_data.gd" id="9_q7vg4"]
+[ext_resource type="Resource" uid="uid://b1kg8ieiaethb" path="res://enemies/horse/horse.horse_brain.tres" id="9_u0jtl"]
+
+[resource]
+script = ExtResource("9_q7vg4")
+name = "horse"
+turn_speed = 1.0
+speed = 1.0
+health = Vector2i(100, 100)
+poise = 110.0
+field_of_view = 2.94
+scale_override = 1.5
+brain = ExtResource("9_u0jtl")
+animation_sprite_frames = Dictionary[int, SpriteFrames]({
+1: ExtResource("1_u0jtl"),
+2: ExtResource("2_qvq6a"),
+3: ExtResource("3_gfr6w"),
+4: ExtResource("4_3h6hu"),
+5: ExtResource("5_dnvuv"),
+6: ExtResource("6_mv83o"),
+7: ExtResource("7_70gw4"),
+8: ExtResource("8_nm0lh")
+})
+metadata/_custom_type_script = "uid://bns6cm0drf1q5"
