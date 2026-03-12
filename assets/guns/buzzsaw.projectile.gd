@@ -1,5 +1,7 @@
-extends Projectile
 class_name BuzzsawProjectile
+extends Projectile
+
+@onready var animated_sprite_3d: AnimatedSprite3D = $AnimatedSprite3D
 
 @export var damage:float = 10
 
@@ -12,6 +14,7 @@ func _ready() -> void:
 	animated_sprite_3d.sprite_frames = sprite_frames
 	animated_sprite_3d.animation = animation_name
 	animated_sprite_3d.play()
+	pass
 
 func _physics_process(delta:float) -> void:
 	bounce_cooldown.x -= delta

@@ -36,8 +36,7 @@ func setup(_enemy:Enemy) -> void:
 	change_state(State.IDLE)
 	enemy.sprite.animation_finished.connect(_on_anim_finished)
 	enemy.sprite.animation_looped.connect(_on_anim_finished)
-	
-	
+	enemy.flinched.connect(flinch)
 
 func process(delta:float):
 	target_lock_time.x -= delta
@@ -64,7 +63,7 @@ func _process_moving(delta:float):
 	if update_path_time.x > 0: return
 	update_path_time.x = update_path_time.y
 	enemy.nav_agent.target_position = target.global_position
-	var path:Vector3 = enemy.nav_agent.get_next_path_position()
+	#var path:Vector3 = enemy.nav_agent.get_next_path_position()
 	move_toward_target()
 
 func _process_ranged_attack(_delta:float):
@@ -78,6 +77,17 @@ func _process_dying(_delta:float):
 
 func _process_hurt(_delta:float):
 	pass
+
+func flinch():
+	print("Flinch")
+	change_state(State.HURT)
+	enemy.sprite.play("Hurt")
+	var back_to_idle:Callable = func():
+		enemy.sprite.animation = "Idle"
+		change_state(State.IDLE)
+	if !enemy.sprite.animation_finished.is_connected(back_to_idle):
+		enemy.sprite.animation_finished.connect(back_to_idle, CONNECT_ONE_SHOT)
+		
 
 func _on_anim_finished():
 	wait.x = wait.y

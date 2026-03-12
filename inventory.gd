@@ -42,11 +42,11 @@ func pickup(data:PickupData) -> bool:
 			pass
 	return false
 
-func pickup_gun(data:PickupData) -> bool:
+func pickup_gun(_data:PickupData) -> bool:
 	return false
-func pickup_ammo(data:PickupData) -> bool:
+func pickup_ammo(_data:PickupData) -> bool:
 	return false
-func pickup_health(data:PickupData) -> bool:
+func pickup_health(_data:PickupData) -> bool:
 	return false
 
 func pull_trigger(player:Player):

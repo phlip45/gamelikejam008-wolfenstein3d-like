@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://qc3s68mi66c8"
 path.s3tc="res://.godot/imported/cleaver.png-5e360f45bc4928e25404ee2e75ffb059.s3tc.ctex"
+path.etc2="res://.godot/imported/cleaver.png-5e360f45bc4928e25404ee2e75ffb059.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/guns/cleaver.png"
-dest_files=["res://.godot/imported/cleaver.png-5e360f45bc4928e25404ee2e75ffb059.s3tc.ctex"]
+dest_files=["res://.godot/imported/cleaver.png-5e360f45bc4928e25404ee2e75ffb059.s3tc.ctex", "res://.godot/imported/cleaver.png-5e360f45bc4928e25404ee2e75ffb059.etc2.ctex"]
 
 [params]
 

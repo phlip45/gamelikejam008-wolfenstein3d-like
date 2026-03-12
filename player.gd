@@ -61,6 +61,18 @@ func move(_delta:float):
 		velocity.z = move_toward(velocity.z, 0, speed)
 	if input_dir.length_squared() > 0 and Input.is_action_pressed("shift"):
 		velocity *= sprint_max
+	if 	!Global.ui.gun_sprite.is_playing() or\
+		Global.ui.gun_sprite.animation == "Idle" or\
+		Global.ui.gun_sprite.animation == "Move":
+		if velocity.length() < 1:
+			if Global.ui.gun_sprite.sprite_frames.has_animation("Idle") and\
+				Global.ui.gun_sprite.animation != "Idle":
+				Global.ui.play_gun_anim("Idle")
+		else:
+			if Global.ui.gun_sprite.sprite_frames.has_animation("Move") and\
+				Global.ui.gun_sprite.animation != "Move":
+				
+				Global.ui.play_gun_anim("Move")
 	move_and_slide()
 
 func handle_weapon(delta:float):

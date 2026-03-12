@@ -16,7 +16,7 @@ func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("enemy") and enabled:
 		var pos = Vector3(body.global_position.x,1.5 ,body.global_position.z)
 		enabled = false
-		body.flesh.damage(10)
+		body.damage(10)
 		BloodSpurt.spawn.call_deferred(pos)
 		queue_free()
 		

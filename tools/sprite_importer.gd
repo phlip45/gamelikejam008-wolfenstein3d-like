@@ -72,6 +72,6 @@ func _run() -> void:
 			var duration:float = float(frame_info["duration"]) / 1000.0  * 60.0
 			sprite_frames.add_frame(anim_name, atlas, duration)
 
-		sprite_frames.set_animation_loop(anim_name, true)
+		sprite_frames.set_animation_loop(anim_name, false)
 
 	ResourceSaver.save(sprite_frames, save_path)

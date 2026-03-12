@@ -19,6 +19,7 @@ shape = SubResource("CylinderShape3D_a6vjd")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1847465004]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.3534582, 0)
+cast_shadow = 0
 billboard = 2
 double_sided = false
 texture_filter = 0

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dub20t22g1wri"
 path.s3tc="res://.godot/imported/horse_back.png-2afecd851664f0595f3dcd832ec31c53.s3tc.ctex"
+path.etc2="res://.godot/imported/horse_back.png-2afecd851664f0595f3dcd832ec31c53.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/enemies/horse/horse_back.png"
-dest_files=["res://.godot/imported/horse_back.png-2afecd851664f0595f3dcd832ec31c53.s3tc.ctex"]
+dest_files=["res://.godot/imported/horse_back.png-2afecd851664f0595f3dcd832ec31c53.s3tc.ctex", "res://.godot/imported/horse_back.png-2afecd851664f0595f3dcd832ec31c53.etc2.ctex"]
 
 [params]
 

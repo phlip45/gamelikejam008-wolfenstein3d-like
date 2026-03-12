@@ -557,7 +557,7 @@ animations = [{
 "duration": 6.0,
 "texture": SubResource("AtlasTexture_rdwpj")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death",
 "speed": 60.0
 }, {
@@ -595,7 +595,7 @@ animations = [{
 "duration": 6.0,
 "texture": SubResource("AtlasTexture_cm7sy")
 }],
-"loop": true,
+"loop": false,
 "name": &"Hurt",
 "speed": 60.0
 }, {
@@ -758,7 +758,7 @@ animations = [{
 "duration": 6.0,
 "texture": SubResource("AtlasTexture_smn0x")
 }],
-"loop": true,
+"loop": false,
 "name": &"MeleeAttack",
 "speed": 60.0
 }, {
@@ -865,7 +865,7 @@ animations = [{
 "duration": 6.0,
 "texture": SubResource("AtlasTexture_nj7fw")
 }],
-"loop": true,
+"loop": false,
 "name": &"RangedAttack",
 "speed": 60.0
 }, {

@@ -77,8 +77,11 @@ func get_vector_to_camera() -> Vector2:
 func damage(amount:int):
 	flesh.damage(amount)
 	
-	var flinch_chance:int = 100 - data.poise
+	var flinch_chance:float = 25.0 - data.poise
 	flinch_chance += amount
-	
+	if randf_range(0,100) < flinch_chance:
+		flinched.emit()
+
+
 func die():
 	queue_free()

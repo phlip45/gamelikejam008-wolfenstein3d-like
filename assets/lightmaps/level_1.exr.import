@@ -4,15 +4,16 @@ importer="2d_array_texture"
 type="CompressedTexture2DArray"
 uid="uid://c3wgjy7d3op52"
 path.bptc="res://.godot/imported/level_1.exr-78de15e5068be5bfc4b8375c8fe104e9.bptc.ctexarray"
+path.astc="res://.godot/imported/level_1.exr-78de15e5068be5bfc4b8375c8fe104e9.astc.ctexarray"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/lightmaps/level_1.exr"
-dest_files=["res://.godot/imported/level_1.exr-78de15e5068be5bfc4b8375c8fe104e9.bptc.ctexarray"]
+dest_files=["res://.godot/imported/level_1.exr-78de15e5068be5bfc4b8375c8fe104e9.bptc.ctexarray", "res://.godot/imported/level_1.exr-78de15e5068be5bfc4b8375c8fe104e9.astc.ctexarray"]
 
 [params]
 

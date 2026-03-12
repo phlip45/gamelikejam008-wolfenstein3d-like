@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://e8yxakvkhkym"
 path.s3tc="res://.godot/imported/buzzsaw.png-eb426d2555b8e02c8e08a8b984d33ebe.s3tc.ctex"
+path.etc2="res://.godot/imported/buzzsaw.png-eb426d2555b8e02c8e08a8b984d33ebe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/guns/buzzsaw.png"
-dest_files=["res://.godot/imported/buzzsaw.png-eb426d2555b8e02c8e08a8b984d33ebe.s3tc.ctex"]
+dest_files=["res://.godot/imported/buzzsaw.png-eb426d2555b8e02c8e08a8b984d33ebe.s3tc.ctex", "res://.godot/imported/buzzsaw.png-eb426d2555b8e02c8e08a8b984d33ebe.etc2.ctex"]
 
 [params]
 

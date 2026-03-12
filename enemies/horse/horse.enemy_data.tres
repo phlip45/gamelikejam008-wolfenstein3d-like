@@ -16,11 +16,18 @@ script = ExtResource("9_q7vg4")
 name = "horse"
 turn_speed = 1.0
 speed = 1.0
-health = Vector2i(100, 100)
-poise = 110.0
+health = Vector2i(99999, 99999)
+poise = 0.0
 field_of_view = 2.94
 scale_override = 1.5
 brain = ExtResource("9_u0jtl")
+animation_states = Dictionary[String, String]({
+"Death": "Death",
+"Hurt": "Hurt",
+"Idle": "Idle",
+"MeleeAttack": "MeleeAttack",
+"RangedAttack": "RangedAttack"
+})
 animation_sprite_frames = Dictionary[int, SpriteFrames]({
 1: ExtResource("1_u0jtl"),
 2: ExtResource("2_qvq6a"),
