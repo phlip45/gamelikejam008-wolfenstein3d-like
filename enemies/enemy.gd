@@ -7,6 +7,7 @@ class_name Enemy
 @onready var ray_cast_3d: RayCast3D = $RayCast3D
 @onready var nav_agent: NavigationAgent3D = $NavAgent
 @onready var debug_label: Label3D = $DebugLabel
+@onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 var brain:Brain
 var flesh:Flesh
 
@@ -15,7 +16,7 @@ var animation_sprites:Dictionary[EnemyData.Direction, SpriteFrames]
 
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 
-signal flinched
+signal damaged(amount:int)
 
 func _ready() -> void:
 	flesh = Flesh.create(data.health)
@@ -23,7 +24,6 @@ func _ready() -> void:
 	if !get_tree().debug_collisions_hint:
 		debug_label.visible = false
 	brain.setup(self)
-	flesh.died.connect(die)
 
 func _process(delta: float) -> void:
 	#rotation.y += delta
@@ -76,12 +76,13 @@ func get_vector_to_camera() -> Vector2:
 
 func damage(amount:int):
 	flesh.damage(amount)
-	
-	var flinch_chance:float = 25.0 - data.poise
-	flinch_chance += amount
-	if randf_range(0,100) < flinch_chance:
-		flinched.emit()
-
 
 func die():
 	queue_free()
+
+func should_flinch(amount:float) -> bool:
+	var chance:float = data.poise - amount
+	if randf_range(0,100) > chance:
+		return true
+	return false
+	

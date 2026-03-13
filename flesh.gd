@@ -16,7 +16,8 @@ func damage(amount:int):
 	if health.x <= 0:
 		died.emit()
 		return
-	damaged.emit(amount)
+	else:
+		damaged.emit(amount)
 
 func heal(amount:int):
 	health.x = min(health.x + amount, health.y)

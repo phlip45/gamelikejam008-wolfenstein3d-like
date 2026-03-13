@@ -6,8 +6,7 @@ var enabled:bool = true
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func setup(pos:Vector3, rot:Vector3):
-	global_position = pos
-	rotation = rot
+	reparent(Global.player.gun_cloaca, false)
 	animation_player.play("swing")
 	await animation_player.animation_finished
 	queue_free()

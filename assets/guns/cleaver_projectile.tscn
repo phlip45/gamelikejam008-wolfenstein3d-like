@@ -47,7 +47,7 @@ script = ExtResource("1_488xg")
 metadata/_custom_type_script = "uid://bcr4kwox7xw8"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1758587287]
-transform = Transform3D(0.8928847, 0.45028546, 0, -0.45028546, 0.8928847, 0, 0, 0, 1, 0, 0, -0.9591052)
+transform = Transform3D(0.8928847, 0.45028546, 0, -0.45028546, 0.8928847, 0, 0, 0, 1, 0, 0, -1)
 rotation_edit_mode = 1
 shape = SubResource("SphereShape3D_488xg")
 disabled = true

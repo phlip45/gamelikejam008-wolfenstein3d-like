@@ -22,6 +22,16 @@ enum State{
 	HURT,
 }
 
+var anim_names:Dictionary[State,String] = {
+	State.NULL: "Null" ,
+	State.IDLE: "Idle" ,
+	State.MOVING: "Idle" ,
+	State.RANGED_ATTACK: "RangedAttack" ,
+	State.MELEE_ATTACK: "MeleeAttack" ,
+	State.DYING: "Death" ,
+	State.HURT: "Hurt" ,
+}
+
 var state_process:Dictionary[State,Callable] = {
 	State.IDLE: _process_idle,
 	State.MOVING: _process_moving,
@@ -36,7 +46,8 @@ func setup(_enemy:Enemy) -> void:
 	change_state(State.IDLE)
 	enemy.sprite.animation_finished.connect(_on_anim_finished)
 	enemy.sprite.animation_looped.connect(_on_anim_finished)
-	enemy.flinched.connect(flinch)
+	enemy.flesh.damaged.connect(on_damaged)
+	enemy.flesh.died.connect(on_death)
 
 func process(delta:float):
 	target_lock_time.x -= delta
@@ -78,21 +89,31 @@ func _process_dying(_delta:float):
 func _process_hurt(_delta:float):
 	pass
 
-func flinch():
-	print("Flinch")
-	change_state(State.HURT)
-	enemy.sprite.play("Hurt")
-	var back_to_idle:Callable = func():
-		enemy.sprite.animation = "Idle"
-		change_state(State.IDLE)
-	if !enemy.sprite.animation_finished.is_connected(back_to_idle):
-		enemy.sprite.animation_finished.connect(back_to_idle, CONNECT_ONE_SHOT)
-		
+func on_damaged(amount:int):
+	if state == State.DYING: return
+	var tween:Tween = enemy.create_tween()
+	tween.tween_property(enemy.sprite,"modulate",Color.RED,.2)
+	tween.tween_property(enemy.sprite,"modulate",Color.WHITE,.1)
+	if enemy.should_flinch(amount):
+		change_state(State.HURT)
+		enemy.sprite.play("Hurt")
+		var back_to_idle:Callable = func():
+			enemy.sprite.animation = "Idle"
+			change_state(State.IDLE)
+		if !enemy.sprite.animation_finished.is_connected(back_to_idle):
+			enemy.sprite.animation_finished.connect(back_to_idle, CONNECT_ONE_SHOT)
+
+func on_death():
+	enemy.collision_shape_3d.disabled = true
+	change_state(State.DYING)
+	enemy.sprite.play("Death")
+	enemy.sprite.animation_finished.connect(enemy.die)
 
 func _on_anim_finished():
 	wait.x = wait.y
 
 func change_state(_state:State):
+	print(State.find_key(_state))
 	enemy.debug_label.text = State.find_key(_state)
 	state = _state
 

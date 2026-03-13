@@ -43,4 +43,6 @@ debug_shape_thickness = 5
 [node name="DebugLabel" type="Label3D" parent="." unique_id=1206567599]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.047869682, 2.2487843, 0)
 billboard = 2
+no_depth_test = true
+fixed_size = true
 text = "This is example"

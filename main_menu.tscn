@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dyoc073gxdrh1"]
 
 [ext_resource type="Script" uid="uid://jupyydtg86as" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://bfco4i1v2ans6" path="res://assets/menus/logo.png" id="2_7vrkn"]
 
 [node name="MainMenu" type="Node3D" unique_id=1901269180]
 script = ExtResource("1_06t4h")
@@ -17,6 +18,16 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="ColorRect" type="ColorRect" parent="Menu/Control" unique_id=2124202191]
+modulate = Color(1.0588765e-06, 0.6149124, 0.59366333, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13319641, 0.13319641, 0.13319638, 1)
+
 [node name="Play" type="Button" parent="Menu/Control" unique_id=1565482591]
 layout_mode = 1
 anchors_preset = 8
@@ -24,12 +35,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.5
-offset_top = -15.5
-offset_right = 20.5
-offset_bottom = 15.5
+offset_left = -21.0
+offset_top = 44.0
+offset_right = 20.0
+offset_bottom = 75.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Play"
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu/Control" unique_id=1171250851]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Menu/Control/CenterContainer" unique_id=672038068]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_7vrkn")
 
 [connection signal="pressed" from="Menu/Control/Play" to="." method="_on_play_pressed"]
