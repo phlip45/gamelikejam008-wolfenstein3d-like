@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DoomscrollBrain" format=3 uid="uid://b3vhksdp5welu"]
+
+[ext_resource type="Script" uid="uid://b8ssqpqiah8e0" path="res://doomscroll.brain.gd" id="1_j3762"]
+
+[resource]
+script = ExtResource("1_j3762")
+name = "doomscroll"
+missile_range = 3.0
+metadata/_custom_type_script = "uid://b8ssqpqiah8e0"

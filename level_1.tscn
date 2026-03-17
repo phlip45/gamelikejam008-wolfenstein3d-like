@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://qc3s68mi66c8" path="res://assets/guns/cleaver.png" id="6_gyffv"]
 [ext_resource type="MeshLibrary" uid="uid://kq40rvted1i7" path="res://assets/meshes/level_1.meshlib" id="7_bjebc"]
 [ext_resource type="PackedScene" uid="uid://0p3hbqc0k8ah" path="res://enemies/enemy.tscn" id="7_j7kpp"]
+[ext_resource type="Resource" uid="uid://pafuf15ipori" path="res://enemies/doomscroll/doomscroll.enemy_data.tres" id="8_5rr72"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hls8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -63,7 +64,11 @@ transform = Transform3D(0.94693, 0.011218399, -0.3212441, 0, 0.99939084, 0.03490
 pickup_data = SubResource("Resource_sof0w")
 
 [node name="Enemy" parent="." unique_id=1625287854 instance=ExtResource("7_j7kpp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 14)
+
+[node name="Enemy2" parent="." unique_id=898220396 instance=ExtResource("7_j7kpp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -1)
+data = ExtResource("8_5rr72")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1999793683 groups=["nav"]]
 navigation_mesh = SubResource("NavigationMesh_5rr72")

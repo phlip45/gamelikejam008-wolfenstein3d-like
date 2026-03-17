@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1dq17vop1bwc"]
+
+[ext_resource type="PackedScene" uid="uid://1ix1s311xo0l" path="res://assets/guns/big_bullet.glb" id="1_ntadh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ntadh"]
+radius = 0.39547348
+
+[node name="big_bullet" unique_id=830381692 instance=ExtResource("1_ntadh")]
+speed = 1.0
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1469287431]
+autoplay = &"Idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=1445207874]
+shape = SubResource("SphereShape3D_ntadh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

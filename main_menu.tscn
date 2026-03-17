@@ -26,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.13319641, 0.13319641, 0.13319638, 1)
+color = Color(0.0885599, 0.0885599, 0.0885599, 1)
 
 [node name="Play" type="Button" parent="Menu/Control" unique_id=1565482591]
 layout_mode = 1

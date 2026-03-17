@@ -9,7 +9,7 @@
 [ext_resource type="SpriteFrames" uid="uid://b63yc7noex6ss" path="res://enemies/horse/horse_right.sprite_frames.tres" id="7_70gw4"]
 [ext_resource type="SpriteFrames" uid="uid://l8l1pgdg1mwt" path="res://enemies/horse/horse_forward_right.sprite_frames.tres" id="8_nm0lh"]
 [ext_resource type="Script" uid="uid://bns6cm0drf1q5" path="res://enemies/enemy_data.gd" id="9_q7vg4"]
-[ext_resource type="Resource" uid="uid://b1kg8ieiaethb" path="res://enemies/horse/horse.horse_brain.tres" id="9_u0jtl"]
+[ext_resource type="Resource" uid="uid://b1kg8ieiaethb" path="res://enemies/horse/horse.brain.tres" id="9_u0jtl"]
 
 [resource]
 script = ExtResource("9_q7vg4")

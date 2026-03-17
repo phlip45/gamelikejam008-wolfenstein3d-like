@@ -4,4 +4,4 @@
 
 [node name="SpriteImporter" type="Node2D" unique_id=920173017]
 script = ExtResource("1_vftd0")
-json_paths = Array[String](["res://assets/guns/cleaver.json"])
+json_paths = Array[String](["res://assets/enemies/doomscroll/doomscroll_back.json", "res://assets/enemies/doomscroll/doomscroll_back_left.json", "res://assets/enemies/doomscroll/doomscroll_back_right.json", "res://assets/enemies/doomscroll/doomscroll_front.json", "res://assets/enemies/doomscroll/doomscroll_front_left.json", "res://assets/enemies/doomscroll/doomscroll_front_right.json", "res://assets/enemies/doomscroll/doomscroll_left.json", "res://assets/enemies/doomscroll/doomscroll_right.json"])

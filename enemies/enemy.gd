@@ -11,6 +11,7 @@ class_name Enemy
 var brain:Brain
 var flesh:Flesh
 
+
 var camera:Camera3D
 var animation_sprites:Dictionary[EnemyData.Direction, SpriteFrames]
 

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://pafuf15ipori"]
+
+[ext_resource type="SpriteFrames" uid="uid://brpoxyk56c8ya" path="res://enemies/doomscroll/doomscroll_front.tres" id="1_gd0aj"]
+[ext_resource type="SpriteFrames" uid="uid://dlgaaqcun1jl" path="res://enemies/doomscroll/doomscroll_front_left.tres" id="2_vl7cj"]
+[ext_resource type="SpriteFrames" uid="uid://c3jg35ska7ild" path="res://enemies/doomscroll/doomscroll_left.tres" id="3_4nikp"]
+[ext_resource type="SpriteFrames" uid="uid://ddjthnc2cqbvb" path="res://enemies/doomscroll/doomscroll_back_left.tres" id="4_3wuul"]
+[ext_resource type="SpriteFrames" uid="uid://d1sywgjldjh67" path="res://enemies/doomscroll/doomscroll_back.tres" id="5_a82lx"]
+[ext_resource type="SpriteFrames" uid="uid://dtorpqh44e34x" path="res://enemies/doomscroll/doomscroll_back_right.tres" id="6_x8q2l"]
+[ext_resource type="SpriteFrames" uid="uid://3qn04cdeeuts" path="res://enemies/doomscroll/doomscroll_right.tres" id="7_6fnqv"]
+[ext_resource type="SpriteFrames" uid="uid://d1iir7112cfif" path="res://enemies/doomscroll/doomscroll_front_right.tres" id="8_rq23i"]
+[ext_resource type="Resource" uid="uid://b3vhksdp5welu" path="res://enemies/doomscroll/doomscroll.brain.tres" id="9_eskoc"]
+[ext_resource type="Script" uid="uid://bns6cm0drf1q5" path="res://enemies/enemy_data.gd" id="10_1ntjo"]
+
+[resource]
+script = ExtResource("10_1ntjo")
+name = "doomscroll"
+health = Vector2i(100, 100)
+poise = 100.0
+brain = ExtResource("9_eskoc")
+animation_sprite_frames = Dictionary[int, SpriteFrames]({
+1: ExtResource("1_gd0aj"),
+2: ExtResource("2_vl7cj"),
+3: ExtResource("3_4nikp"),
+4: ExtResource("4_3wuul"),
+5: ExtResource("5_a82lx"),
+6: ExtResource("6_x8q2l"),
+7: ExtResource("7_6fnqv"),
+8: ExtResource("8_rq23i")
+})
+metadata/_custom_type_script = "uid://bns6cm0drf1q5"

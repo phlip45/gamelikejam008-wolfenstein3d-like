@@ -1,12 +1,8 @@
 extends Brain
-class_name HorseBrain
+class_name DoomscrollBrain
 
 @export var name:String
-@export var decide_time:Vector2 = Vector2(2,4)
-## Less than this and the enemy attacks melee. More than than this
-## but less than missile_range and the enemy will randomly decide to
-## try and close the gap or shoot a missile
-@export var melee_range:float
+@export var wait:Vector2 = Vector2(2,4)
 ## Further than this range and the enemy attacks with their projectile.
 ## Less than this but more than melee range and the enemy will randomly
 ## decide to try and close the gap or shoot a missile.
@@ -24,17 +20,15 @@ enum State{
 	IDLE,
 	MOVING,
 	RANGED_ATTACK,
-	MELEE_ATTACK,
 	DYING,
 	HURT,
 }
 
 var anim_names:Dictionary[State,String] = {
-	State.NULL: "Null" ,
+	State.NULL: "Null" , # This will throw error which is good
 	State.IDLE: "Idle" ,
 	State.MOVING: "Idle" ,
-	State.RANGED_ATTACK: "RangedAttack" ,
-	State.MELEE_ATTACK: "MeleeAttack" ,
+	State.RANGED_ATTACK: "Attack" ,
 	State.DYING: "Death" ,
 	State.HURT: "Hurt" ,
 }
@@ -42,15 +36,15 @@ var anim_names:Dictionary[State,String] = {
 var state_process:Dictionary[State,Callable] = {
 	State.IDLE: _process_idle,
 	State.MOVING: _process_moving,
-	State.RANGED_ATTACK: _process_ranged_attack,
-	State.MELEE_ATTACK: _process_melee_attack,
+	State.RANGED_ATTACK: _process_attack,
 	State.DYING: _process_dying,
 	State.HURT: _process_hurt,
 }
+## TODO this part needs fixed
 var bullet_path:String = "res://assets/guns/big_bullet.tscn"
 var bullet_scene:PackedScene
 func setup(_enemy:Enemy) -> void:
-	bullet_scene = await Global.load_scene(bullet_path)
+	#bullet_scene = await Global.load_scene(bullet_path)
 	enemy = _enemy
 	change_state(State.IDLE)
 	enemy.sprite.animation_finished.connect(_on_anim_finished)
@@ -63,10 +57,12 @@ func process(delta:float):
 	if state == State.NULL: return
 	state_process[state].call(delta)
 
-func _process_idle(_delta:float):
-	if can_see_player() and !target:
+func _process_idle(delta:float):
+	wait.x -= delta
+	if wait.x <= 0:
+		wait.x = wait.y
+	if can_see_player():
 		target = Global.player
-	if target:
 		update_path_time.x = update_path_time.y
 		enemy.nav_agent.target_position = Global.player.global_position
 		change_state(State.MOVING)
@@ -74,17 +70,16 @@ func _process_idle(_delta:float):
 func _process_moving(delta:float):
 	update_path_time.x -= delta
 	move_toward_target()
-	
+	wait.x -= delta
+	if wait.x <= 0:
+		wait.x = wait.y
 	if update_path_time.x > 0: return
 	update_path_time.x = update_path_time.y
 	enemy.nav_agent.target_position = target.global_position
 	#var path:Vector3 = enemy.nav_agent.get_next_path_position()
 	move_toward_target()
 
-func _process_ranged_attack(_delta:float):
-	pass
-
-func _process_melee_attack(_delta:float):
+func _process_attack(_delta:float):
 	pass
 
 func _process_dying(_delta:float):
@@ -103,11 +98,8 @@ func get_target():
 
 func decide_state_by_range():
 	var distance:float = enemy.global_position.distance_to(target.global_position)
-	if distance <= melee_range:
-		#melee
-		pass
-	elif distance <= missile_range:
-		#middle
+	if distance <= missile_range:
+		#too close, get further, but sometimes attack anyways
 		pass
 	else:
 		#ranged
@@ -121,21 +113,22 @@ func on_damaged(amount:int):
 	if enemy.should_flinch(amount):
 		change_state(State.HURT)
 		enemy.sprite.play("Hurt")
+		var back_to_idle:Callable = func():
+			enemy.sprite.animation = "Idle"
+			change_state(State.IDLE)
 		if !enemy.sprite.animation_finished.is_connected(back_to_idle):
 			enemy.sprite.animation_finished.connect(back_to_idle, CONNECT_ONE_SHOT)
-
-func back_to_idle():
-	enemy.sprite.animation = anim_names[State.IDLE]
-	change_state(State.IDLE)
 
 func on_death():
 	enemy.collision_shape_3d.disabled = true
 	change_state(State.DYING)
 	enemy.sprite.play("Death")
+	var tween:Tween = enemy.create_tween()
+	tween.tween_property(enemy.sprite,"modulate",Color.TRANSPARENT,0.9)
 	enemy.sprite.animation_finished.connect(enemy.die)
 
 func _on_anim_finished():
-	decide_time.x = decide_time.y
+	wait.x = wait.y
 
 func change_state(_state:State):
 	print(State.find_key(_state))

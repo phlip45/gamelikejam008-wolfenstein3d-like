@@ -5,15 +5,13 @@ class_name Level
 @export var fog_colors:Array[Color]
 var fog_color_index:int = 0
 
-
 func _init():
 	Global.level = self
-	await Global.load_scene("res://assets/effects/blood_spurt.tscn")
-
-
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _ready() -> void:
+	var spurt:PackedScene = await Global.load_scene("res://assets/effects/blood_spurt.tscn")
+	var real_spurt:BloodSpurt = spurt.instantiate()
+	add_child(real_spurt)
 	cycle_colors()
 
 func cycle_colors():

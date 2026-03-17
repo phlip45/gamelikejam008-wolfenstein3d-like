@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cscj7cjjwce8y"]
+
+[ext_resource type="PackedScene" uid="uid://deqnv6gi5j3pp" path="res://assets/guns/basic_bullet.glb" id="1_g5hf6"]
+
+[node name="basic_bullet" unique_id=439899836 instance=ExtResource("1_g5hf6")]
