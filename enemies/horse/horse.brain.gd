@@ -7,14 +7,16 @@ class_name HorseBrain
 ## but less than missile_range and the enemy will randomly decide to
 ## try and close the gap or shoot a missile
 @export var melee_range:float
+@export var melee_activate_frame:int = 9
 ## Further than this range and the enemy attacks with their projectile.
 ## Less than this but more than melee range and the enemy will randomly
 ## decide to try and close the gap or shoot a missile.
 @export var missile_range:float
+@export var missile_activate_frame:int = 17
 var awake:bool = false
 var state:State
 var target:Actor
-var target_position:Vector3
+var move_target:Vector3
 var target_lock_time:Vector2 = Vector2(10,10)
 var update_path_time:Vector2 = Vector2(0,1)
 var aggression:float = 20.0
@@ -53,10 +55,12 @@ func setup(_enemy:Enemy) -> void:
 	bullet_scene = await Global.load_scene(bullet_path)
 	enemy = _enemy
 	change_state(State.IDLE)
+	enemy.projectile_cloaca.position = projectile_cloaca_position
 	enemy.sprite.animation_finished.connect(_on_anim_finished)
 	enemy.sprite.animation_looped.connect(_on_anim_finished)
 	enemy.flesh.damaged.connect(on_damaged)
 	enemy.flesh.died.connect(on_death)
+	enemy.sprite.frame_changed.connect(_on_sprite_frame_changed)
 
 func process(delta:float):
 	target_lock_time.x -= delta
@@ -74,8 +78,12 @@ func _process_idle(_delta:float):
 func _process_moving(delta:float):
 	update_path_time.x -= delta
 	move_toward_target()
-	
+	decide_time.x -= delta
+	if decide_time.x < 0:
+		decide_time.x = decide_time.y
+		decide_state_by_range()
 	if update_path_time.x > 0: return
+	
 	update_path_time.x = update_path_time.y
 	enemy.nav_agent.target_position = target.global_position
 	#var path:Vector3 = enemy.nav_agent.get_next_path_position()
@@ -102,16 +110,41 @@ func get_target():
 			return
 
 func decide_state_by_range():
+	if !target: return
 	var distance:float = enemy.global_position.distance_to(target.global_position)
 	if distance <= melee_range:
-		#melee
-		pass
+		melee()
 	elif distance <= missile_range:
-		#middle
-		pass
+		#somewhere between able to melee and desired missile range.
+		var shoot_chance:float = 1
+		match Global.Settings.difficulty:
+			Global.Settings.Difficulty.EASY:
+				shoot_chance = .2
+			Global.Settings.Difficulty.NORMAL:
+				shoot_chance = .4
+			Global.Settings.Difficulty.HARD:
+				shoot_chance = .6
+			Global.Settings.Difficulty.ULTRA:
+				shoot_chance = .8
+		if randf() < shoot_chance:
+			shoot()
+		else:
+			change_state(State.MOVING)
 	else:
-		#ranged
-		pass
+		shoot()
+
+func melee():
+	change_state(State.MELEE_ATTACK)
+	enemy.sprite.play(anim_names[State.MELEE_ATTACK])
+
+func spawn_melee_attack():
+	pass
+
+func shoot():
+	change_state(State.RANGED_ATTACK)
+
+func spawn_missile():
+	pass
 
 func on_damaged(amount:int):
 	if state == State.DYING: return
@@ -143,7 +176,7 @@ func change_state(_state:State):
 	state = _state
 
 func move_toward_target() -> bool:
-	if enemy.global_position.distance_to(target_position) > 1:
+	if enemy.global_position.distance_to(enemy.nav_agent.target_position) > 1:
 		var next_location = enemy.nav_agent.get_next_path_position()
 		if !is_colinear_with_up(enemy.global_position,next_location) and !enemy.global_position.is_equal_approx(next_location):
 			var prev_rot:Vector3 = enemy.rotation
@@ -159,3 +192,7 @@ func move_toward_target() -> bool:
 		return false
 	else:
 		return true
+
+func _on_sprite_frame_changed():
+	if enemy.sprite.frame == 1:
+		print("frame 1 occurred")

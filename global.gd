@@ -30,3 +30,7 @@ func load_scene(scene:String) -> PackedScene:
 
 class Settings:
 	static var mouse_sensitivity:float = 3.0
+	static var difficulty:Difficulty = Difficulty.NORMAL
+	enum Difficulty{
+		NULL, EASY, NORMAL, HARD, ULTRA
+	}

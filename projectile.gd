@@ -6,7 +6,7 @@ class_name Projectile
 @export var damage_min:int = 1
 @export var damage_max:int = 1
 @export var life_time:float = 2.0
-@export var faction:Faction = Faction.ENEMY
+@export var faction:Faction = Faction.PLAYER
 @export var sprite_frames:SpriteFrames
 @export var animation_name:String = "Idle"
 

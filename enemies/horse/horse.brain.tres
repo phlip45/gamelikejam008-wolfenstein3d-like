@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="HorseSM" format=3 uid="uid://b1kg8ieiaethb"]
+[gd_resource type="Resource" script_class="HorseBrain" format=3 uid="uid://b1kg8ieiaethb"]
 
-[ext_resource type="Script" uid="uid://bbt6w2ml0t5dh" path="res://enemies/horse/horse.brain.gd" id="1_a16oi"]
+[ext_resource type="Script" uid="uid://bbt6w2ml0t5dh" path="res://enemies/horse/horse.brain.gd" id="1_j4q2e"]
 
 [resource]
-script = ExtResource("1_a16oi")
+script = ExtResource("1_j4q2e")
 name = "Horse"
+melee_range = 0.5
+missile_range = 5.0
+projectile_cloaca_position = Vector3(0, 1.315, -1)
 metadata/_custom_type_script = "uid://bbt6w2ml0t5dh"

@@ -15,6 +15,7 @@ var flesh:Flesh
 var camera:Camera3D
 var animation_sprites:Dictionary[EnemyData.Direction, SpriteFrames]
 
+@onready var projectile_cloaca: Marker3D = $ProjectileCloaca
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 
 signal damaged(amount:int)

@@ -5,8 +5,8 @@ class_name Brain
 var enemy:Enemy
 
 @abstract func setup(_enemy:Enemy)
-
 @abstract func process(_delta:float)
+@export var projectile_cloaca_position:Vector3
 
 func can_see_player() -> bool:
 	enemy.ray_cast_3d.look_at(Global.player.head.global_position + Vector3(0,-.2,0))
