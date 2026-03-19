@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://nsfcwe4uo4cq" path="res://enemies/enemy.gd" id="1_7frlh"]
 [ext_resource type="Resource" uid="uid://plnwob4rggpp" path="res://enemies/horse/horse.enemy_data.tres" id="2_orwns"]
-[ext_resource type="SpriteFrames" uid="uid://bbwhr03jcq7mm" path="res://tools/sprite_importer_output/horse_forward.tres" id="3_orwns"]
+[ext_resource type="SpriteFrames" uid="uid://cccvs3rjcseh5" path="res://enemies/horse/horse_back.sprite_frames.tres" id="3_orwns"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_a6vjd"]
 height = 2.8032227
@@ -24,9 +24,8 @@ billboard = 2
 double_sided = false
 texture_filter = 0
 sprite_frames = ExtResource("3_orwns")
-animation = &"MeleeAttack"
+animation = &"Death"
 autoplay = "Idle"
-frame = 9
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=188573817]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -42,6 +41,7 @@ billboard = 2
 no_depth_test = true
 fixed_size = true
 text = "This is example"
+font_size = 16
 
 [node name="ProjectileCloaca" type="Marker3D" parent="." unique_id=428934726]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.315, -1)

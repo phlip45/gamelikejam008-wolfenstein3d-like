@@ -5,7 +5,12 @@ extends Projectile
 
 @export var damage:float = 10
 
-func setup(pos:Vector3, rot:Vector3) -> void:
+func setup(pos:Vector3, rot:Vector3, enemy:Enemy = null) -> void:
+	if enemy:
+		faction = Faction.ENEMY
+		reparent(enemy.projectile_cloaca, false)
+	else:
+		reparent(Global.player.gun_cloaca, false)
 	global_position = pos
 	rotation = rot
 	velocity = -transform.basis.z.normalized() * speed
@@ -48,7 +53,8 @@ func _physics_process(delta:float) -> void:
 		die()
 
 func _on_body_entered(body: Node3D) -> void:
-	if body.is_in_group("enemy"):
+	if (body.is_in_group("enemy") and faction == Faction.PLAYER) or\
+	   (body.is_in_group("player") and faction == Faction.ENEMY):
 		deal_damage(body)
 		die()
 

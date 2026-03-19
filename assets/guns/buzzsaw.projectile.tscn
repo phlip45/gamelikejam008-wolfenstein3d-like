@@ -10,7 +10,6 @@ radius = 0.58984375
 [node name="BuzzsawProjectile" type="Area3D" unique_id=1548743355]
 script = ExtResource("1_lhjpx")
 speed = 5.0
-faction = 1
 sprite_frames = ExtResource("2_evp8g")
 metadata/_custom_type_script = "uid://cj76s6ioa6wm8"
 
@@ -24,5 +23,7 @@ double_sided = false
 texture_filter = 0
 sprite_frames = ExtResource("2_evp8g")
 animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.16394545
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

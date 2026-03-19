@@ -2,7 +2,7 @@ extends Brain
 class_name HorseBrain
 
 @export var name:String
-@export var decide_time:Vector2 = Vector2(2,4)
+@export var decide_time:Vector2 = Vector2(.5,1.0)
 ## Less than this and the enemy attacks melee. More than than this
 ## but less than missile_range and the enemy will randomly decide to
 ## try and close the gap or shoot a missile
@@ -13,6 +13,12 @@ class_name HorseBrain
 ## decide to try and close the gap or shoot a missile.
 @export var missile_range:float
 @export var missile_activate_frame:int = 17
+
+@export_file_path() var melee_projectile_path:String
+var melee_projectile_scene:PackedScene
+@export_file_path var ranged_projectile_path:String
+var ranged_projectile_scene:PackedScene
+
 var awake:bool = false
 var state:State
 var target:Actor
@@ -53,6 +59,8 @@ var bullet_path:String = "res://assets/guns/big_bullet.tscn"
 var bullet_scene:PackedScene
 func setup(_enemy:Enemy) -> void:
 	bullet_scene = await Global.load_scene(bullet_path)
+	melee_projectile_scene = await Global.load_scene(melee_projectile_path)
+	ranged_projectile_scene = await Global.load_scene(ranged_projectile_path)
 	enemy = _enemy
 	change_state(State.IDLE)
 	enemy.projectile_cloaca.position = projectile_cloaca_position
@@ -83,14 +91,13 @@ func _process_moving(delta:float):
 		decide_time.x = decide_time.y
 		decide_state_by_range()
 	if update_path_time.x > 0: return
-	
 	update_path_time.x = update_path_time.y
 	enemy.nav_agent.target_position = target.global_position
 	#var path:Vector3 = enemy.nav_agent.get_next_path_position()
-	move_toward_target()
 
 func _process_ranged_attack(_delta:float):
-	pass
+	if !enemy.sprite.is_playing():
+		change_state(State.IDLE)
 
 func _process_melee_attack(_delta:float):
 	pass
@@ -136,15 +143,21 @@ func decide_state_by_range():
 func melee():
 	change_state(State.MELEE_ATTACK)
 	enemy.sprite.play(anim_names[State.MELEE_ATTACK])
+	
 
 func spawn_melee_attack():
-	pass
+	var attack:MeleeProjectile = melee_projectile_scene.instantiate() as MeleeProjectile
+	enemy.add_child(attack)
+	attack.setup(enemy.global_position,enemy.rotation, enemy)
 
 func shoot():
 	change_state(State.RANGED_ATTACK)
+	enemy.sprite.play(anim_names[State.RANGED_ATTACK])
 
 func spawn_missile():
-	pass
+	var attack:BuzzsawProjectile = ranged_projectile_scene.instantiate() as BuzzsawProjectile
+	enemy.add_child(attack)
+	attack.setup(enemy.global_position,enemy.rotation, enemy)
 
 func on_damaged(amount:int):
 	if state == State.DYING: return
@@ -168,12 +181,14 @@ func on_death():
 	enemy.sprite.animation_finished.connect(enemy.die)
 
 func _on_anim_finished():
-	decide_time.x = decide_time.y
+	pass
 
 func change_state(_state:State):
-	print(State.find_key(_state))
 	enemy.debug_label.text = State.find_key(_state)
+	enemy.debug_label.text += " " +enemy.sprite.animation
+	enemy.sprite.play(anim_names[_state])
 	state = _state
+	
 
 func move_toward_target() -> bool:
 	if enemy.global_position.distance_to(enemy.nav_agent.target_position) > 1:
@@ -194,5 +209,9 @@ func move_toward_target() -> bool:
 		return true
 
 func _on_sprite_frame_changed():
-	if enemy.sprite.frame == 1:
-		print("frame 1 occurred")
+	if enemy.sprite.frame == melee_activate_frame and state == State.MELEE_ATTACK:
+		print("Chopping")
+		spawn_melee_attack()
+	if enemy.sprite.frame == missile_activate_frame and state == State.RANGED_ATTACK:
+		print("Shooting")
+		spawn_missile()

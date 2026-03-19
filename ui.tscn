@@ -3,13 +3,12 @@
 [ext_resource type="Theme" uid="uid://vu00olcg0t37" path="res://assets/theme/main.theme.tres" id="1_fyqef"]
 [ext_resource type="Script" uid="uid://hyy1igtobxad" path="res://ui.gd" id="1_ibotj"]
 [ext_resource type="Texture2D" uid="uid://e8yxakvkhkym" path="res://assets/guns/buzzsaw.png" id="1_m6e0p"]
+[ext_resource type="SpriteFrames" path="res://assets/guns/revolver.sprite_frames.tres" id="3_ibotj"]
 [ext_resource type="Texture2D" uid="uid://7fhq8vru4ef4" path="res://assets/ui.png" id="3_nltto"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_27fn8"]
 atlas = ExtResource("1_m6e0p")
 region = Rect2(0, 0, 133, 53)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_nltto"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ibotj"]
 atlas = ExtResource("3_nltto")
@@ -66,9 +65,11 @@ layout_mode = 2
 texture = SubResource("AtlasTexture_27fn8")
 
 [node name="GunSprite" type="AnimatedSprite2D" parent="Hud/VBoxContainer/GameView/VBoxContainer/Control" unique_id=1903928754]
-position = Vector2(161, -38)
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_nltto")
+position = Vector2(201, -25)
+scale = Vector2(0.21374027, 0.20994474)
+sprite_frames = ExtResource("3_ibotj")
+animation = &"Idle"
+autoplay = "Idle"
 
 [node name="TextureRect" type="TextureRect" parent="Hud/VBoxContainer/GameView" unique_id=1804038769]
 layout_mode = 1

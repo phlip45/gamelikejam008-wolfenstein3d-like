@@ -1,0 +1,728 @@
+{ "frames": {
+   "revolver #Wield 0.ase": {
+    "frame": { "x": 0, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Wield 1.ase": {
+    "frame": { "x": 0, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Wield 2.ase": {
+    "frame": { "x": 262, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Wield 3.ase": {
+    "frame": { "x": 524, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Wield 4.ase": {
+    "frame": { "x": 786, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Wield 5.ase": {
+    "frame": { "x": 1048, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Wield 6.ase": {
+    "frame": { "x": 1310, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Wield 7.ase": {
+    "frame": { "x": 1572, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Wield 8.ase": {
+    "frame": { "x": 1834, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Wield 9.ase": {
+    "frame": { "x": 2096, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Wield 10.ase": {
+    "frame": { "x": 2358, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Wield 11.ase": {
+    "frame": { "x": 0, "y": 362, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Holster 0.ase": {
+    "frame": { "x": 262, "y": 362, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Holster 1.ase": {
+    "frame": { "x": 524, "y": 362, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Holster 2.ase": {
+    "frame": { "x": 786, "y": 362, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Holster 3.ase": {
+    "frame": { "x": 1048, "y": 362, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Holster 4.ase": {
+    "frame": { "x": 1310, "y": 362, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Holster 5.ase": {
+    "frame": { "x": 1572, "y": 362, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Holster 6.ase": {
+    "frame": { "x": 0, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Holster 7.ase": {
+    "frame": { "x": 0, "y": 0, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 0.ase": {
+    "frame": { "x": 1834, "y": 362, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 1.ase": {
+    "frame": { "x": 2096, "y": 362, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 2.ase": {
+    "frame": { "x": 2358, "y": 362, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 3.ase": {
+    "frame": { "x": 0, "y": 724, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 4.ase": {
+    "frame": { "x": 262, "y": 724, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 5.ase": {
+    "frame": { "x": 524, "y": 724, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 6.ase": {
+    "frame": { "x": 786, "y": 724, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 7.ase": {
+    "frame": { "x": 1048, "y": 724, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 8.ase": {
+    "frame": { "x": 1310, "y": 724, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 9.ase": {
+    "frame": { "x": 1572, "y": 724, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 10.ase": {
+    "frame": { "x": 1834, "y": 724, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 11.ase": {
+    "frame": { "x": 2096, "y": 724, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 12.ase": {
+    "frame": { "x": 2358, "y": 724, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 13.ase": {
+    "frame": { "x": 0, "y": 1086, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 14.ase": {
+    "frame": { "x": 262, "y": 1086, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 15.ase": {
+    "frame": { "x": 524, "y": 1086, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 16.ase": {
+    "frame": { "x": 786, "y": 1086, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 17.ase": {
+    "frame": { "x": 1048, "y": 1086, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 18.ase": {
+    "frame": { "x": 1310, "y": 1086, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 19.ase": {
+    "frame": { "x": 1572, "y": 1086, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 20.ase": {
+    "frame": { "x": 1834, "y": 1086, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 21.ase": {
+    "frame": { "x": 2096, "y": 1086, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 22.ase": {
+    "frame": { "x": 2358, "y": 1086, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 23.ase": {
+    "frame": { "x": 0, "y": 1448, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 24.ase": {
+    "frame": { "x": 262, "y": 1448, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 25.ase": {
+    "frame": { "x": 524, "y": 1448, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 26.ase": {
+    "frame": { "x": 786, "y": 1448, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 27.ase": {
+    "frame": { "x": 1048, "y": 1448, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 28.ase": {
+    "frame": { "x": 1310, "y": 1448, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 29.ase": {
+    "frame": { "x": 1572, "y": 1448, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 30.ase": {
+    "frame": { "x": 1834, "y": 1448, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 31.ase": {
+    "frame": { "x": 2096, "y": 1448, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 32.ase": {
+    "frame": { "x": 2358, "y": 1448, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 33.ase": {
+    "frame": { "x": 0, "y": 1810, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 34.ase": {
+    "frame": { "x": 262, "y": 1810, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 35.ase": {
+    "frame": { "x": 524, "y": 1810, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 36.ase": {
+    "frame": { "x": 786, "y": 1810, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 37.ase": {
+    "frame": { "x": 1048, "y": 1810, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 38.ase": {
+    "frame": { "x": 1310, "y": 1810, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Idle 39.ase": {
+    "frame": { "x": 1572, "y": 1810, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 0.ase": {
+    "frame": { "x": 1834, "y": 1810, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 1.ase": {
+    "frame": { "x": 2096, "y": 1810, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 2.ase": {
+    "frame": { "x": 2358, "y": 1810, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 3.ase": {
+    "frame": { "x": 0, "y": 2172, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 4.ase": {
+    "frame": { "x": 262, "y": 2172, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 5.ase": {
+    "frame": { "x": 524, "y": 2172, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 6.ase": {
+    "frame": { "x": 786, "y": 2172, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 50
+   },
+   "revolver #Run 7.ase": {
+    "frame": { "x": 1048, "y": 2172, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 24
+   },
+   "revolver #Run 8.ase": {
+    "frame": { "x": 1310, "y": 2172, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 9.ase": {
+    "frame": { "x": 1572, "y": 2172, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 10.ase": {
+    "frame": { "x": 1834, "y": 2172, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 11.ase": {
+    "frame": { "x": 2096, "y": 2172, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 12.ase": {
+    "frame": { "x": 2358, "y": 2172, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 13.ase": {
+    "frame": { "x": 0, "y": 2534, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 14.ase": {
+    "frame": { "x": 262, "y": 2534, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 15.ase": {
+    "frame": { "x": 524, "y": 2534, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Run 16.ase": {
+    "frame": { "x": 786, "y": 2534, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 24
+   },
+   "revolver #Shoot 0.ase": {
+    "frame": { "x": 1048, "y": 2534, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Shoot 1.ase": {
+    "frame": { "x": 1310, "y": 2534, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Shoot 2.ase": {
+    "frame": { "x": 1572, "y": 2534, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Shoot 3.ase": {
+    "frame": { "x": 1834, "y": 2534, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Shoot 4.ase": {
+    "frame": { "x": 2096, "y": 2534, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Shoot 5.ase": {
+    "frame": { "x": 2358, "y": 2534, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Shoot 6.ase": {
+    "frame": { "x": 0, "y": 2896, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Shoot 7.ase": {
+    "frame": { "x": 262, "y": 2896, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Shoot 8.ase": {
+    "frame": { "x": 524, "y": 2896, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Shoot 9.ase": {
+    "frame": { "x": 262, "y": 2896, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver #Shoot 10.ase": {
+    "frame": { "x": 262, "y": 2896, "w": 262, "h": 362 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 150, "w": 262, "h": 362 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.17-x64",
+  "image": "revolver.png",
+  "format": "I8",
+  "size": { "w": 2620, "h": 3258 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Wield", "from": 0, "to": 11, "direction": "forward", "color": "#000000ff" },
+   { "name": "Holster", "from": 12, "to": 19, "direction": "forward", "color": "#000000ff" },
+   { "name": "Idle", "from": 20, "to": 59, "direction": "forward", "color": "#000000ff" },
+   { "name": "Run", "from": 60, "to": 76, "direction": "forward", "color": "#000000ff" },
+   { "name": "Shoot", "from": 77, "to": 87, "direction": "forward", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

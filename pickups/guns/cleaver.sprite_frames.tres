@@ -602,10 +602,10 @@ animations = [{
 "duration": 6.0,
 "texture": SubResource("AtlasTexture_w1ixi")
 }, {
-"duration": 6.0,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_vgnmi")
 }, {
-"duration": 6.0,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_4k6bv")
 }, {
 "duration": 6.0,

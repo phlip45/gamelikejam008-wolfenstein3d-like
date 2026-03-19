@@ -1,0 +1,147 @@
+{ "frames": {
+   "revolver.asebackup #Wield 0.ase": {
+    "frame": { "x": 0, "y": 0, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Wield 1.ase": {
+    "frame": { "x": 0, "y": 0, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Wield 2.ase": {
+    "frame": { "x": 266, "y": 0, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Wield 3.ase": {
+    "frame": { "x": 532, "y": 0, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Wield 4.ase": {
+    "frame": { "x": 798, "y": 0, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Wield 5.ase": {
+    "frame": { "x": 0, "y": 417, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Wield 6.ase": {
+    "frame": { "x": 266, "y": 417, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Wield 7.ase": {
+    "frame": { "x": 532, "y": 417, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Wield 8.ase": {
+    "frame": { "x": 798, "y": 417, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Wield 9.ase": {
+    "frame": { "x": 0, "y": 834, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Wield 10.ase": {
+    "frame": { "x": 266, "y": 834, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Wield 11.ase": {
+    "frame": { "x": 532, "y": 834, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Holster 0.ase": {
+    "frame": { "x": 798, "y": 834, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Holster 1.ase": {
+    "frame": { "x": 0, "y": 1251, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Holster 2.ase": {
+    "frame": { "x": 266, "y": 1251, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   },
+   "revolver.asebackup #Holster 3.ase": {
+    "frame": { "x": 532, "y": 1251, "w": 266, "h": 417 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 246, "y": 95, "w": 266, "h": 417 },
+    "sourceSize": { "w": 512, "h": 512 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.17-x64",
+  "image": "revolver.asebackup.png",
+  "format": "I8",
+  "size": { "w": 1064, "h": 1668 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Wield", "from": 0, "to": 11, "direction": "forward", "color": "#000000ff" },
+   { "name": "Holster", "from": 12, "to": 15, "direction": "forward", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ]
+ }
+}
