@@ -9,7 +9,9 @@ radius = 0.58984375
 
 [node name="BuzzsawProjectile" type="Area3D" unique_id=1548743355]
 script = ExtResource("1_lhjpx")
-speed = 5.0
+speed = 30.0
+damage_min = 8
+damage_max = 16
 sprite_frames = ExtResource("2_evp8g")
 metadata/_custom_type_script = "uid://cj76s6ioa6wm8"
 

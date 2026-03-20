@@ -6,9 +6,11 @@
 [ext_resource type="Resource" uid="uid://bf4pulmfs8jib" path="res://assets/guns/cleaver.gun_data.tres" id="4_bjebc"]
 [ext_resource type="Script" uid="uid://b5240uddhgar4" path="res://pickups/gun.pickup_data.gd" id="5_5rr72"]
 [ext_resource type="Texture2D" uid="uid://qc3s68mi66c8" path="res://assets/guns/cleaver.png" id="6_gyffv"]
+[ext_resource type="Resource" uid="uid://d0dlr3ieah3h5" path="res://assets/guns/buzzsaw.gun_data.tres" id="7_27bay"]
 [ext_resource type="MeshLibrary" uid="uid://kq40rvted1i7" path="res://assets/meshes/level_1.meshlib" id="7_bjebc"]
 [ext_resource type="PackedScene" uid="uid://0p3hbqc0k8ah" path="res://enemies/enemy.tscn" id="7_j7kpp"]
 [ext_resource type="Resource" uid="uid://pafuf15ipori" path="res://enemies/doomscroll/doomscroll.enemy_data.tres" id="8_5rr72"]
+[ext_resource type="Texture2D" uid="uid://e8yxakvkhkym" path="res://assets/guns/buzzsaw.png" id="8_sof0w"]
 [ext_resource type="PackedScene" uid="uid://d1irf8koqdrvc" path="res://assets/map/door.tscn" id="9_gyffv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hls8"]
@@ -21,7 +23,6 @@ sky_material = SubResource("ProceduralSkyMaterial_3hls8")
 [sub_resource type="Environment" id="Environment_hn12h"]
 background_mode = 2
 sky = SubResource("Sky_hbghi")
-tonemap_mode = 2
 fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0.093417965, 0.31310907, 0.12271014, 1)
@@ -30,8 +31,8 @@ fog_depth_curve = 0.84089714
 fog_depth_begin = 3.0
 fog_depth_end = 50.0
 adjustment_enabled = true
-adjustment_brightness = 1.18
-adjustment_contrast = 1.25
+adjustment_brightness = 1.25
+adjustment_contrast = 1.1
 adjustment_saturation = 2.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_27bay"]
@@ -44,6 +45,18 @@ gundata = ExtResource("4_bjebc")
 name = "CleaverPickup"
 type = 1
 texture = SubResource("AtlasTexture_27bay")
+metadata/_custom_type_script = "uid://b5240uddhgar4"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggavl"]
+atlas = ExtResource("8_sof0w")
+region = Rect2(1110, 0, 120, 47)
+
+[sub_resource type="Resource" id="Resource_ubhxj"]
+script = ExtResource("5_5rr72")
+gundata = ExtResource("7_27bay")
+name = "BuzzSawPickup"
+type = 1
+texture = SubResource("AtlasTexture_ggavl")
 metadata/_custom_type_script = "uid://b5240uddhgar4"
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5rr72"]
@@ -63,6 +76,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -4)
 [node name="Pickup" parent="." unique_id=2051472674 instance=ExtResource("3_rka8t")]
 transform = Transform3D(0.94693, 0.011218399, -0.3212441, 0, 0.99939084, 0.034900453, 0.32143992, -0.033048287, 0.9463531, -16.919617, 0.5379653, -1.8758464)
 pickup_data = SubResource("Resource_sof0w")
+
+[node name="Pickup2" parent="." unique_id=137511147 instance=ExtResource("3_rka8t")]
+transform = Transform3D(0.94693, 0.011218399, -0.3212441, 0, 0.99939084, 0.034900453, 0.32143992, -0.033048287, 0.9463531, -5.9196167, 0.5379653, -1.8758464)
+pickup_data = SubResource("Resource_ubhxj")
 
 [node name="Enemy" parent="." unique_id=1625287854 instance=ExtResource("7_j7kpp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 14)

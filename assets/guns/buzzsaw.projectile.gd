@@ -8,9 +8,6 @@ extends Projectile
 func setup(pos:Vector3, rot:Vector3, enemy:Enemy = null) -> void:
 	if enemy:
 		faction = Faction.ENEMY
-		reparent(enemy.projectile_cloaca, false)
-	else:
-		reparent(Global.player.gun_cloaca, false)
 	global_position = pos
 	rotation = rot
 	velocity = -transform.basis.z.normalized() * speed
@@ -22,6 +19,8 @@ func _ready() -> void:
 	pass
 
 func _physics_process(delta:float) -> void:
+	if randi_range(0,100) < 2:
+		print(get_parent())
 	bounce_cooldown.x -= delta
 	if position.y < 0 or position.y >3:
 		velocity.y = -velocity.y

@@ -52,9 +52,9 @@ func pickup_health(_data:PickupData) -> bool:
 
 func pull_trigger(player:Player):
 	current_weapon.shoot(player)
-	var projectile:Projectile = current_weapon.projectile.instantiate()
-	player.get_tree().current_scene.add_child(projectile)
-	projectile.setup(player.gun_cloaca.global_position, player.camera_3d.rotation)
+	#var projectile:Projectile = current_weapon.projectile.instantiate()
+	#player.get_tree().current_scene.add_child(projectile)
+	#projectile.setup(player.gun_cloaca.global_position, player.camera_3d.rotation)
 
 func switch_weapons_by_number(gun_type:GunType):
 	if owned_weapons.has(gun_type):

@@ -24,6 +24,7 @@ func change_gun(data:GunData):
 		await gun_sprite.animation_finished
 	gun_sprite.sprite_frames = data.ui_sprite_frames
 	gun_sprite.scale = data.ui_scale * Vector2.ONE
+	gun_sprite.position = data.ui_transform_position
 	gun_sprite.frame = 0
 	if !gun_sprite.sprite_frames.has_animation("Wield"):
 		push_error("Tried to change to gun '%s' but it didn't have a Wield animation " % data.name)

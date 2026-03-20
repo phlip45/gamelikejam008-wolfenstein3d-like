@@ -44,6 +44,8 @@ _data = {
 
 [node name="CleaverProjectile" type="Area3D" unique_id=972365294]
 script = ExtResource("1_488xg")
+damage_min = 8
+damage_max = 16
 metadata/_custom_type_script = "uid://bcr4kwox7xw8"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1758587287]

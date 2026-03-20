@@ -32,8 +32,8 @@ func shoot(player:Player):
 		push_error("Player tried shooting when reload wasn't ready")
 		return
 	var saw:BuzzsawProjectile = projectile.instantiate()
-	saw.setup(player.gun_cloaca.global_position, player.rotation)
 	player.get_tree().current_scene.add_child(saw)
+	saw.setup(player.gun_cloaca.global_position, player.camera_3d.rotation)
 	reload.x = reload.y
 	change_state(State.RELOAD)
 

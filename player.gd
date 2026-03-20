@@ -3,7 +3,7 @@ class_name Player
 
 @export var inventory:Inventory
 @onready var ui: CanvasLayer = $UI
-@export var ray_cast_3d_2: RayCast3D
+@export var ray_cast_3d: RayCast3D
 var flesh:Flesh = Flesh.create(Vector2i(100,100))
 
 @onready var head: Node3D = $Head
@@ -98,7 +98,6 @@ func switch_weapons(_delta:float):
 	if Input.is_action_just_pressed("3"):
 		switch_to = 3
 	if switch_to == 0: return
-	
 	inventory.switch_weapons_by_number(switch_to as Inventory.GunType)
 
 func handle_weapon(delta:float):
