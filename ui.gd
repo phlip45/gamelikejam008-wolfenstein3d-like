@@ -1,7 +1,9 @@
 extends CanvasLayer
 class_name UI
 
-@onready var gun_sprite: AnimatedSprite2D = $Hud/VBoxContainer/GameView/VBoxContainer/Control/GunSprite
+@export var gun_sprite: AnimatedSprite2D
+@export var damage_mask: TextureRect
+var tween:Tween
 
 func _init() -> void:
 	Global.ui = self
@@ -29,3 +31,7 @@ func change_gun(data:GunData):
 	await gun_sprite.animation_finished
 	return
 	
+func flash_damage():
+	damage_mask.modulate = Color.WHITE
+	tween = create_tween()
+	tween.tween_property(damage_mask,"modulate",Color.TRANSPARENT,.5)

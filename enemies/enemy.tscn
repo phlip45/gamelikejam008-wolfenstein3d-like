@@ -5,7 +5,7 @@
 [ext_resource type="SpriteFrames" uid="uid://cccvs3rjcseh5" path="res://enemies/horse/horse_back.sprite_frames.tres" id="3_orwns"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_a6vjd"]
-height = 2.8032227
+height = 2.2016113
 
 [sub_resource type="PrismMesh" id="PrismMesh_7frlh"]
 
@@ -14,7 +14,7 @@ script = ExtResource("1_7frlh")
 data = ExtResource("2_orwns")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1261121391]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4016113, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1008056, 0)
 shape = SubResource("CylinderShape3D_a6vjd")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1847465004]
@@ -47,5 +47,5 @@ font_size = 16
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.315, -1)
 
 [node name="DebugFacingArrow" type="MeshInstance3D" parent="ProjectileCloaca" unique_id=490926000]
-transform = Transform3D(-0.29999998, -2.6226832e-08, 1.1464111e-15, 0, -1.3113415e-08, -0.29999998, 2.6226832e-08, -0.29999998, 1.3113415e-08, 0, -0.31500006, 0.100000024)
+transform = Transform3D(-0.29999998, -2.6226832e-08, 1.1464111e-15, 0, -1.3113415e-08, -0.29999998, 2.6226832e-08, -0.29999998, 1.3113415e-08, 0, 0, 0)
 mesh = SubResource("PrismMesh_7frlh")

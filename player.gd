@@ -3,8 +3,8 @@ class_name Player
 
 @export var inventory:Inventory
 @onready var ui: CanvasLayer = $UI
+@export var ray_cast_3d_2: RayCast3D
 var flesh:Flesh = Flesh.create(Vector2i(100,100))
-
 
 @onready var head: Node3D = $Head
 @onready var camera_3d: Camera3D = $Head/Camera3D
@@ -18,12 +18,17 @@ var mouse_move:Vector2 = Vector2.ZERO
 
 var gun_state:GunState = GunState.READY
 
+var interactables_nearby:Array[Interactable]
+
 enum GunState{
 	NULL, CHANGING_WEAPON, READY
 }
 
 func _init() -> void:
 	Global.player = self
+
+func _ready() -> void:
+	flesh.damaged.connect(on_damage)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -37,9 +42,11 @@ func _input(event: InputEvent) -> void:
 		
 func _process(delta: float) -> void:
 	handle_weapon(delta)
+	interact(delta)
+	switch_weapons(delta)
 	move(delta)
 	mouse_look(delta)
-	
+
 func mouse_look(_delta:float):
 		camera_3d.rotation.y -= mouse_move.x
 		camera_3d.rotation.x -= mouse_move.y
@@ -75,6 +82,25 @@ func move(_delta:float):
 				Global.ui.play_gun_anim("Move")
 	move_and_slide()
 
+func interact(_delta:float):
+	if !Input.is_action_just_pressed("use"): return
+	print(interactables_nearby)
+	var interactable:Interactable = closest_interactable()
+	if !interactable: return
+	interactable.interact()
+
+func switch_weapons(_delta:float):
+	var switch_to:int
+	if Input.is_action_just_pressed("1"):
+		switch_to = 1
+	if Input.is_action_just_pressed("2"):
+		switch_to = 2
+	if Input.is_action_just_pressed("3"):
+		switch_to = 3
+	if switch_to == 0: return
+	
+	inventory.switch_weapons_by_number(switch_to as Inventory.GunType)
+
 func handle_weapon(delta:float):
 	var gun = inventory.current_weapon
 	if gun:
@@ -89,3 +115,29 @@ func pull_trigger(gun:GunData,_delta:float):
 		if gun.ready:
 			inventory.pull_trigger(self)
 			gun.reload.x = gun.reload.y
+
+func closest_interactable() -> Interactable:
+	if interactables_nearby.size() == 0: return null
+	var closest_interactable:Interactable = interactables_nearby[0]
+	var distance:float = global_position.distance_squared_to(closest_interactable.global_position)
+	for interactable in interactables_nearby:
+		var new_distance:float = global_position.distance_squared_to(interactable.global_position)
+		if new_distance < distance:
+			distance = new_distance
+			closest_interactable = interactable
+	return closest_interactable
+
+func _on_interactable_detector_area_entered(area: Area3D) -> void:
+	if area.is_in_group("interactable"):
+		var interactable = area as Interactable
+		interactables_nearby.append(interactable)
+		interactable.tree_exiting.connect(func():
+			interactables_nearby.erase(interactable)
+			,CONNECT_ONE_SHOT)
+
+func _on_interactable_detector_area_exited(area: Area3D) -> void:
+	var interactable = area as Interactable
+	interactables_nearby.erase(interactable)
+
+func on_damage(_unused:float):
+	ui.flash_damage()

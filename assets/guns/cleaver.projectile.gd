@@ -18,6 +18,7 @@ func _on_body_entered(body: Node3D) -> void:
 	if !enabled: return
 	if  body.is_in_group("enemy") and faction == Faction.PLAYER or\
 		body.is_in_group("player") and faction == Faction.ENEMY:
+		
 		var pos = Vector3(body.global_position.x,1.5 ,body.global_position.z)
 		enabled = false
 		body.damage(10)

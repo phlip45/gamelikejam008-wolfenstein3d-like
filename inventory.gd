@@ -18,10 +18,11 @@ enum AmmoType{
 }
 
 enum GunType{
-	NULL,
-	BUZZSAW,
-	REVOLVER,
-	CLEAVER,
+	NULL = 0,
+	CLEAVER = 1,
+	BUZZSAW = 2,
+	REVOLVER = 3,
+	CREDITS = 4,
 }
 
 func pickup(data:PickupData) -> bool:
@@ -54,6 +55,10 @@ func pull_trigger(player:Player):
 	var projectile:Projectile = current_weapon.projectile.instantiate()
 	player.get_tree().current_scene.add_child(projectile)
 	projectile.setup(player.gun_cloaca.global_position, player.camera_3d.rotation)
+
+func switch_weapons_by_number(gun_type:GunType):
+	if owned_weapons.has(gun_type):
+		switch_weapons(owned_weapons[gun_type])
 
 func switch_weapons(data:GunData):
 	if !owned_weapons.has(data.type): return

@@ -37,6 +37,7 @@ player="its the player"
 wall=""
 enemy=""
 nav=""
+interactable=""
 
 [gui]
 

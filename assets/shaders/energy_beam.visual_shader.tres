@@ -1,0 +1,19 @@
+[gd_resource type="VisualShader" format=3 uid="uid://dcabwkstil30h"]
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_1gg33"]
+parameter_name = "Image"
+qualifier = 1
+texture_type = 1
+texture_filter = 1
+texture_source = 1
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_p3o02"]
+source = 5
+
+[resource]
+nodes/vertex/0/position = Vector2(460, 120)
+nodes/vertex/2/node = SubResource("VisualShaderNodeTexture2DParameter_1gg33")
+nodes/vertex/2/position = Vector2(-360, 160)
+nodes/vertex/3/node = SubResource("VisualShaderNodeTexture_p3o02")
+nodes/vertex/3/position = Vector2(100, 300)
+nodes/vertex/connections = PackedInt32Array(2, 0, 3, 2, 3, 0, 0, 6)
