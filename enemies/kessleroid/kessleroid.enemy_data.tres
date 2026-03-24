@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dqnasne11fbg0"]
+
+[ext_resource type="SpriteFrames" uid="uid://c8pfvecn86wxb" path="res://enemies/kessleroid/kessleroid.sprite_frames.tres" id="1_8jyl4"]
+[ext_resource type="Resource" uid="uid://b8m0fdr0qc7kd" path="res://enemies/kessleroid/kessleroid.brain.tres" id="1_tuxol"]
+[ext_resource type="Script" uid="uid://bns6cm0drf1q5" path="res://enemies/enemy_data.gd" id="2_8jyl4"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("2_8jyl4")
+name = "Kessleroid"
+turn_speed = 0.0
+speed = 0.0
+health = Vector2i(100, 100)
+poise = 30.0
+scale_override = 0.5
+type = 3
+brain = ExtResource("1_tuxol")
+animation_states = Dictionary[String, String]({
+"Hurt": "Hurt",
+"Idle": "Idle"
+})
+animation_sprite_frames = Dictionary[int, SpriteFrames]({
+1: ExtResource("1_8jyl4"),
+2: ExtResource("1_8jyl4"),
+3: ExtResource("1_8jyl4"),
+4: ExtResource("1_8jyl4"),
+5: ExtResource("1_8jyl4"),
+6: ExtResource("1_8jyl4"),
+7: ExtResource("1_8jyl4"),
+8: ExtResource("1_8jyl4")
+})
+metadata/_custom_type_script = "uid://bns6cm0drf1q5"

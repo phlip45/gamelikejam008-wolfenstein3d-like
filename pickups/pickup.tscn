@@ -1,14 +1,11 @@
 [gd_scene format=3 uid="uid://d31xovg6w2ev2"]
 
 [ext_resource type="Script" uid="uid://miucqn4adp7g" path="res://pickups/pickup.gd" id="1_0ketk"]
-[ext_resource type="Texture2D" uid="uid://mx26tmwddeys" path="res://assets/pickups.png" id="4_pbiw3"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0ketk"]
-radius = 0.42694822
+radius = 0.7625359
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x6t5v"]
-atlas = ExtResource("4_pbiw3")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="SpriteFrames" id="SpriteFrames_ra232"]
 
 [sub_resource type="Animation" id="Animation_i5kuo"]
 length = 0.001
@@ -89,8 +86,10 @@ _data = {
 &"bob": SubResource("Animation_pbiw3")
 }
 
-[node name="Pickup" type="Area3D" unique_id=2051472674]
+[node name="Pickup" type="Area3D" unique_id=2051472674 node_paths=PackedStringArray("sprite_3d", "animated_sprite_3d")]
 script = ExtResource("1_0ketk")
+sprite_3d = NodePath("CollisionShape3D/Sprite3D")
+animated_sprite_3d = NodePath("CollisionShape3D/AnimatedSprite3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1124354488]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25892204, 0)
@@ -98,10 +97,14 @@ shape = SubResource("SphereShape3D_0ketk")
 
 [node name="Sprite3D" type="Sprite3D" parent="CollisionShape3D" unique_id=1173993398]
 transform = Transform3D(0.21756178, 0, 0, 0, 0.21756178, 0, 0, 0, 1, 0, 0, 0)
-pixel_size = 0.1
+pixel_size = 0.03
 billboard = 2
 texture_filter = 0
-texture = SubResource("AtlasTexture_x6t5v")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CollisionShape3D" unique_id=1285161797]
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_ra232")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1749460910]
 libraries/ = SubResource("AnimationLibrary_x6t5v")

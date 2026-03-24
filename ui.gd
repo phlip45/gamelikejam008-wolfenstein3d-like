@@ -3,10 +3,20 @@ class_name UI
 
 @export var gun_sprite: AnimatedSprite2D
 @export var damage_mask: TextureRect
+@export var face: AnimatedSprite2D
+@export var health: RichTextLabel
+@export var ammo: RichTextLabel
 var tween:Tween
+var player:Player
 
 func _init() -> void:
 	Global.ui = self
+	
+func _ready() -> void:
+	face.play("Idle")
+	player = Global.player
+	player.flesh.health_changed.connect(on_health_change)
+	player.inventory.credit_changed.connect(on_credit_change)
 
 func play_gun_anim(anim_name:String,backwards:bool = false ,frame:int = 0) -> AnimatedSprite2D:
 	if !gun_sprite.sprite_frames.has_animation(anim_name):
@@ -36,3 +46,9 @@ func flash_damage():
 	damage_mask.modulate = Color.WHITE
 	tween = create_tween()
 	tween.tween_property(damage_mask,"modulate",Color.TRANSPARENT,.5)
+
+func on_health_change(new_health:int):
+	health.text = str(new_health)
+
+func on_credit_change(new_credit_amount:int):
+	ammo.text = str(new_credit_amount)

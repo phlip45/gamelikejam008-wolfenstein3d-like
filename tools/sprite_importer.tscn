@@ -4,4 +4,5 @@
 
 [node name="SpriteImporter" type="Node2D" unique_id=920173017]
 script = ExtResource("1_vftd0")
+save_path = "res://tools/sprite_importer_output"
 json_paths = Array[String](["res://assets/guns/revolver.json"])

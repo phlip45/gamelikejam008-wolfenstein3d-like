@@ -28,6 +28,9 @@ func prepare():
 	pass
 
 func shoot(player:Player):
+	if player.inventory.credit.x <= 0:
+		return
+	player.inventory.use_credit(1)
 	if reload.x > 0: 
 		push_error("Player tried shooting when reload wasn't ready")
 		return
@@ -40,6 +43,8 @@ func shoot(player:Player):
 func change_state(new_state:State):
 	state = new_state
 	match new_state:
+		State.IDLE:
+			Global.ui.play_gun_anim.bind(AnimStates[new_state])
 		State.RELOAD:
 			if tween: tween.kill()
 			tween = Global.create_tween()

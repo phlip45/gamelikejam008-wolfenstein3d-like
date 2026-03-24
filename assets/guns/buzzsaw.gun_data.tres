@@ -1,20 +1,24 @@
 [gd_resource type="Resource" script_class="BuzzsawGunData" format=3 uid="uid://d0dlr3ieah3h5"]
 
-[ext_resource type="Texture2D" uid="uid://dfttt21kk3y2f" path="res://assets/pickups.atlastex" id="1_bujtm"]
 [ext_resource type="Script" uid="uid://b1al1cmtqqisr" path="res://assets/guns/buzzsaw.gun_data.gd" id="1_c887a"]
+[ext_resource type="Texture2D" uid="uid://e8yxakvkhkym" path="res://assets/guns/buzzsaw.png" id="1_eix3h"]
 [ext_resource type="PackedScene" uid="uid://c7xmo3ao5xow1" path="res://assets/guns/buzzsaw.projectile.tscn" id="2_hud16"]
 [ext_resource type="SpriteFrames" uid="uid://bwg2ujydyp2t3" path="res://assets/guns/buzzsaw.sprite_frames.tres" id="4_bmwu2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0jko"]
+atlas = ExtResource("1_eix3h")
+region = Rect2(1262, 3, 123, 45)
 
 [resource]
 script = ExtResource("1_c887a")
 name = "Buzzsaw"
 projectile = ExtResource("2_hud16")
-pickup_sprite = ExtResource("1_bujtm")
+pickup_sprite = SubResource("AtlasTexture_h0jko")
 ui_sprite_frames = ExtResource("4_bmwu2")
 ui_transform_position = Vector2(161.00002, -6.999998)
 ui_scale = 0.56
 ammo_type = 1
 fire_rate = 1.5
-type = 1
+type = 3
 reload = Vector2(0.4, 0.4)
 metadata/_custom_type_script = "uid://b1al1cmtqqisr"

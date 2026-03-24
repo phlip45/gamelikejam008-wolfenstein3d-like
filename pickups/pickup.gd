@@ -1,13 +1,34 @@
+@tool
 extends Area3D
 class_name Pickup
 
-@export var pickup_data:PickupData
-@onready var sprite_3d: Sprite3D = $CollisionShape3D/Sprite3D
-
+@export var pickup_data:PickupData:
+	set(value):
+		pickup_data = value
+		_update_sprite.call_deferred()
+@export var sprite_3d: Sprite3D
+@export var animated_sprite_3d: AnimatedSprite3D
+var animated:bool = false
 signal picked_up
 
 func _ready() -> void:
-	sprite_3d.texture = pickup_data.texture
+	_update_sprite.call_deferred()
+
+func _update_sprite():
+	if not is_inside_tree():
+		return
+	if pickup_data.sprite_frames != null:
+		animated_sprite_3d.sprite_frames = pickup_data.sprite_frames
+		animated_sprite_3d.animation = pickup_data.starting_anim
+		animated = true
+		sprite_3d.visible = false
+		animated_sprite_3d.visible = true
+		animated_sprite_3d.play()
+	else:
+		sprite_3d.texture = pickup_data.texture
+		animated = false
+		sprite_3d.visible = true
+		animated_sprite_3d.visible = false
 
 func die():
 	picked_up.emit()

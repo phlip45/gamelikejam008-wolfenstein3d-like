@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="KessleroidBrain" format=3 uid="uid://b8m0fdr0qc7kd"]
+
+[ext_resource type="Script" uid="uid://jclo3v5ftjgu" path="res://enemies/kessleroid/kessleroid.brain.gd" id="1_eghll"]
+
+[resource]
+script = ExtResource("1_eghll")
+name = "Kessleroid"
+metadata/_custom_type_script = "uid://jclo3v5ftjgu"

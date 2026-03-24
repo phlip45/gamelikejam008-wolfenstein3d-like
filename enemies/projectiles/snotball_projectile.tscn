@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://fobk5c7lb8yu"]
+
+[ext_resource type="Script" uid="uid://dw0ycr1gm3spb" path="res://enemies/projectiles/snotball.projectile.gd" id="1_7ixmv"]
+[ext_resource type="SpriteFrames" uid="uid://d0le0suwl4bgf" path="res://assets/projectiles/snot_bullet.sprite_frames.tres" id="2_u64c3"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_uaaep"]
+height = 0.22558594
+radius = 0.58984375
+
+[node name="SnotballProjectile" type="Area3D" unique_id=1548743355]
+script = ExtResource("1_7ixmv")
+speed = 15.0
+sprite_frames = ExtResource("2_u64c3")
+metadata/_custom_type_script = "uid://cj76s6ioa6wm8"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1007230949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.056640625, 0)
+shape = SubResource("CylinderShape3D_uaaep")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=2014430673]
+billboard = 2
+double_sided = false
+texture_filter = 0
+sprite_frames = ExtResource("2_u64c3")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.2568527
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

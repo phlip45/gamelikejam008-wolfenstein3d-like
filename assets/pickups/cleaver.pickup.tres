@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="GunPickupData" format=3 uid="uid://dwew83mkghvry"]
+
+[ext_resource type="Resource" uid="uid://bf4pulmfs8jib" path="res://assets/guns/cleaver.gun_data.tres" id="1_u4eq1"]
+[ext_resource type="Script" uid="uid://b5240uddhgar4" path="res://pickups/gun.pickup_data.gd" id="2_8he4d"]
+[ext_resource type="Texture2D" uid="uid://qc3s68mi66c8" path="res://assets/guns/cleaver.png" id="3_l2btk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27bay"]
+atlas = ExtResource("3_l2btk")
+region = Rect2(832, 1088, 128, 192)
+
+[resource]
+script = ExtResource("2_8he4d")
+gundata = ExtResource("1_u4eq1")
+name = "CleaverPickup"
+type = 1
+texture = SubResource("AtlasTexture_27bay")
+metadata/_custom_type_script = "uid://b5240uddhgar4"

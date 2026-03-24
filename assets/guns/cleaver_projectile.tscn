@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://df8x7d56xifs0"]
 
 [ext_resource type="Script" uid="uid://befiei686fjyw" path="res://assets/guns/cleaver.projectile.gd" id="1_488xg"]
+[ext_resource type="SpriteFrames" uid="uid://cclouqqethc36" path="res://assets/guns/cleaver.sprite_frames.tres" id="2_488xg"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_488xg"]
 radius = 0.7305013
@@ -30,7 +31,7 @@ tracks/0/path = NodePath("CollisionShape3D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.06666667, 0.11440436, 0.117659196, 0.3, 0.3166667),
+"times": PackedFloat32Array(0.033333335, 0.08107102, 0.084325865, 0.21666665, 0.23333333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [true, true, false, false, true]
@@ -44,8 +45,8 @@ _data = {
 
 [node name="CleaverProjectile" type="Area3D" unique_id=972365294]
 script = ExtResource("1_488xg")
-damage_min = 8
-damage_max = 16
+damage = Vector2(20, 40)
+sprite_frames = ExtResource("2_488xg")
 metadata/_custom_type_script = "uid://bcr4kwox7xw8"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1758587287]

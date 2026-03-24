@@ -8,7 +8,7 @@ radius = 0.39547348
 [node name="big_bullet" unique_id=830381692 instance=ExtResource("1_ntadh")]
 speed = 1.0
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1469287431]
+[node name="AnimationPlayer" parent="." index="1" unique_id=558857053]
 autoplay = &"Idle"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=1445207874]

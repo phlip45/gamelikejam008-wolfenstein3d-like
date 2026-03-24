@@ -1,0 +1,570 @@
+{ "frames": {
+   "AdventureDude #Look 0.ase": {
+    "frame": { "x": 0, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Look 1.ase": {
+    "frame": { "x": 31, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Look 2.ase": {
+    "frame": { "x": 62, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Look 3.ase": {
+    "frame": { "x": 93, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Look 4.ase": {
+    "frame": { "x": 124, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Look 5.ase": {
+    "frame": { "x": 155, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Look 6.ase": {
+    "frame": { "x": 155, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Look 7.ase": {
+    "frame": { "x": 124, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Look 8.ase": {
+    "frame": { "x": 124, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Look 9.ase": {
+    "frame": { "x": 186, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Look 10.ase": {
+    "frame": { "x": 217, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Look 11.ase": {
+    "frame": { "x": 0, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Look 12.ase": {
+    "frame": { "x": 0, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Walk 0.ase": {
+    "frame": { "x": 0, "y": 25, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 16
+   },
+   "AdventureDude #Walk 1.ase": {
+    "frame": { "x": 31, "y": 25, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 16
+   },
+   "AdventureDude #Walk 2.ase": {
+    "frame": { "x": 62, "y": 25, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 16
+   },
+   "AdventureDude #Walk 3.ase": {
+    "frame": { "x": 93, "y": 25, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 16
+   },
+   "AdventureDude #Walk 4.ase": {
+    "frame": { "x": 124, "y": 25, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 16
+   },
+   "AdventureDude #Walk 5.ase": {
+    "frame": { "x": 155, "y": 25, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 16
+   },
+   "AdventureDude #Walk 6.ase": {
+    "frame": { "x": 124, "y": 25, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 16
+   },
+   "AdventureDude #Walk 7.ase": {
+    "frame": { "x": 93, "y": 25, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 16
+   },
+   "AdventureDude #UpSlash 0.ase": {
+    "frame": { "x": 186, "y": 25, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #UpSlash 1.ase": {
+    "frame": { "x": 217, "y": 25, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #UpSlash 2.ase": {
+    "frame": { "x": 0, "y": 50, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #UpSlash 3.ase": {
+    "frame": { "x": 31, "y": 50, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #UpSlash 4.ase": {
+    "frame": { "x": 62, "y": 50, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #UpSlash 5.ase": {
+    "frame": { "x": 93, "y": 50, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #UpSlash 6.ase": {
+    "frame": { "x": 124, "y": 50, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #UpSlash 7.ase": {
+    "frame": { "x": 155, "y": 50, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #UpSlash 8.ase": {
+    "frame": { "x": 186, "y": 50, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #UpSlash 9.ase": {
+    "frame": { "x": 0, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #DownSlash 0.ase": {
+    "frame": { "x": 217, "y": 50, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #DownSlash 1.ase": {
+    "frame": { "x": 0, "y": 75, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #DownSlash 2.ase": {
+    "frame": { "x": 31, "y": 75, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #DownSlash 3.ase": {
+    "frame": { "x": 62, "y": 75, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #DownSlash 4.ase": {
+    "frame": { "x": 93, "y": 75, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #DownSlash 5.ase": {
+    "frame": { "x": 124, "y": 75, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #DownSlash 6.ase": {
+    "frame": { "x": 155, "y": 75, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #DownSlash 7.ase": {
+    "frame": { "x": 186, "y": 75, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #DownSlash 8.ase": {
+    "frame": { "x": 217, "y": 75, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #DownSlash 9.ase": {
+    "frame": { "x": 0, "y": 100, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #SideSlash 0.ase": {
+    "frame": { "x": 31, "y": 100, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #SideSlash 1.ase": {
+    "frame": { "x": 62, "y": 100, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #SideSlash 2.ase": {
+    "frame": { "x": 93, "y": 100, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #SideSlash 3.ase": {
+    "frame": { "x": 124, "y": 100, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #SideSlash 4.ase": {
+    "frame": { "x": 155, "y": 100, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #SideSlash 5.ase": {
+    "frame": { "x": 186, "y": 100, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #SideSlash 6.ase": {
+    "frame": { "x": 124, "y": 50, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #SideSlash 7.ase": {
+    "frame": { "x": 155, "y": 50, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #SideSlash 8.ase": {
+    "frame": { "x": 186, "y": 50, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #SideSlash 9.ase": {
+    "frame": { "x": 0, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Jump 0.ase": {
+    "frame": { "x": 0, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Jump 1.ase": {
+    "frame": { "x": 217, "y": 100, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Jump 2.ase": {
+    "frame": { "x": 0, "y": 125, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Jump 3.ase": {
+    "frame": { "x": 31, "y": 125, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Jump 4.ase": {
+    "frame": { "x": 62, "y": 125, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Jump 5.ase": {
+    "frame": { "x": 217, "y": 100, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Land 0.ase": {
+    "frame": { "x": 0, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Land 1.ase": {
+    "frame": { "x": 93, "y": 125, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Land 2.ase": {
+    "frame": { "x": 124, "y": 125, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #Land 3.ase": {
+    "frame": { "x": 155, "y": 125, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #KickBucket 0.ase": {
+    "frame": { "x": 0, "y": 0, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #KickBucket 1.ase": {
+    "frame": { "x": 93, "y": 125, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #KickBucket 2.ase": {
+    "frame": { "x": 124, "y": 125, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #KickBucket 3.ase": {
+    "frame": { "x": 186, "y": 125, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #KickBucket 4.ase": {
+    "frame": { "x": 217, "y": 125, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #KickBucket 5.ase": {
+    "frame": { "x": 0, "y": 150, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   },
+   "AdventureDude #KickBucket 6.ase": {
+    "frame": { "x": 31, "y": 150, "w": 31, "h": 25 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 1, "y": 7, "w": 31, "h": 25 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.17-x64",
+  "image": "AdventureDude.png",
+  "format": "I8",
+  "size": { "w": 248, "h": 175 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Look", "from": 0, "to": 12, "direction": "forward", "color": "#000000ff" },
+   { "name": "Walk", "from": 13, "to": 20, "direction": "forward", "repeat": "1", "color": "#000000ff" },
+   { "name": "UpSlash", "from": 21, "to": 30, "direction": "forward", "color": "#000000ff" },
+   { "name": "DownSlash", "from": 31, "to": 40, "direction": "forward", "color": "#000000ff" },
+   { "name": "SideSlash", "from": 41, "to": 50, "direction": "forward", "color": "#000000ff" },
+   { "name": "Jump", "from": 51, "to": 56, "direction": "forward", "color": "#000000ff" },
+   { "name": "Land", "from": 57, "to": 60, "direction": "forward", "color": "#000000ff" },
+   { "name": "KickBucket", "from": 61, "to": 67, "direction": "forward", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "Sprite Sheet", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

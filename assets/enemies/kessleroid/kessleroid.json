@@ -1,0 +1,364 @@
+{ "frames": {
+   "kessleroid #Hurt 0.ase": {
+    "frame": { "x": 0, "y": 0, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Hurt 1.ase": {
+    "frame": { "x": 249, "y": 0, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Hurt 2.ase": {
+    "frame": { "x": 498, "y": 0, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Hurt 3.ase": {
+    "frame": { "x": 747, "y": 0, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Hurt 4.ase": {
+    "frame": { "x": 996, "y": 0, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Hurt 5.ase": {
+    "frame": { "x": 1245, "y": 0, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Hurt 6.ase": {
+    "frame": { "x": 1494, "y": 0, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Hurt 7.ase": {
+    "frame": { "x": 0, "y": 244, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Hurt 8.ase": {
+    "frame": { "x": 249, "y": 244, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Hurt 9.ase": {
+    "frame": { "x": 498, "y": 244, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Hurt 10.ase": {
+    "frame": { "x": 747, "y": 244, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Hurt 11.ase": {
+    "frame": { "x": 996, "y": 244, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Hurt 12.ase": {
+    "frame": { "x": 1245, "y": 244, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 0.ase": {
+    "frame": { "x": 1494, "y": 244, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 1.ase": {
+    "frame": { "x": 0, "y": 488, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 2.ase": {
+    "frame": { "x": 249, "y": 488, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 3.ase": {
+    "frame": { "x": 498, "y": 488, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 4.ase": {
+    "frame": { "x": 747, "y": 488, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 5.ase": {
+    "frame": { "x": 996, "y": 488, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 6.ase": {
+    "frame": { "x": 1245, "y": 488, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 7.ase": {
+    "frame": { "x": 1494, "y": 488, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 8.ase": {
+    "frame": { "x": 0, "y": 732, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 9.ase": {
+    "frame": { "x": 249, "y": 732, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 10.ase": {
+    "frame": { "x": 498, "y": 732, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 11.ase": {
+    "frame": { "x": 747, "y": 732, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 12.ase": {
+    "frame": { "x": 996, "y": 732, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 13.ase": {
+    "frame": { "x": 1245, "y": 732, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 14.ase": {
+    "frame": { "x": 1494, "y": 732, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 15.ase": {
+    "frame": { "x": 0, "y": 976, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 16.ase": {
+    "frame": { "x": 249, "y": 976, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 17.ase": {
+    "frame": { "x": 498, "y": 976, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 18.ase": {
+    "frame": { "x": 747, "y": 976, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 19.ase": {
+    "frame": { "x": 996, "y": 976, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 20.ase": {
+    "frame": { "x": 1245, "y": 976, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 21.ase": {
+    "frame": { "x": 1494, "y": 976, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 22.ase": {
+    "frame": { "x": 0, "y": 1220, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 23.ase": {
+    "frame": { "x": 249, "y": 1220, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 24.ase": {
+    "frame": { "x": 498, "y": 1220, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 25.ase": {
+    "frame": { "x": 747, "y": 1220, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 26.ase": {
+    "frame": { "x": 996, "y": 1220, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 27.ase": {
+    "frame": { "x": 1245, "y": 1220, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 28.ase": {
+    "frame": { "x": 1494, "y": 1220, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   },
+   "kessleroid #Idle 29.ase": {
+    "frame": { "x": 0, "y": 1464, "w": 249, "h": 244 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 4, "y": 7, "w": 249, "h": 244 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.17-x64",
+  "image": "kessleroid.png",
+  "format": "I8",
+  "size": { "w": 1743, "h": 1708 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Hurt", "from": 0, "to": 12, "direction": "forward", "color": "#000000ff" },
+   { "name": "Idle", "from": 13, "to": 42, "direction": "forward", "repeat": "1", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://jqtu6h7g7jd7"]
+
+[ext_resource type="SpriteFrames" uid="uid://ddsv25mfwgqvh" path="res://assets/effects/explosion_smoke.sprite_frames.tres" id="1_kholv"]
+[ext_resource type="Script" uid="uid://td1f07qvx3bq" path="res://explosion.gd" id="2_wnibr"]
+
+[node name="Explosion" type="AnimatedSprite3D" unique_id=2050658218]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+billboard = 2
+texture_filter = 0
+sprite_frames = ExtResource("1_kholv")
+animation = &"Explode"
+autoplay = "Explode"
+frame = 31
+frame_progress = 1.0
+script = ExtResource("2_wnibr")

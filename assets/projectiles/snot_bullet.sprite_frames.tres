@@ -1,0 +1,100 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://d0le0suwl4bgf"]
+
+[ext_resource type="Texture2D" uid="uid://ctdon1xn2ulps" path="res://assets/projectiles/snot_bullet.png" id="1_npam8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpmg0"]
+atlas = ExtResource("1_npam8")
+region = Rect2(0, 0, 55, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w142q"]
+atlas = ExtResource("1_npam8")
+region = Rect2(55, 0, 55, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7005"]
+atlas = ExtResource("1_npam8")
+region = Rect2(110, 0, 55, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kndck"]
+atlas = ExtResource("1_npam8")
+region = Rect2(165, 0, 55, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mb3h2"]
+atlas = ExtResource("1_npam8")
+region = Rect2(0, 62, 55, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jmf0"]
+atlas = ExtResource("1_npam8")
+region = Rect2(55, 62, 55, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx734"]
+atlas = ExtResource("1_npam8")
+region = Rect2(110, 62, 55, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i3sm"]
+atlas = ExtResource("1_npam8")
+region = Rect2(165, 62, 55, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4aqx2"]
+atlas = ExtResource("1_npam8")
+region = Rect2(0, 124, 55, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4bgc"]
+atlas = ExtResource("1_npam8")
+region = Rect2(55, 124, 55, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u11po"]
+atlas = ExtResource("1_npam8")
+region = Rect2(110, 124, 55, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xfl6"]
+atlas = ExtResource("1_npam8")
+region = Rect2(165, 124, 55, 62)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_lpmg0")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_w142q")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_f7005")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_kndck")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_mb3h2")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_5jmf0")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_dx734")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_0i3sm")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_4aqx2")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_u4bgc")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_u11po")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_3xfl6")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 60.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

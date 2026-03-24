@@ -4,7 +4,9 @@ class_name Player
 @export var inventory:Inventory
 @onready var ui: CanvasLayer = $UI
 @export var ray_cast_3d: RayCast3D
-var flesh:Flesh = Flesh.create(Vector2i(100,100))
+@export var starting_health: int
+@export var max_health:int
+var flesh:Flesh = Flesh.create(Vector2i(100,200), Flesh.Type.PLAYER)
 
 @onready var head: Node3D = $Head
 @onready var camera_3d: Camera3D = $Head/Camera3D
@@ -39,7 +41,10 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("click"):
 		mouse_move = Vector2.ZERO
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		
+
+func damage(_damage:Damage):
+	flesh.damage(_damage)
+
 func _process(delta: float) -> void:
 	handle_weapon(delta)
 	interact(delta)
@@ -80,6 +85,10 @@ func move(_delta:float):
 				Global.ui.gun_sprite.animation != "Move":
 				
 				Global.ui.play_gun_anim("Move")
+			elif !Global.ui.gun_sprite.sprite_frames.has_animation("Move") and\
+				Global.ui.gun_sprite.sprite_frames.has_animation("Idle") and\
+				Global.ui.gun_sprite.animation != "Idle":
+				Global.ui.play_gun_anim("Idle")
 	move_and_slide()
 
 func interact(_delta:float):
@@ -117,14 +126,14 @@ func pull_trigger(gun:GunData,_delta:float):
 
 func closest_interactable() -> Interactable:
 	if interactables_nearby.size() == 0: return null
-	var closest_interactable:Interactable = interactables_nearby[0]
-	var distance:float = global_position.distance_squared_to(closest_interactable.global_position)
+	var _closest_interactable:Interactable = interactables_nearby[0]
+	var distance:float = global_position.distance_squared_to(_closest_interactable.global_position)
 	for interactable in interactables_nearby:
 		var new_distance:float = global_position.distance_squared_to(interactable.global_position)
 		if new_distance < distance:
 			distance = new_distance
-			closest_interactable = interactable
-	return closest_interactable
+			_closest_interactable = interactable
+	return _closest_interactable
 
 func _on_interactable_detector_area_entered(area: Area3D) -> void:
 	if area.is_in_group("interactable"):

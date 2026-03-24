@@ -11,21 +11,23 @@ class_name Enemy
 var brain:Brain
 var flesh:Flesh
 
-
 var camera:Camera3D
 var animation_sprites:Dictionary[EnemyData.Direction, SpriteFrames]
 
 @onready var projectile_cloaca: Marker3D = $ProjectileCloaca
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 
+@warning_ignore("unused_signal")
 signal damaged(amount:int)
 
 func _ready() -> void:
-	flesh = Flesh.create(data.health)
+	flesh = Flesh.create(data.health, data.type)
 	brain = data.brain.duplicate()
 	if !get_tree().debug_collisions_hint:
 		debug_label.visible = false
 	brain.setup(self)
+	sprite.scale *= data.scale_override
+	collision_shape_3d.scale *= data.scale_override
 
 func _process(delta: float) -> void:
 	#rotation.y += delta
@@ -76,8 +78,6 @@ func get_vector_to_camera() -> Vector2:
 	var vec:Vector3 = camera.global_position - global_position
 	return Vector2(vec.x,vec.z)
 
-func damage(amount:int):
-	flesh.damage(amount)
 
 func die():
 	queue_free()

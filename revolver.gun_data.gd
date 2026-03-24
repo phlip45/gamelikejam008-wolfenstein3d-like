@@ -28,12 +28,16 @@ func prepare():
 	pass
 
 func shoot(player:Player):
+	Global.ui.play_gun_anim("Shoot")
+	if player.inventory.credit.x <= 0:
+		return
+	player.inventory.use_credit(1)
 	if reload.x > 0: 
 		push_error("Player tried shooting when reload wasn't ready")
 		return
-	var saw:BuzzsawProjectile = projectile.instantiate()
-	saw.setup(player.gun_cloaca.global_position, player.rotation)
-	player.get_tree().current_scene.add_child(saw)
+	var bullet:RevolverProjectile = projectile.instantiate()
+	player.get_tree().current_scene.add_child(bullet)
+	bullet.setup(player.gun_cloaca.global_position, player.rotation,null)
 	reload.x = reload.y
 
 func change_state(new_state:State):

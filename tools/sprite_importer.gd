@@ -1,5 +1,6 @@
 extends Node
 
+@export_dir() var save_path:String
 @export_file("*.json") var json_paths:Array[String]
 var json_path:String
 var texture_path:String
@@ -11,16 +12,15 @@ func _ready() -> void:
 func _assemble() -> void:
 	for i in json_paths.size():
 		json_path = json_paths[i]
-		texture_path = json_path.substr(0,json_path.length() - 4) + "png"
-		var filename:String = json_path.get_file()  # "horse_back_right.json"
-		var name_only:String = filename.get_basename()  # "horse_back_right"
+		texture_path = json_path.substr(0, json_path.length() - 4) + "png"
+		var filename:String = json_path.get_file()
+		var name_only:String = filename.get_basename()
 		save_path_name = name_only
 		_run()
-	#get_tree().quit()
 
 func _run() -> void:
 	print("working")
-	var save_path:String = "res://tools/sprite_importer_output/%s.tres" % save_path_name
+	var path:String = save_path + "/" + "%s.sprite_frames.tres" % save_path_name
 
 	var file:FileAccess = FileAccess.open(json_path, FileAccess.READ)
 	if file == null:
@@ -37,6 +37,16 @@ func _run() -> void:
 
 	var data:Dictionary = json.data
 	var frames:Dictionary = data["frames"]
+
+	var meta:Dictionary = data.get("meta", {})
+	var frame_tags:Array = meta.get("frameTags", [])
+	var anim_loops:Dictionary = {}
+
+	for tag in frame_tags:
+		var _name:String = tag.get("name", "")
+		var repeat_val = tag.get("repeat", "0") # string in your JSON
+		anim_loops[_name] = str(repeat_val) == "1"
+
 	var texture:Texture2D = load(texture_path)
 	if texture == null:
 		push_error("Cant load texture")
@@ -58,7 +68,8 @@ func _run() -> void:
 	
 	for anim_name:String in anims.keys():
 		sprite_frames.add_animation(anim_name)
-		sprite_frames.set_animation_speed(anim_name, 60.0) # prolly shouldn't be hardcoded
+		sprite_frames.set_animation_speed(anim_name, 60.0)
+
 		for frame_key:String in anims[anim_name]:
 			var frame_info:Dictionary = frames[frame_key]
 			var f_rect:Dictionary = frame_info["frame"]
@@ -69,9 +80,11 @@ func _run() -> void:
 				f_rect["x"], f_rect["y"], f_rect["w"], f_rect["h"]
 			)
 
-			var duration:float = float(frame_info["duration"]) / 1000.0  * 60.0
+			var duration:float = float(frame_info["duration"]) / 1000.0 * 60.0
 			sprite_frames.add_frame(anim_name, atlas, duration)
 
-		sprite_frames.set_animation_loop(anim_name, false)
+		var should_loop:bool = anim_loops.get(anim_name, false)
+		sprite_frames.set_animation_loop(anim_name, should_loop)
 
-	ResourceSaver.save(sprite_frames, save_path)
+	ResourceSaver.save(sprite_frames, path)
+	get_tree().quit()

@@ -47,6 +47,7 @@ size = Vector2(0.1, 0.1)
 script = ExtResource("1_u7cos")
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=1945041082]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 emitting = false
 lifetime = 1.5
 one_shot = true
@@ -73,6 +74,7 @@ scale_amount_max = 10.0
 scale_amount_curve = SubResource("Curve_5njvh")
 
 [node name="CPUParticles3D3" type="CPUParticles3D" parent="." unique_id=638282033]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 emitting = false
 lifetime = 1.5
 one_shot = true

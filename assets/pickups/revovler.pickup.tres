@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RevolverGunData" format=3 uid="uid://d0conre0ga0x4"]
+
+[ext_resource type="PackedScene" uid="uid://hxgoa48vr1xp" path="res://assets/guns/revolver.projectile.tscn" id="2_aksx7"]
+[ext_resource type="Script" uid="uid://cl4qdwnn7aanv" path="res://revolver.gun_data.gd" id="3_dgylu"]
+[ext_resource type="Texture2D" uid="uid://mx26tmwddeys" path="res://assets/pickups.png" id="3_kqhmd"]
+[ext_resource type="SpriteFrames" uid="uid://csj6gjd6nqmew" path="res://assets/guns/revolver.sprite_frames.tres" id="4_vmphd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhyyg"]
+atlas = ExtResource("3_kqhmd")
+region = Rect2(113, 128, 143, 128)
+
+[resource]
+script = ExtResource("3_dgylu")
+name = "Revolver"
+projectile = ExtResource("2_aksx7")
+pickup_sprite = SubResource("AtlasTexture_vhyyg")
+ui_sprite_frames = ExtResource("4_vmphd")
+ui_transform_position = Vector2(210, -20)
+ui_scale = 0.206
+ammo_type = 2
+fire_rate = null
+type = 3
+reload = Vector2(0.5, 0.5)
+metadata/_custom_type_script = "uid://cl4qdwnn7aanv"

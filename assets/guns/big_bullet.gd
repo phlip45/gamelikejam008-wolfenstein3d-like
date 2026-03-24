@@ -3,7 +3,7 @@ class_name BigBulletProjectile
 
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 
-func setup(pos:Vector3,rot:Vector3):
+func setup(pos:Vector3,rot:Vector3,_enemy:Enemy = null):
 	global_position = pos
 	rotation = rot
 	velocity = -transform.basis.z.normalized() * speed
@@ -14,8 +14,8 @@ func _process(delta: float) -> void:
 	speed += delta
 	velocity = -transform.basis.z.normalized() * speed
 
-func hit(player:Player):
-	player.damage(randi_range(damage_min,damage_max))
+func hit(_player:Player):
+	#player.damage(randi_range(damage_min,damage_max))
 	collision_shape_3d.disabled = true
 	queue_free()
 

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://hxgoa48vr1xp"]
+
+[ext_resource type="Script" uid="uid://dq7x4gj5e8coi" path="res://assets/guns/revolver.projectile.gd" id="1_76q6d"]
+[ext_resource type="SpriteFrames" uid="uid://bwg2ujydyp2t3" path="res://assets/guns/buzzsaw.sprite_frames.tres" id="2_h52py"]
+
+[node name="RevolverProjectile" type="Area3D" unique_id=1548743355]
+script = ExtResource("1_76q6d")
+speed = 30.0
+damage = Vector2(20, 40)
+sprite_frames = ExtResource("2_h52py")
+metadata/_custom_type_script = "uid://cj76s6ioa6wm8"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

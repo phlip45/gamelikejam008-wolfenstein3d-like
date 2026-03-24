@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://6qjjhmakiq4x" path="res://assets/guns/cleaver.gun_data.gd" id="1_8elpe"]
 [ext_resource type="Texture2D" uid="uid://qc3s68mi66c8" path="res://assets/guns/cleaver.png" id="1_214jh"]
 [ext_resource type="PackedScene" uid="uid://df8x7d56xifs0" path="res://assets/guns/cleaver_projectile.tscn" id="2_2sck7"]
-[ext_resource type="SpriteFrames" uid="uid://dykujtab1vcm" path="res://pickups/guns/cleaver.sprite_frames.tres" id="3_2sck7"]
+[ext_resource type="SpriteFrames" uid="uid://cclouqqethc36" path="res://assets/guns/cleaver.sprite_frames.tres" id="4_2sck7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_53l7r"]
 atlas = ExtResource("1_214jh")
@@ -14,11 +14,11 @@ script = ExtResource("1_8elpe")
 name = "Cleaver"
 projectile = ExtResource("2_2sck7")
 pickup_sprite = SubResource("AtlasTexture_53l7r")
-ui_sprite_frames = ExtResource("3_2sck7")
+ui_sprite_frames = ExtResource("4_2sck7")
 ui_transform_position = Vector2(161, -38)
 ui_scale = 0.7
-ammo_type = 4
+ammo_type = 2
 fire_rate = 0.5
-type = 3
+type = 1
 reload = Vector2(0.5, 0.5)
 metadata/_custom_type_script = "uid://6qjjhmakiq4x"

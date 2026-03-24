@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HealthPickupData" format=3 uid="uid://b17ffa83te42e"]
+
+[ext_resource type="Script" uid="uid://dcnptufmd6a0o" path="res://health.pickup_data.gd" id="1_ckgcv"]
+[ext_resource type="SpriteFrames" uid="uid://cvxi8nlaxqkkk" path="res://assets/pickups/super_health.sprite_frames.tres" id="2_pav6y"]
+
+[resource]
+script = ExtResource("1_ckgcv")
+amount = 100
+overheal_allowed = true
+name = "Super Health"
+type = 3
+sprite_frames = ExtResource("2_pav6y")
+metadata/_custom_type_script = "uid://dcnptufmd6a0o"

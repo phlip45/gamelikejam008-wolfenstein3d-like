@@ -9,6 +9,7 @@ class_name EnemyData
 @export_range(0, 200, 1, "suffix:percent") var poise:float = 10
 @export_range(0,TAU,.01,"suffix:rads") var field_of_view:float
 @export var scale_override:float = 1.0
+@export var type:Flesh.Type
 @export var brain:Brain
 @export var animation_states:Dictionary[String,String]
 @export var animation_sprite_frames:Dictionary[Direction, SpriteFrames] = {

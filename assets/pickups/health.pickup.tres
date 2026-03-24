@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="HealthPickupData" format=3 uid="uid://cok8j8c4o1w1t"]
+
+[ext_resource type="Script" uid="uid://dcnptufmd6a0o" path="res://health.pickup_data.gd" id="1_b02ix"]
+[ext_resource type="SpriteFrames" path="res://assets/pickups/health.sprite_frames.tres" id="2_liq4c"]
+
+[resource]
+script = ExtResource("1_b02ix")
+amount = 25
+name = "Health"
+type = 3
+sprite_frames = ExtResource("2_liq4c")
+metadata/_custom_type_script = "uid://dcnptufmd6a0o"

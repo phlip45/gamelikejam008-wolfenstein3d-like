@@ -164,6 +164,7 @@ radius = 1.6
 [node name="Door" type="Node3D" unique_id=1326828655]
 
 [node name="DoorComplete" type="Node3D" parent="." unique_id=1087029422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0.5)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="DoorComplete" unique_id=649506989]
 bones/0/name = "Left"
@@ -198,7 +199,7 @@ bones/3/scale = Vector3(1, 1, 1)
 [node name="collision" type="StaticBody3D" parent="DoorComplete/Skeleton3D" unique_id=869112625]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DoorComplete/Skeleton3D/collision" unique_id=677484618]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2944504, 0)
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, -0.18672794, 0)
 shape = SubResource("ConcavePolygonShape3D_j865k")
 
 [node name="Door" type="MeshInstance3D" parent="DoorComplete/Skeleton3D" unique_id=286178352]
@@ -210,6 +211,7 @@ skeleton = NodePath("..")
 libraries/ = SubResource("AnimationLibrary_kxpgq")
 
 [node name="ActivateArea" type="Area3D" parent="." unique_id=1654728196 node_paths=PackedStringArray("animation_player") groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0.5)
 script = ExtResource("3_uiiwt")
 toggleable = true
 animation_player = NodePath("../AnimationPlayer")

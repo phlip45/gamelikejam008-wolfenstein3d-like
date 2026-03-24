@@ -6,8 +6,10 @@
 script = ExtResource("1_j4q2e")
 name = "Horse"
 melee_range = 2.0
+melee_activate_frame = 4
 missile_range = 5.0
+missile_activate_frame = 3
 melee_projectile_path = "res://assets/guns/cleaver_projectile.tscn"
-ranged_projectile_path = "res://assets/guns/buzzsaw.projectile.tscn"
+ranged_projectile_path = "res://enemies/projectiles/snotball_projectile.tscn"
 projectile_cloaca_position = Vector3(0, 1.315, -1)
 metadata/_custom_type_script = "uid://bbt6w2ml0t5dh"

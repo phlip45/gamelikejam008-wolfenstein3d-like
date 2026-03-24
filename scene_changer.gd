@@ -18,6 +18,7 @@ func change_scene(scene:String) -> void:
 		if status == ResourceLoader.THREAD_LOAD_LOADED:
 			var loaded_scene = ResourceLoader.load_threaded_get(scene)
 			get_tree().change_scene_to_packed(loaded_scene)
+			print("Succesfully Loaded: " + loaded_scene.resource_name)
 			break
 		elif status == ResourceLoader.THREAD_LOAD_FAILED or\
 			 status == ResourceLoader.THREAD_LOAD_INVALID_RESOURCE:

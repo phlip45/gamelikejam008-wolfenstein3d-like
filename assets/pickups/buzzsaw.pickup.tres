@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="GunPickupData" format=3 uid="uid://t5qlv0qcrn6p"]
+
+[ext_resource type="Resource" uid="uid://d0dlr3ieah3h5" path="res://assets/guns/buzzsaw.gun_data.tres" id="1_5lstg"]
+[ext_resource type="Script" uid="uid://b5240uddhgar4" path="res://pickups/gun.pickup_data.gd" id="2_53tue"]
+[ext_resource type="Texture2D" uid="uid://e8yxakvkhkym" path="res://assets/guns/buzzsaw.png" id="3_r5prq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubhxj"]
+atlas = ExtResource("3_r5prq")
+region = Rect2(1261, 0, 127, 53)
+
+[resource]
+script = ExtResource("2_53tue")
+gundata = ExtResource("1_5lstg")
+name = "buzzsaw"
+type = 1
+texture = SubResource("AtlasTexture_ubhxj")
+metadata/_custom_type_script = "uid://b5240uddhgar4"

@@ -13,6 +13,7 @@ class_name HorseBrain
 ## decide to try and close the gap or shoot a missile.
 @export var missile_range:float
 @export var missile_activate_frame:int = 17
+@export var global_attack_cooldown:Vector2 = Vector2(.4,.4)
 
 @export_file_path() var melee_projectile_path:String
 var melee_projectile_scene:PackedScene
@@ -71,6 +72,7 @@ func setup(_enemy:Enemy) -> void:
 	enemy.sprite.frame_changed.connect(_on_sprite_frame_changed)
 
 func process(delta:float):
+	global_attack_cooldown.x -= delta
 	target_lock_time.x -= delta
 	if state == State.NULL: return
 	state_process[state].call(delta)
@@ -90,17 +92,22 @@ func _process_moving(delta:float):
 	if decide_time.x < 0:
 		decide_time.x = decide_time.y
 		decide_state_by_range()
+	#Only update path every few tics instead of every single tic
 	if update_path_time.x > 0: return
 	update_path_time.x = update_path_time.y
 	enemy.nav_agent.target_position = target.global_position
 	#var path:Vector3 = enemy.nav_agent.get_next_path_position()
 
 func _process_ranged_attack(_delta:float):
+	rotate_toward_target()
 	if !enemy.sprite.is_playing():
 		change_state(State.IDLE)
 
 func _process_melee_attack(_delta:float):
-	pass
+	rotate_toward_target()
+	if !enemy.sprite.is_playing():
+		change_state(State.IDLE)
+	
 
 func _process_dying(_delta:float):
 	pass
@@ -155,15 +162,18 @@ func shoot():
 	enemy.sprite.play(anim_names[State.RANGED_ATTACK])
 
 func spawn_missile():
-	var attack:BuzzsawProjectile = ranged_projectile_scene.instantiate() as BuzzsawProjectile
+	if global_attack_cooldown.x > 0: return
+	var attack:Projectile = ranged_projectile_scene.instantiate() as Projectile
 	enemy.add_child(attack)
-	attack.setup(enemy.global_position,enemy.rotation, enemy)
+	attack.setup(enemy.projectile_cloaca.global_position,enemy.rotation, enemy)
 
 func on_damaged(amount:int):
 	if state == State.DYING: return
 	var tween:Tween = enemy.create_tween()
 	tween.tween_property(enemy.sprite,"modulate",Color.RED,.2)
 	tween.tween_property(enemy.sprite,"modulate",Color.WHITE,.1)
+	if !target:
+		target = Global.player
 	if enemy.should_flinch(amount):
 		change_state(State.HURT)
 		enemy.sprite.play("Hurt")
@@ -193,20 +203,25 @@ func change_state(_state:State):
 func move_toward_target() -> bool:
 	if enemy.global_position.distance_to(enemy.nav_agent.target_position) > 1:
 		var next_location = enemy.nav_agent.get_next_path_position()
-		if !is_colinear_with_up(enemy.global_position,next_location) and !enemy.global_position.is_equal_approx(next_location):
-			var prev_rot:Vector3 = enemy.rotation
-			enemy.look_at(next_location)
-			var target_rotation:Vector3 = shortest_rotation_path(prev_rot,enemy.rotation)
-			enemy.rotation = prev_rot.move_toward(target_rotation,.1)
-			
-		enemy.rotation.x = 0
-		enemy.rotation.z = 0
-		var new_velocity = (next_location - enemy.global_position).normalized() * enemy.speed
+		rotate_toward_target()
+		next_location.y = 0
+		var new_velocity:Vector3 = (next_location - enemy.global_position).normalized() * enemy.speed
 		enemy.velocity = enemy.velocity.move_toward(new_velocity,.25)
 		enemy.move_and_slide()
 		return false
 	else:
 		return true
+
+func rotate_toward_target()-> void:
+	var next_location = enemy.nav_agent.get_next_path_position()
+	if !is_colinear_with_up(enemy.global_position,next_location) and !enemy.global_position.is_equal_approx(next_location):
+		var prev_rot:Vector3 = enemy.rotation
+		enemy.look_at(next_location)
+		var target_rotation:Vector3 = shortest_rotation_path(prev_rot,enemy.rotation)
+		enemy.rotation = prev_rot.move_toward(target_rotation,.1)
+			
+	enemy.rotation.x = 0
+	enemy.rotation.z = 0
 
 func _on_sprite_frame_changed():
 	if enemy.sprite.frame == melee_activate_frame and state == State.MELEE_ATTACK:

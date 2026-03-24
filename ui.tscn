@@ -3,9 +3,10 @@
 [ext_resource type="Theme" uid="uid://vu00olcg0t37" path="res://assets/theme/main.theme.tres" id="1_fyqef"]
 [ext_resource type="Script" uid="uid://hyy1igtobxad" path="res://ui.gd" id="1_ibotj"]
 [ext_resource type="Texture2D" uid="uid://e8yxakvkhkym" path="res://assets/guns/buzzsaw.png" id="1_m6e0p"]
-[ext_resource type="SpriteFrames" uid="uid://bwg2ujydyp2t3" path="res://assets/guns/buzzsaw.sprite_frames.tres" id="3_ibotj"]
 [ext_resource type="Shader" uid="uid://bccrheoyfitna" path="res://hsv_light_balance.gdshader" id="3_n5ude"]
 [ext_resource type="Texture2D" uid="uid://7fhq8vru4ef4" path="res://assets/ui.png" id="3_nltto"]
+[ext_resource type="FontFile" uid="uid://dm3q4yxnivjsu" path="res://assets/fonts/Cyberfall.otf" id="7_waa4j"]
+[ext_resource type="SpriteFrames" uid="uid://dsvldca5w88xt" path="res://assets/UI/face.sprite_frames.tres" id="7_y4yjw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y4yjw"]
 
@@ -20,6 +21,8 @@ shader_parameter/saturation_mult = 1.1310000537225
 shader_parameter/value_mult = 1.250000059375
 shader_parameter/brightness_add = 0.0
 shader_parameter/contrast_mult = 1.10000005225
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y4yjw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ibotj"]
 atlas = ExtResource("3_nltto")
@@ -36,10 +39,13 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0, 1)
 
-[node name="UI" type="CanvasLayer" unique_id=1707186579 node_paths=PackedStringArray("gun_sprite", "damage_mask")]
+[node name="UI" type="CanvasLayer" unique_id=1707186579 node_paths=PackedStringArray("gun_sprite", "damage_mask", "face", "health", "ammo")]
 script = ExtResource("1_ibotj")
 gun_sprite = NodePath("Hud/VBoxContainer/GameView/GunHolder/Control/GunSprite")
 damage_mask = NodePath("Hud/VBoxContainer/GameView/DamageMask")
+face = NodePath("Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/FacePanel/Face")
+health = NodePath("Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/HealthPanel/Health")
+ammo = NodePath("Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/AmmoPanel/Ammo")
 
 [node name="Hud" type="Control" parent="." unique_id=631451806]
 texture_filter = 1
@@ -91,12 +97,9 @@ texture = SubResource("AtlasTexture_27fn8")
 
 [node name="GunSprite" type="AnimatedSprite2D" parent="Hud/VBoxContainer/GameView/GunHolder/Control" unique_id=1903928754]
 material = SubResource("ShaderMaterial_waa4j")
-position = Vector2(161.00002, -6.999998)
-scale = Vector2(0.5821167, 0.8852459)
-sprite_frames = ExtResource("3_ibotj")
-animation = &"Wield"
-autoplay = "Idle"
-frame = 7
+position = Vector2(210, -20)
+scale = Vector2(0.6122448, 0.6122447)
+sprite_frames = SubResource("SpriteFrames_y4yjw")
 
 [node name="Crosshair" type="TextureRect" parent="Hud/VBoxContainer/GameView" unique_id=1804038769]
 layout_mode = 1
@@ -106,9 +109,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -20.0
-offset_top = 5.0
+offset_top = -3.0
 offset_right = 20.0
-offset_bottom = 45.0
+offset_bottom = 37.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_ibotj")
@@ -160,7 +163,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Panel2" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/Control" unique_id=2011816916]
+[node name="Base" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/Control" unique_id=2011816916]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -170,7 +173,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 theme_type_variation = &"PanelTV"
 
-[node name="Panel" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/Control/Panel2" unique_id=1412670172]
+[node name="Glare" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/Control" unique_id=1412670172]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -180,11 +183,11 @@ grow_vertical = 2
 theme = ExtResource("1_fyqef")
 theme_type_variation = &"PanelTVGlare"
 
-[node name="Control2" type="Control" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer" unique_id=1985065080]
+[node name="HealthPanel" type="Control" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer" unique_id=1985065080]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Panel2" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/Control2" unique_id=1298744564]
+[node name="Base" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/HealthPanel" unique_id=1298744564]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -194,7 +197,30 @@ grow_vertical = 2
 size_flags_horizontal = 3
 theme_type_variation = &"PanelTV"
 
-[node name="Panel" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/Control2/Panel2" unique_id=9770388]
+[node name="Health" type="RichTextLabel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/HealthPanel" unique_id=127688474]
+texture_filter = 1
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("7_waa4j")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "99
+"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Glare" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/HealthPanel" unique_id=9770388]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -204,11 +230,31 @@ grow_vertical = 2
 theme = ExtResource("1_fyqef")
 theme_type_variation = &"PanelTVGlare"
 
-[node name="Control3" type="Control" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer" unique_id=563458381]
+[node name="FacePanel" type="Control" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer" unique_id=1131912694]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="ColorRect" type="ColorRect" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/FacePanel" unique_id=1942757801]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19076231, 0.19076234, 0.19076231, 1)
+
+[node name="Face" type="AnimatedSprite2D" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/FacePanel" unique_id=736095278]
+position = Vector2(17, 13)
+scale = Vector2(0.90000004, 0.79999995)
+sprite_frames = ExtResource("7_y4yjw")
+animation = &"Idle"
+
+[node name="AmmoPanel" type="Control" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer" unique_id=563458381]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Panel2" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/Control3" unique_id=963661372]
+[node name="Base" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/AmmoPanel" unique_id=963661372]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -218,7 +264,30 @@ grow_vertical = 2
 size_flags_horizontal = 3
 theme_type_variation = &"PanelTV"
 
-[node name="Panel" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/Control3/Panel2" unique_id=812164762]
+[node name="Ammo" type="RichTextLabel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/AmmoPanel" unique_id=16161409]
+texture_filter = 1
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("7_waa4j")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "99
+"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Glare" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/AmmoPanel" unique_id=812164762]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -232,7 +301,7 @@ theme_type_variation = &"PanelTVGlare"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Panel2" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/Control4" unique_id=918742511]
+[node name="Base" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/Control4" unique_id=918742511]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -242,7 +311,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 theme_type_variation = &"PanelTV"
 
-[node name="Panel" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/Control4/Panel2" unique_id=1917175025]
+[node name="Glare" type="Panel" parent="Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/Control4" unique_id=1917175025]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
