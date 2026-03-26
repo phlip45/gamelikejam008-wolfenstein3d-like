@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b77hdcsrgkq1l"]
+
+[ext_resource type="Script" uid="uid://pjxyhkteof2q" path="res://enemies/projectiles/popup.projectile.gd" id="1_h0j1u"]
+[ext_resource type="SpriteFrames" uid="uid://dmh7tu6qyieau" path="res://enemies/projectiles/popup.sprite_frames.tres" id="2_d6gi8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y1eoe"]
+size = Vector3(0.5839844, 1.4316406, 1)
+
+[node name="PopupProjectile" type="Area3D" unique_id=1548743355]
+script = ExtResource("1_h0j1u")
+speed = 15.0
+sprite_frames = ExtResource("2_d6gi8")
+metadata/_custom_type_script = "uid://cj76s6ioa6wm8"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1007230949]
+shape = SubResource("BoxShape3D_y1eoe")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=2014430673]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+texture_filter = 0
+sprite_frames = ExtResource("2_d6gi8")
+animation = &"popup_0"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

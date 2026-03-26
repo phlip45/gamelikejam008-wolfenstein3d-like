@@ -1,8 +1,8 @@
 extends Actor
 class_name Enemy
 
-@export_range(0,10,.02,"suffix:rad/sec") var turn_speed:float = 3
-@export_range(0,30,.02,"suffix:m/sec") var speed:float = 3
+var turn_speed:float
+var speed:float
 @export var data:EnemyData
 @onready var ray_cast_3d: RayCast3D = $RayCast3D
 @onready var nav_agent: NavigationAgent3D = $NavAgent
@@ -21,6 +21,8 @@ var animation_sprites:Dictionary[EnemyData.Direction, SpriteFrames]
 signal damaged(amount:int)
 
 func _ready() -> void:
+	speed = data.speed
+	turn_speed = data.turn_speed
 	flesh = Flesh.create(data.health, data.type)
 	brain = data.brain.duplicate()
 	if !get_tree().debug_collisions_hint:

@@ -4,6 +4,7 @@ class_name Level
 @onready var world_environment: WorldEnvironment = $WorldEnvironment
 @export var fog_colors:Array[Color]
 var fog_color_index:int = 0
+@export var navigation_region_3d: NavigationRegion3D
 
 func _init():
 	Global.level = self

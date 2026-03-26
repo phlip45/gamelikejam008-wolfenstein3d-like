@@ -15,8 +15,8 @@
 resource_local_to_scene = true
 script = ExtResource("9_q7vg4")
 name = "horse"
-turn_speed = 1.0
-speed = 1.0
+turn_speed = 10.0
+speed = 10.0
 health = Vector2i(100, 100)
 poise = 40.0
 field_of_view = 2.94

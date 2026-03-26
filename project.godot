@@ -38,6 +38,7 @@ wall=""
 enemy=""
 nav=""
 interactable=""
+door=""
 
 [gui]
 

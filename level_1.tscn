@@ -12,35 +12,50 @@
 [ext_resource type="PackedScene" uid="uid://0p3hbqc0k8ah" path="res://enemies/enemy.tscn" id="7_j7kpp"]
 [ext_resource type="Texture2D" uid="uid://mx26tmwddeys" path="res://assets/pickups.png" id="8_ubhxj"]
 [ext_resource type="PackedScene" uid="uid://d1irf8koqdrvc" path="res://assets/map/door.tscn" id="9_gyffv"]
-[ext_resource type="SpriteFrames" uid="uid://g48qpw5woe0f" path="res://enemies/horse/horse_front.sprite_frames.tres" id="11_lfy8a"]
-[ext_resource type="SpriteFrames" uid="uid://j6etecs6428l" path="res://enemies/horse/horse_front_left.sprite_frames.tres" id="12_ethxx"]
-[ext_resource type="SpriteFrames" uid="uid://bmpgmfyw3disf" path="res://enemies/horse/horse_left.sprite_frames.tres" id="13_3o2xh"]
-[ext_resource type="SpriteFrames" uid="uid://b0pr6rfv0oe4q" path="res://enemies/horse/horse_back_left.sprite_frames.tres" id="14_duihb"]
-[ext_resource type="SpriteFrames" uid="uid://y4lj02nu54hl" path="res://enemies/horse/horse_back.sprite_frames.tres" id="15_b6mmh"]
-[ext_resource type="SpriteFrames" uid="uid://mt7keh7kltof" path="res://enemies/horse/horse_back_right.sprite_frames.tres" id="16_ttn6t"]
-[ext_resource type="SpriteFrames" uid="uid://b7w505oox22hw" path="res://enemies/horse/horse_right.sprite_frames.tres" id="17_ia5ws"]
-[ext_resource type="SpriteFrames" uid="uid://c6pf0oxlkmxoe" path="res://enemies/horse/horse_front_right.sprite_frames.tres" id="18_be5co"]
-[ext_resource type="Resource" uid="uid://b1kg8ieiaethb" path="res://enemies/horse/horse.brain.tres" id="19_hycyb"]
-[ext_resource type="Script" uid="uid://bns6cm0drf1q5" path="res://enemies/enemy_data.gd" id="20_swvua"]
+[ext_resource type="SpriteFrames" uid="uid://g48qpw5woe0f" path="res://enemies/horse/horse_front.sprite_frames.tres" id="11_swvua"]
+[ext_resource type="SpriteFrames" uid="uid://j6etecs6428l" path="res://enemies/horse/horse_front_left.sprite_frames.tres" id="12_ka01f"]
+[ext_resource type="SpriteFrames" uid="uid://bmpgmfyw3disf" path="res://enemies/horse/horse_left.sprite_frames.tres" id="13_notaq"]
+[ext_resource type="SpriteFrames" uid="uid://b0pr6rfv0oe4q" path="res://enemies/horse/horse_back_left.sprite_frames.tres" id="14_ett8d"]
+[ext_resource type="SpriteFrames" uid="uid://y4lj02nu54hl" path="res://enemies/horse/horse_back.sprite_frames.tres" id="15_4p6gt"]
+[ext_resource type="SpriteFrames" uid="uid://mt7keh7kltof" path="res://enemies/horse/horse_back_right.sprite_frames.tres" id="16_td8cy"]
+[ext_resource type="SpriteFrames" uid="uid://b7w505oox22hw" path="res://enemies/horse/horse_right.sprite_frames.tres" id="17_84ct4"]
+[ext_resource type="SpriteFrames" uid="uid://c6pf0oxlkmxoe" path="res://enemies/horse/horse_front_right.sprite_frames.tres" id="18_i5xja"]
+[ext_resource type="Resource" uid="uid://b1kg8ieiaethb" path="res://enemies/horse/horse.brain.tres" id="19_mdra8"]
+[ext_resource type="Script" uid="uid://bns6cm0drf1q5" path="res://enemies/enemy_data.gd" id="20_w0qac"]
+[ext_resource type="SpriteFrames" uid="uid://brpoxyk56c8ya" path="res://enemies/doomscroll/doomscroll_front.tres" id="21_qa26o"]
+[ext_resource type="SpriteFrames" uid="uid://dlgaaqcun1jl" path="res://enemies/doomscroll/doomscroll_front_left.tres" id="22_hu5wk"]
+[ext_resource type="SpriteFrames" uid="uid://c3jg35ska7ild" path="res://enemies/doomscroll/doomscroll_left.tres" id="23_mmag5"]
+[ext_resource type="SpriteFrames" uid="uid://ddjthnc2cqbvb" path="res://enemies/doomscroll/doomscroll_back_left.tres" id="24_3i87y"]
+[ext_resource type="SpriteFrames" uid="uid://d1sywgjldjh67" path="res://enemies/doomscroll/doomscroll_back.tres" id="25_qbpgg"]
+[ext_resource type="SpriteFrames" uid="uid://dtorpqh44e34x" path="res://enemies/doomscroll/doomscroll_back_right.tres" id="26_hlf5m"]
+[ext_resource type="SpriteFrames" uid="uid://3qn04cdeeuts" path="res://enemies/doomscroll/doomscroll_right.tres" id="27_wc02i"]
+[ext_resource type="SpriteFrames" uid="uid://d1iir7112cfif" path="res://enemies/doomscroll/doomscroll_front_right.tres" id="28_jf2qc"]
+[ext_resource type="Resource" uid="uid://b3vhksdp5welu" path="res://enemies/doomscroll/doomscroll.brain.tres" id="29_nfgh3"]
+[ext_resource type="PackedScene" uid="uid://dylk5q0wgiwx5" path="res://assets/map/exit.tscn" id="32_ka01f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ethxx"]
+atlas = ExtResource("8_ubhxj")
+region = Rect2(109, 121, 147, 135)
 
 [sub_resource type="Resource" id="Resource_ggavl"]
 script = ExtResource("7_ggavl")
 gundata = ExtResource("6_sof0w")
 name = "Revolver"
 type = 1
-texture = ExtResource("8_ubhxj")
+texture = SubResource("AtlasTexture_ethxx")
 metadata/_custom_type_script = "uid://b5240uddhgar4"
 
 [sub_resource type="Resource" id="Resource_ka01f"]
 resource_local_to_scene = true
-script = ExtResource("20_swvua")
+script = ExtResource("20_w0qac")
 name = "horse"
 turn_speed = 10.0
+speed = 10.0
 health = Vector2i(100, 100)
 poise = 40.0
 field_of_view = 2.94
 type = 2
-brain = ExtResource("19_hycyb")
+brain = ExtResource("19_mdra8")
 animation_states = Dictionary[String, String]({
 "Death": "Death",
 "Hurt": "Hurt",
@@ -49,14 +64,35 @@ animation_states = Dictionary[String, String]({
 "RangedAttack": "RangedAttack"
 })
 animation_sprite_frames = Dictionary[int, SpriteFrames]({
-1: ExtResource("11_lfy8a"),
-2: ExtResource("12_ethxx"),
-3: ExtResource("13_3o2xh"),
-4: ExtResource("14_duihb"),
-5: ExtResource("15_b6mmh"),
-6: ExtResource("16_ttn6t"),
-7: ExtResource("17_ia5ws"),
-8: ExtResource("18_be5co")
+1: ExtResource("11_swvua"),
+2: ExtResource("12_ka01f"),
+3: ExtResource("13_notaq"),
+4: ExtResource("14_ett8d"),
+5: ExtResource("15_4p6gt"),
+6: ExtResource("16_td8cy"),
+7: ExtResource("17_84ct4"),
+8: ExtResource("18_i5xja")
+})
+metadata/_custom_type_script = "uid://bns6cm0drf1q5"
+
+[sub_resource type="Resource" id="Resource_notaq"]
+resource_local_to_scene = true
+script = ExtResource("20_w0qac")
+name = "doomscroll"
+health = Vector2i(100, 100)
+poise = 100.0
+scale_override = 0.75
+type = 4
+brain = ExtResource("29_nfgh3")
+animation_sprite_frames = Dictionary[int, SpriteFrames]({
+1: ExtResource("21_qa26o"),
+2: ExtResource("22_hu5wk"),
+3: ExtResource("23_mmag5"),
+4: ExtResource("24_3i87y"),
+5: ExtResource("25_qbpgg"),
+6: ExtResource("26_hlf5m"),
+7: ExtResource("27_wc02i"),
+8: ExtResource("28_jf2qc")
 })
 metadata/_custom_type_script = "uid://bns6cm0drf1q5"
 
@@ -64,9 +100,10 @@ metadata/_custom_type_script = "uid://bns6cm0drf1q5"
 vertices = PackedVector3Array(-19.25, 0.5, 10.25, -19.75, 0.5, 10.75, -19, 0.5, 11.5, -17.5, 0.5, 13.5, -15.5, 0.5, 13.5, -15.5, 0.5, 12.75, -17.25, 0.5, 11.75, -23.5, 0.5, 10, -21.5, 0.5, 9.75, -21.25, 0.5, 8.5, -23.5, 0.5, 5.5, -14.5, 0.5, 12.5, -14.5, 0.5, 10.5, -16.5, 0.5, 10.5, -16.5, 0.5, 8.75, -15, 0.5, 8.5, -15, 0.5, 5.5, -19.5, 0.5, 8.5, -11.5, 0.5, 13.75, -9.5, 0.5, 13.5, -9.75, 0.5, 12.5, -11.5, 0.5, 12.5, -13.25, 0.5, 12.75, -13.25, 0.5, 14.25, -13.75, 0.5, 14.75, -15.5, 0.5, 14.5, -15.5, 0.5, 16.5, -11.5, 0.5, 5.5, -14.25, 0.5, 8.75, -11.5, 0.5, 16.5, -50.25, 0.5, 17.75, -47.5, 0.5, 17.75, -47.25, 0.5, 15.5, -50.5, 0.5, 9.5, -39.75, 0.5, 15.5, -36.5, 0.5, 15.25, -36.5, 0.5, 9.5, -19.5, 0.5, 11.75, -21.25, 0.5, 10.75, -17.25, 0.5, 17.75, -16.5, 0.5, 17.75, -16.5, 0.5, 16.75, -17.5, 0.5, 16.5, -19.5, 0.5, 13.5, -23.5, 0.5, 16.5, 2.25, 0.5, 12.75, 1, 0.5, 12.5, 0.75, 0.5, 13.5, 2.75, 0.5, 13.75, 2.75, 0.5, 17.5, 10.5, 0.5, 17.5, 10.5, 0.5, 10.5, 2.75, 0.5, 12.25, 2.75, 0.5, 10.5, -9.5, 0.5, 23.25, -8.5, 0.5, 23, -8.25, 0.5, 22.5, -9.5, 0.5, 21.75, -4.25, 0.5, 28.75, -6.75, 0.5, 28.75, -9.5, 0.5, 29.5, -1.5, 0.5, 29.5, -3, 0.5, 24.75, -2.75, 0.5, 26.5, -2.25, 0.5, 26.75, -2.25, 0.5, 24.25, -4.5, 0.5, 28.25, -6.25, 0.5, 28, -2.25, 0.5, 28.25, -2.75, 0.5, 28.75, -5.75, 0.5, 21.75, -6.5, 0.5, 22.5, -1.5, 0.5, 21.5, -6.5, 0.5, 24.5, -4.5, 0.5, 24.5, -4.5, 0.5, 22.75, -2.5, 0.5, 22.5, -4.5, 0.5, 21.5, -5.25, 0.5, 21.25, -8.25, 0.5, 28.75, -8.25, 0.5, 26.5, -9.5, 0.5, 26.25, -4.5, 0.5, 13.75, -5.25, 0.5, 13.75, -36.5, 0.5, 21.75, -35.25, 0.5, 21.5, -35.25, 0.5, 20.75, -36.5, 0.5, 20.5, -39.25, 0.5, 15.75, -39.25, 0.5, 25.25, -39.75, 0.5, 25.75, -36.5, 0.5, 25.75, -36.5, 0.5, 30.5, -47.5, 0.5, 25.5, -50.25, 0.5, 30.5, -21.25, 0.5, 21.75, -21.25, 0.5, 22.5, -20.25, 0.5, 22.75, -20.25, 0.5, 21.25, -16.25, 0.5, 18.75, -17.75, 0.5, 18.75, -13.5, 0.5, 24.5, -13.5, 0.5, 18.5, -20.25, 0.5, 24.5, -20.5, 0.5, 18.5, -34.25, 0.5, 21.75, -23.5, 0.5, 18.5, -34.25, 0.5, 20.25, -22.5, 0.5, 24.5, -22.5, 0.5, 22.75, -34.5, 0.5, 24.5, -22.5, 0.5, 21.5, -34.25, 0.5, 18.5, -22.5, 0.5, 18.75, -8.25, 0.5, 24.75, -6.5, 0.5, 26.5, -4.5, 0.5, 26.75)
 polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(11, 5, 12), PackedInt32Array(12, 5, 13), PackedInt32Array(13, 5, 6), PackedInt32Array(15, 14, 16), PackedInt32Array(16, 14, 17), PackedInt32Array(16, 17, 10), PackedInt32Array(17, 9, 10), PackedInt32Array(2, 0, 6), PackedInt32Array(6, 0, 13), PackedInt32Array(13, 0, 14), PackedInt32Array(14, 0, 17), PackedInt32Array(20, 19, 21), PackedInt32Array(21, 19, 18), PackedInt32Array(21, 18, 22), PackedInt32Array(22, 18, 23), PackedInt32Array(26, 25, 24), PackedInt32Array(11, 12, 22), PackedInt32Array(22, 12, 21), PackedInt32Array(21, 12, 28), PackedInt32Array(21, 28, 27), PackedInt32Array(18, 29, 24), PackedInt32Array(24, 29, 26), PackedInt32Array(15, 16, 28), PackedInt32Array(28, 16, 27), PackedInt32Array(18, 24, 23), PackedInt32Array(31, 30, 32), PackedInt32Array(32, 30, 33), PackedInt32Array(35, 34, 36), PackedInt32Array(36, 34, 32), PackedInt32Array(36, 32, 33), PackedInt32Array(2, 37, 1), PackedInt32Array(1, 37, 38), PackedInt32Array(40, 39, 41), PackedInt32Array(41, 39, 42), PackedInt32Array(25, 42, 3), PackedInt32Array(3, 42, 43), PackedInt32Array(43, 42, 44), PackedInt32Array(41, 42, 26), PackedInt32Array(26, 42, 25), PackedInt32Array(37, 43, 38), PackedInt32Array(38, 43, 7), PackedInt32Array(7, 43, 44), PackedInt32Array(3, 4, 25), PackedInt32Array(38, 7, 8), PackedInt32Array(46, 45, 47), PackedInt32Array(47, 45, 48), PackedInt32Array(49, 48, 50), PackedInt32Array(50, 48, 51), PackedInt32Array(45, 52, 48), PackedInt32Array(48, 52, 51), PackedInt32Array(52, 53, 51), PackedInt32Array(55, 54, 56), PackedInt32Array(56, 54, 57), PackedInt32Array(58, 61, 59), PackedInt32Array(59, 61, 60), PackedInt32Array(63, 62, 64), PackedInt32Array(64, 62, 65), PackedInt32Array(66, 58, 67), PackedInt32Array(67, 58, 59), PackedInt32Array(61, 68, 64), PackedInt32Array(61, 69, 68), PackedInt32Array(71, 56, 70), PackedInt32Array(70, 56, 57), PackedInt32Array(65, 72, 64), PackedInt32Array(64, 72, 61), PackedInt32Array(70, 75, 71), PackedInt32Array(71, 75, 74), PackedInt32Array(71, 74, 73), PackedInt32Array(77, 72, 76), PackedInt32Array(61, 58, 69), PackedInt32Array(78, 77, 70), PackedInt32Array(70, 77, 75), PackedInt32Array(75, 77, 76), PackedInt32Array(80, 79, 81), PackedInt32Array(81, 79, 60), PackedInt32Array(72, 65, 76), PackedInt32Array(60, 79, 59), PackedInt32Array(83, 82, 78), PackedInt32Array(78, 82, 77), PackedInt32Array(19, 20, 83), PackedInt32Array(83, 20, 82), PackedInt32Array(82, 20, 47), PackedInt32Array(47, 20, 46), PackedInt32Array(85, 84, 86), PackedInt32Array(86, 84, 87), PackedInt32Array(35, 87, 88), PackedInt32Array(91, 90, 89), PackedInt32Array(88, 34, 35), PackedInt32Array(84, 91, 89), PackedInt32Array(84, 89, 87), PackedInt32Array(87, 89, 88), PackedInt32Array(90, 91, 92), PackedInt32Array(31, 93, 30), PackedInt32Array(30, 93, 94), PackedInt32Array(93, 90, 94), PackedInt32Array(94, 90, 92), PackedInt32Array(96, 95, 97), PackedInt32Array(97, 95, 98), PackedInt32Array(40, 99, 39), PackedInt32Array(39, 99, 100), PackedInt32Array(100, 99, 98), PackedInt32Array(98, 99, 97), PackedInt32Array(97, 99, 103), PackedInt32Array(103, 99, 102), PackedInt32Array(103, 102, 101), PackedInt32Array(98, 104, 100), PackedInt32Array(85, 86, 105), PackedInt32Array(105, 86, 107), PackedInt32Array(105, 107, 106), PackedInt32Array(109, 108, 106), PackedInt32Array(106, 108, 105), PackedInt32Array(105, 108, 110), PackedInt32Array(96, 109, 95), PackedInt32Array(95, 109, 111), PackedInt32Array(107, 112, 106), PackedInt32Array(106, 113, 111), PackedInt32Array(106, 111, 109), PackedInt32Array(55, 114, 54), PackedInt32Array(54, 114, 81), PackedInt32Array(81, 114, 80), PackedInt32Array(80, 114, 115), PackedInt32Array(115, 114, 73), PackedInt32Array(62, 63, 74), PackedInt32Array(74, 63, 116), PackedInt32Array(74, 116, 115), PackedInt32Array(74, 115, 73), PackedInt32Array(66, 67, 116), PackedInt32Array(116, 67, 115)]
 
-[node name="Level1" type="Node3D" unique_id=2144145430]
+[node name="Level1" type="Node3D" unique_id=2144145430 node_paths=PackedStringArray("navigation_region_3d")]
 script = ExtResource("1_bjebc")
 fog_colors = Array[Color]([Color(0.21000002, 0.6, 0.26200008, 1), Color(0.67, 0.23450002, 0.23450002, 1), Color(0.2205, 0.609525, 0.63, 1), Color(0, 0, 0, 1)])
+navigation_region_3d = NodePath("NavigationRegion3D")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=762996392]
 environment = ExtResource("2_ggavl")
@@ -88,8 +125,11 @@ pickup_data = SubResource("Resource_ggavl")
 
 [node name="Enemy14" parent="." unique_id=1044088150 instance=ExtResource("7_j7kpp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.70613, 0, 28.22306)
-speed = 10.0
 data = SubResource("Resource_ka01f")
+
+[node name="Enemy15" parent="." unique_id=1625287854 instance=ExtResource("7_j7kpp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.706131, 0, 20.22306)
+data = SubResource("Resource_notaq")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1999793683 groups=["nav"]]
 navigation_mesh = SubResource("NavigationMesh_5rr72")
@@ -117,3 +157,6 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -16,
 
 [node name="Door5" parent="." unique_id=408695234 instance=ExtResource("9_gyffv")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4, 0, 21)
+
+[node name="Exit" parent="." unique_id=1757934071 instance=ExtResource("32_ka01f")]
+transform = Transform3D(0.94551855, 0.011362142, -0.32536986, 0, 0.99939084, 0.034899425, 0.32556817, -0.032998055, 0.9449426, -46.37951, -0.0005275607, 27.11051)

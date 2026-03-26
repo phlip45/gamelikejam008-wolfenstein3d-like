@@ -24,7 +24,6 @@ var awake:bool = false
 var state:State
 var target:Actor
 var move_target:Vector3
-var target_lock_time:Vector2 = Vector2(10,10)
 var update_path_time:Vector2 = Vector2(0,1)
 var aggression:float = 20.0
 
@@ -73,7 +72,6 @@ func setup(_enemy:Enemy) -> void:
 
 func process(delta:float):
 	global_attack_cooldown.x -= delta
-	target_lock_time.x -= delta
 	if state == State.NULL: return
 	state_process[state].call(delta)
 
@@ -91,8 +89,10 @@ func _process_moving(delta:float):
 	decide_time.x -= delta
 	if decide_time.x < 0:
 		decide_time.x = decide_time.y
-		decide_state_by_range()
-	#Only update path every few tics instead of every single tic
+		decide_action_by_range()
+	update_path()
+
+func update_path():
 	if update_path_time.x > 0: return
 	update_path_time.x = update_path_time.y
 	enemy.nav_agent.target_position = target.global_position
@@ -123,7 +123,7 @@ func get_target():
 			change_state(State.IDLE)
 			return
 
-func decide_state_by_range():
+func decide_action_by_range():
 	if !target: return
 	var distance:float = enemy.global_position.distance_to(target.global_position)
 	if distance <= melee_range:
@@ -163,7 +163,7 @@ func shoot():
 
 func spawn_missile():
 	if global_attack_cooldown.x > 0: return
-	var attack:Projectile = ranged_projectile_scene.instantiate() as Projectile
+	var attack:SnotBallProjectile = ranged_projectile_scene.instantiate() as SnotBallProjectile
 	enemy.add_child(attack)
 	attack.setup(enemy.projectile_cloaca.global_position,enemy.rotation, enemy)
 
@@ -211,17 +211,6 @@ func move_toward_target() -> bool:
 		return false
 	else:
 		return true
-
-func rotate_toward_target()-> void:
-	var next_location = enemy.nav_agent.get_next_path_position()
-	if !is_colinear_with_up(enemy.global_position,next_location) and !enemy.global_position.is_equal_approx(next_location):
-		var prev_rot:Vector3 = enemy.rotation
-		enemy.look_at(next_location)
-		var target_rotation:Vector3 = shortest_rotation_path(prev_rot,enemy.rotation)
-		enemy.rotation = prev_rot.move_toward(target_rotation,.1)
-			
-	enemy.rotation.x = 0
-	enemy.rotation.z = 0
 
 func _on_sprite_frame_changed():
 	if enemy.sprite.frame == melee_activate_frame and state == State.MELEE_ATTACK:

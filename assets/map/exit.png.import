@@ -2,22 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boxuja31ngl5k"
-path.s3tc="res://.godot/imported/doomscroll_projectiles.png-81e0fd8d61dd794abc889d12842e3763.s3tc.ctex"
-path.etc2="res://.godot/imported/doomscroll_projectiles.png-81e0fd8d61dd794abc889d12842e3763.etc2.ctex"
+uid="uid://w8jmb1u86ain"
+path="res://.godot/imported/exit.png-f42729d79a917f7f53cbc273ff0d9bee.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/projectiles/doomscroll_projectiles.png"
-dest_files=["res://.godot/imported/doomscroll_projectiles.png-81e0fd8d61dd794abc889d12842e3763.s3tc.ctex", "res://.godot/imported/doomscroll_projectiles.png-81e0fd8d61dd794abc889d12842e3763.etc2.ctex"]
+source_file="res://assets/map/exit.png"
+dest_files=["res://.godot/imported/exit.png-f42729d79a917f7f53cbc273ff0d9bee.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

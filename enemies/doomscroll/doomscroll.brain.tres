@@ -6,4 +6,7 @@
 script = ExtResource("1_j3762")
 name = "doomscroll"
 missile_range = 3.0
+missile_activate_frame = 8
+ranged_projectile_path = "res://enemies/projectiles/popup.projectile.tscn"
+projectile_cloaca_position = Vector3(0, 1.5, 0)
 metadata/_custom_type_script = "uid://b8ssqpqiah8e0"

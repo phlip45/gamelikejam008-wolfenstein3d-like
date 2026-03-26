@@ -15,5 +15,3 @@ func interact():
 	else:
 		animation_player.play("interact")
 	toggled = !toggled
-		
-		

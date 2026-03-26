@@ -1,0 +1,54 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dmh7tu6qyieau"]
+
+[ext_resource type="Texture2D" uid="uid://boxuja31ngl5k" path="res://assets/enemies/projectiles/doomscroll_projectiles.png" id="1_8a0p7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1tfe"]
+atlas = ExtResource("1_8a0p7")
+region = Rect2(0, 0, 220, 191)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvukn"]
+atlas = ExtResource("1_8a0p7")
+region = Rect2(0, 191, 224, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvo7b"]
+atlas = ExtResource("1_8a0p7")
+region = Rect2(222, 0, 222, 133)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5g1wk"]
+atlas = ExtResource("1_8a0p7")
+region = Rect2(223, 142, 229, 162)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1tfe")
+}],
+"loop": true,
+"name": &"popup_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvukn")
+}],
+"loop": true,
+"name": &"popup_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvo7b")
+}],
+"loop": true,
+"name": &"popup_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5g1wk")
+}],
+"loop": true,
+"name": &"popup_3",
+"speed": 5.0
+}]

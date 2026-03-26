@@ -32,3 +32,14 @@ func shortest_rotation_path(from_rotation: Vector3, to_rotation: Vector3) -> Vec
 	delta.y = normalize_angle_diff.call(delta.y)
 	delta.z = normalize_angle_diff.call(delta.z)
 	return from_rotation + delta
+
+func rotate_toward_target()-> void:
+	var next_location = enemy.nav_agent.get_next_path_position()
+	if !is_colinear_with_up(enemy.global_position,next_location) and !enemy.global_position.is_equal_approx(next_location):
+		var prev_rot:Vector3 = enemy.rotation
+		enemy.look_at(next_location)
+		var target_rotation:Vector3 = shortest_rotation_path(prev_rot,enemy.rotation)
+		enemy.rotation = prev_rot.move_toward(target_rotation,.1)
+			
+	enemy.rotation.x = 0
+	enemy.rotation.z = 0
