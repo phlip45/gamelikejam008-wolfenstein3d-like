@@ -34,7 +34,7 @@ func interact():
 
 func play_button_animation():
 	if !animation_player: 
-		push_warning("No AnimationPlayer")
+		#push_warning("No AnimationPlayer")
 		return
 	if toggleable:
 		if active:

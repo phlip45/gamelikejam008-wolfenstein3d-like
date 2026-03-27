@@ -68,5 +68,5 @@ func on_kessleroid_killed(remaining:int):
 func display_death():
 	if gun_sprite.sprite_frames.has_animation("Holster"):
 		play_gun_anim("Holster")
-	var tween:Tween = create_tween()
-	tween.tween_property(died_splash, "modulate", Color.WHITE,0.6)
+	var _tween:Tween = create_tween()
+	_tween.tween_property(died_splash, "modulate", Color.WHITE,0.6)
