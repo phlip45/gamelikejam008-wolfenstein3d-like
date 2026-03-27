@@ -3,9 +3,7 @@ class_name DoomscrollBrain
 
 @export var name:String
 @export var wait:Vector2 = Vector2(3,3)
-## Further than this range and the enemy attacks with their projectile.
-## Less than this but more than melee range and the enemy will randomly
-## decide to try and close the gap or shoot a missile.
+# Enemy attacks more passed this range and runs more before it
 @export var missile_range:float
 @export var missile_activate_frame:int = 17
 var awake:bool = false
@@ -124,8 +122,10 @@ func on_damaged(amount:int):
 	var tween:Tween = enemy.create_tween()
 	tween.tween_property(enemy.sprite,"modulate",Color.RED,.2)
 	tween.tween_property(enemy.sprite,"modulate",Color.WHITE,.1)
+	wait.x = 0
 	if !target:
 		target = Global.player
+		change_state(State.MOVING)
 	if enemy.should_flinch(amount):
 		change_state(State.HURT)
 		enemy.sprite.play("Hurt")
@@ -198,7 +198,6 @@ func get_run_position() -> Vector3:
 	var result:Vector3 = Global.player.global_position + rotated_dir * randf_range(4.0,6.0)
 	return result
 
-	
 func rotate_toward_enemy() -> void:
 	var prev_rot:Vector3 = enemy.rotation
 	enemy.look_at(target.global_position)
