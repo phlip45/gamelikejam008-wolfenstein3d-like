@@ -2,14 +2,19 @@ extends Node3D
 class_name Level
 
 @onready var world_environment: WorldEnvironment = $WorldEnvironment
+@export var kessleroids_to_unlock_exit:Vector2i
 @export var fog_colors:Array[Color]
 var fog_color_index:int = 0
 @export var navigation_region_3d: NavigationRegion3D
+
+signal kessleroid_killed(remaining_kessleroids:int)
 
 func _init():
 	Global.level = self
 	
 func _ready() -> void:
+	Global.level = self
+	kessleroids_to_unlock_exit.x = kessleroids_to_unlock_exit.y
 	var spurt:PackedScene = await Global.load_scene("res://assets/effects/blood_spurt.tscn")
 	var real_spurt:BloodSpurt = spurt.instantiate()
 	add_child(real_spurt)
@@ -20,4 +25,8 @@ func cycle_colors():
 	for i in fog_colors.size():
 		tween.tween_property(world_environment.environment, "fog_light_color",fog_colors[i],10)
 	tween.tween_callback(cycle_colors)
-	
+
+func kessleroid_died():
+	kessleroids_to_unlock_exit.x -= 1
+	print("Kesselroid Died: " , kessleroids_to_unlock_exit)
+	kessleroid_killed.emit(kessleroids_to_unlock_exit.x)

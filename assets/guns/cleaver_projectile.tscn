@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://cclouqqethc36" path="res://assets/guns/cleaver.sprite_frames.tres" id="2_488xg"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_488xg"]
-radius = 0.7305013
+radius = 1.0917138
 
 [sub_resource type="Animation" id="Animation_5wty6"]
 length = 0.001

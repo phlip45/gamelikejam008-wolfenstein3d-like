@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://di7k1hu1ix4gf"]
+
+[ext_resource type="Shader" uid="uid://613ja4oq5s5u" path="res://assets/materials/portal_purple.shader.gdshader" id="1_7pohd"]
+[ext_resource type="Texture2D" uid="uid://dnu2eolumbu7u" path="res://assets/materials/red_orange_gradient.gradient.tres" id="2_8v5cb"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_7pohd")
+shader_parameter/noise_texture = ExtResource("2_8v5cb")
+shader_parameter/layers = 8
+shader_parameter/depth_amount = 1.0
+shader_parameter/fade_amount = 1.0

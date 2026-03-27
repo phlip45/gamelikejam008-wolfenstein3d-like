@@ -1,7 +1,7 @@
 extends Projectile
 class_name RevolverProjectile
 
-func setup(pos:Vector3,rot:Vector3, enemy:Enemy):
+func setup(_pos:Vector3,_rot:Vector3, _enemy:Enemy):
 	pass
 
 func _ready() -> void:

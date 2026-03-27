@@ -36,7 +36,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3122481, -0.4774545)
 
 [node name="RayCast3D2" type="RayCast3D" parent="Head/Camera3D" unique_id=1713062027]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07985473, 0)
-target_position = Vector3(0, 0, -10)
+target_position = Vector3(0, 0, -100)
 debug_shape_custom_color = Color(1, 0.85490197, 0, 1)
 debug_shape_thickness = 5
 

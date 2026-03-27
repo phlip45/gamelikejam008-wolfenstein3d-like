@@ -59,6 +59,7 @@ func on_death():
 	Explosion.spawn(enemy.global_position + Vector3(0,1.5,0), 4.0)
 	var tween:Tween = enemy.create_tween()
 	tween.tween_property(enemy.sprite,"modulate", Color.TRANSPARENT, .5)
+	tween.tween_callback(Global.level.kessleroid_died)
 	tween.tween_callback(enemy.die)
 
 func _on_anim_finished():

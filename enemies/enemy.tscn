@@ -7,10 +7,10 @@
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_a6vjd"]
 height = 2.2016113
 
+[sub_resource type="PrismMesh" id="PrismMesh_7frlh"]
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_7frlh"]
 radius = 0.70864034
-
-[sub_resource type="PrismMesh" id="PrismMesh_7frlh"]
 
 [node name="Enemy" type="CharacterBody3D" unique_id=1625287854 groups=["enemy"]]
 script = ExtResource("1_7frlh")
@@ -18,13 +18,6 @@ script = ExtResource("1_7frlh")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1261121391]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1008056, 0)
 shape = SubResource("CylinderShape3D_a6vjd")
-
-[node name="DoorOpener" type="Area3D" parent="CollisionShape3D" unique_id=221083440]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12901843, 0)
-script = ExtResource("2_orwns")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D/DoorOpener" unique_id=2132988604]
-shape = SubResource("SphereShape3D_7frlh")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1847465004]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.3534582, 0)
@@ -61,5 +54,13 @@ transform = Transform3D(-0.29999998, -2.6226832e-08, 1.1464111e-15, 0, -1.311341
 visible = false
 mesh = SubResource("PrismMesh_7frlh")
 
-[connection signal="area_entered" from="CollisionShape3D/DoorOpener" to="CollisionShape3D/DoorOpener" method="_on_area_entered"]
-[connection signal="area_exited" from="CollisionShape3D/DoorOpener" to="CollisionShape3D/DoorOpener" method="_on_area_exited"]
+[node name="DoorOpener" type="Area3D" parent="." unique_id=221083440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9717872, 0)
+collision_layer = 2
+script = ExtResource("2_orwns")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DoorOpener" unique_id=2132988604]
+shape = SubResource("SphereShape3D_7frlh")
+
+[connection signal="area_entered" from="DoorOpener" to="DoorOpener" method="_on_area_entered"]
+[connection signal="area_exited" from="DoorOpener" to="DoorOpener" method="_on_area_exited"]

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://e8yxakvkhkym" path="res://assets/guns/buzzsaw.png" id="1_m6e0p"]
 [ext_resource type="Shader" uid="uid://bccrheoyfitna" path="res://hsv_light_balance.gdshader" id="3_n5ude"]
 [ext_resource type="Texture2D" uid="uid://7fhq8vru4ef4" path="res://assets/ui.png" id="3_nltto"]
+[ext_resource type="FontFile" uid="uid://bmuvkaw13jyml" path="res://assets/fonts/Cyberfall Italic.otf" id="5_waa4j"]
 [ext_resource type="FontFile" uid="uid://dm3q4yxnivjsu" path="res://assets/fonts/Cyberfall.otf" id="7_waa4j"]
 [ext_resource type="SpriteFrames" uid="uid://dsvldca5w88xt" path="res://assets/UI/face.sprite_frames.tres" id="7_y4yjw"]
 
@@ -39,13 +40,30 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0, 1)
 
-[node name="UI" type="CanvasLayer" unique_id=1707186579 node_paths=PackedStringArray("gun_sprite", "damage_mask", "face", "health", "ammo")]
+[sub_resource type="Gradient" id="Gradient_ok7cu"]
+offsets = PackedFloat32Array(0.25515464, 1)
+colors = PackedColorArray(0, 0, 0, 0.28627452, 0, 1, 0.0666666, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_irxef"]
+gradient = SubResource("Gradient_ok7cu")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_waa4j"]
+offsets = PackedFloat32Array(0.25515464, 1)
+colors = PackedColorArray(0, 0, 0, 0.28627452, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ok7cu"]
+gradient = SubResource("Gradient_waa4j")
+fill_to = Vector2(0, 1)
+
+[node name="UI" type="CanvasLayer" unique_id=1707186579 node_paths=PackedStringArray("gun_sprite", "damage_mask", "face", "health", "ammo", "died_splash")]
 script = ExtResource("1_ibotj")
 gun_sprite = NodePath("Hud/VBoxContainer/GameView/GunHolder/Control/GunSprite")
 damage_mask = NodePath("Hud/VBoxContainer/GameView/DamageMask")
 face = NodePath("Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/FacePanel/Face")
 health = NodePath("Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/HealthPanel/Health")
 ammo = NodePath("Hud/VBoxContainer/HUD/MarginContainer/HBoxContainer/AmmoPanel/Ammo")
+died_splash = NodePath("Hud/VBoxContainer/GameView/Died Splash")
 
 [node name="Hud" type="Control" parent="." unique_id=631451806]
 texture_filter = 1
@@ -135,6 +153,65 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0, 0, 1)
+
+[node name="ExitOpenedText" type="RichTextLabel" parent="Hud/VBoxContainer/GameView" unique_id=510333670]
+modulate = Color(1, 1, 1, 0)
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 20.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("5_waa4j")
+theme_override_font_sizes/normal_font_size = 34
+text = "EXIT OPENED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Hud/VBoxContainer/GameView/ExitOpenedText" unique_id=937337111]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_irxef")
+
+[node name="Died Splash" type="ColorRect" parent="Hud/VBoxContainer/GameView" unique_id=640337545]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5, 0.18, 0.18, 0.6666667)
+
+[node name="DiedText" type="RichTextLabel" parent="Hud/VBoxContainer/GameView/Died Splash" unique_id=1381144371]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("5_waa4j")
+theme_override_font_sizes/normal_font_size = 44
+text = "FLATLINE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Hud/VBoxContainer/GameView/Died Splash/DiedText" unique_id=1671046713]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ok7cu")
 
 [node name="HUD" type="Panel" parent="Hud/VBoxContainer" unique_id=151883937]
 texture_filter = 1

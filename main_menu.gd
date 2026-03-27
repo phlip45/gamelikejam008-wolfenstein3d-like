@@ -8,6 +8,7 @@ func _on_play_pressed() -> void:
 	Global.scene_changer.change_scene("res://level_1.tscn")
 
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	viewport = get_viewport()
 	set_viewport_size()
 	viewport.size_changed.connect(set_viewport_size)

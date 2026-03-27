@@ -2,11 +2,12 @@ extends Actor
 class_name Player
 
 @export var inventory:Inventory
-@onready var ui: CanvasLayer = $UI
+@onready var ui: UI = $UI
 @export var ray_cast_3d: RayCast3D
 @export var starting_health: int
 @export var max_health:int
 var flesh:Flesh = Flesh.create(Vector2i(100,200), Flesh.Type.PLAYER)
+@onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 
 @onready var head: Node3D = $Head
 @onready var camera_3d: Camera3D = $Head/Camera3D
@@ -17,10 +18,14 @@ var flesh:Flesh = Flesh.create(Vector2i(100,200), Flesh.Type.PLAYER)
 const speed = 5.0
 const JUMP_VELOCITY = 4.5
 var mouse_move:Vector2 = Vector2.ZERO
-
 var gun_state:GunState = GunState.READY
-
 var interactables_nearby:Array[Interactable]
+var state:State = State.ALIVE
+var death_time:float = 2.0
+
+enum State{
+	NULL, ALIVE, DEAD
+}
 
 enum GunState{
 	NULL, CHANGING_WEAPON, READY
@@ -30,6 +35,7 @@ func _init() -> void:
 	Global.player = self
 
 func _ready() -> void:
+	flesh.died.connect(on_death)
 	flesh.damaged.connect(on_damage)
 
 func _input(event: InputEvent) -> void:
@@ -46,11 +52,22 @@ func damage(_damage:Damage):
 	flesh.damage(_damage)
 
 func _process(delta: float) -> void:
+	if state == State.DEAD:
+		_process_dead(delta)
+		return
 	handle_weapon(delta)
 	interact(delta)
 	switch_weapons(delta)
 	move(delta)
 	mouse_look(delta)
+
+func _process_dead(delta):
+	death_time -= delta
+	if death_time > 0:
+		return
+	if (Input.is_action_just_pressed("use") or
+		Input.is_action_just_pressed("click")):
+		Global.restart_level()
 
 func mouse_look(_delta:float):
 		camera_3d.rotation.y -= mouse_move.x
@@ -149,3 +166,10 @@ func _on_interactable_detector_area_exited(area: Area3D) -> void:
 
 func on_damage(_unused:float):
 	ui.flash_damage()
+
+func on_death():
+	state = State.DEAD
+	ui.display_death()
+	collision_shape_3d.disabled = true
+	var tween:Tween = create_tween()
+	tween.tween_property(head,"position", Vector3(0,.2,0), 1.0)

@@ -64,7 +64,7 @@ func process(delta:float):
 	if state == State.NULL: return
 	state_process[state].call(delta)
 
-func _process_idle(delta:float):
+func _process_idle(_delta:float):
 	if wait.x <= 0:
 		wait.x = wait.y
 		#decide_action_by_range()

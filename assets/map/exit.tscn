@@ -5,15 +5,18 @@
 [ext_resource type="Script" uid="uid://cfgifsfeh37tx" path="res://assets/map/walk_on.trigger.gd" id="2_gb0yp"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_gb0yp"]
+radius = 0.5978768
 
-[node name="Exit" type="Node3D" unique_id=1977667363]
+[node name="Exit" type="Node3D" unique_id=1977667363 node_paths=PackedStringArray("animated_sprite_3d") groups=["exit"]]
 script = ExtResource("1_hfi5f")
+animated_sprite_3d = NodePath("WalkOn/AnimatedSprite3D")
 
-[node name="Exit" type="Area3D" parent="." unique_id=1757934071]
+[node name="WalkOn" type="Area3D" parent="." unique_id=1757934071 node_paths=PackedStringArray("collision_shape_3d")]
 script = ExtResource("2_gb0yp")
+collision_shape_3d = NodePath("CollisionShape3D")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Exit" unique_id=861819217]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -0.124538004, 0)
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="WalkOn" unique_id=861819217]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, -0.124538004, 0)
 offset = Vector2(0, 128)
 billboard = 2
 texture_filter = 0
@@ -22,8 +25,9 @@ animation = &"Inactive"
 autoplay = "Inactive"
 frame_progress = 0.4893793
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Exit" unique_id=1643664631]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WalkOn" unique_id=1643664631]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80630624, 0)
 shape = SubResource("SphereShape3D_gb0yp")
 
-[connection signal="body_entered" from="Exit" to="Exit" method="_on_body_entered"]
+[connection signal="body_entered" from="WalkOn" to="WalkOn" method="_on_body_entered"]
+[connection signal="trigger" from="WalkOn" to="." method="_on_walk_on_trigger"]

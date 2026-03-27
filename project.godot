@@ -39,6 +39,7 @@ enemy=""
 nav=""
 interactable=""
 door=""
+exit=""
 
 [gui]
 

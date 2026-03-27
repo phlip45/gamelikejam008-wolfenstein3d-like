@@ -1,6 +1,5 @@
 extends Area3D
 
-
 var doors_to_open:Array[Door] = []
 
 func _ready() -> void:
@@ -15,8 +14,8 @@ func open_doors():
 
 func _on_area_entered(area: Area3D) -> void:
 	if area and area.is_in_group("door"):
-		doors_to_open.append(area as Door)
+		doors_to_open.append(area.get_parent() as Door)
 
 func _on_area_exited(area: Area3D) -> void:
 	if area and area.is_in_group("door"):
-		doors_to_open.erase(area as Door)
+		doors_to_open.erase(area.get_parent() as Door)
