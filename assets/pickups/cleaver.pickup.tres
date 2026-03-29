@@ -13,5 +13,6 @@ script = ExtResource("2_8he4d")
 gundata = ExtResource("1_u4eq1")
 name = "CleaverPickup"
 type = 1
+sprite_scale = 0.2
 texture = SubResource("AtlasTexture_27bay")
 metadata/_custom_type_script = "uid://b5240uddhgar4"

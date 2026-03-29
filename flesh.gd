@@ -51,3 +51,8 @@ func heal(amount:int, over_heal:bool = false):
 	else:
 		health.x = min(health.x + amount, health.y)
 	health_changed.emit(health.x)
+
+func is_hale():
+	if health.x >= starting_health:
+		return true
+	return false

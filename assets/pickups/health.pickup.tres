@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="HealthPickupData" format=3 uid="uid://cok8j8c4o1w1t"]
 
 [ext_resource type="Script" uid="uid://dcnptufmd6a0o" path="res://health.pickup_data.gd" id="1_b02ix"]
-[ext_resource type="SpriteFrames" path="res://assets/pickups/health.sprite_frames.tres" id="2_liq4c"]
+[ext_resource type="SpriteFrames" uid="uid://23sx1kvbjh4r" path="res://assets/pickups/health.sprite_frames.tres" id="2_liq4c"]
 
 [resource]
 script = ExtResource("1_b02ix")

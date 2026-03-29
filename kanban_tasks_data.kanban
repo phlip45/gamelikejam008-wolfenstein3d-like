@@ -12,15 +12,15 @@
 			"title": "Todo",
 			"tasks": [
 				"c6448406-4492-4c52-9e37-066effab4b22",
-				"66d88e66-15ee-4c46-84c0-d3af86bf4e01"
+				"66d88e66-15ee-4c46-84c0-d3af86bf4e01",
+				"8051c719-cce1-4fc4-b362-2af92c18db47"
 			]
 		},
 		{
 			"uuid": "3ec64728-f476-4882-9e34-83ac258c99b7",
 			"title": "Doing",
 			"tasks": [
-				"935a1061-7e32-4343-8f26-7918c13f3a01",
-				"64fe302e-e5b5-4825-86a3-b1f0b4aea2ab"
+				"935a1061-7e32-4343-8f26-7918c13f3a01"
 			]
 		},
 		{
@@ -31,7 +31,8 @@
 				"804103f2-9c5b-47f0-b944-926bcb87f409",
 				"a491b1b6-df81-4e46-96a9-aff12cc49fea",
 				"f8980dd3-2974-4644-827d-57cb8e091826",
-				"150ccbf0-b2dd-4670-9e2e-f61f9b64094e"
+				"150ccbf0-b2dd-4670-9e2e-f61f9b64094e",
+				"64fe302e-e5b5-4825-86a3-b1f0b4aea2ab"
 			]
 		}
 	],
@@ -105,6 +106,22 @@
 			"description": "",
 			"category": "2a9989eb-8cfb-43e9-984a-c8636dd462db",
 			"steps": []
+		},
+		{
+			"uuid": "8051c719-cce1-4fc4-b362-2af92c18db47",
+			"title": "New Level Pieces",
+			"description": "",
+			"category": "2a9989eb-8cfb-43e9-984a-c8636dd462db",
+			"steps": [
+				{
+					"details": "New textrure",
+					"done": false
+				},
+				{
+					"details": "New piece -> Window",
+					"done": false
+				}
+			]
 		}
 	],
 	"layout": {

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AmmoPickupData" format=3 uid="uid://dojuobjmnaty7"]
+
+[ext_resource type="Script" uid="uid://br6336udj7lu6" path="res://pickups/ammo.pickup_data.gd" id="1_eggdx"]
+[ext_resource type="SpriteFrames" uid="uid://eq8kq6t2vxir" path="res://assets/pickups/ammo.sprite_frames.tres" id="2_l2nxb"]
+
+[resource]
+script = ExtResource("1_eggdx")
+amount = 10
+ammo_type = 1
+name = "CreditSmallPickup"
+type = 2
+sprite_scale = 0.6
+sprite_frames = ExtResource("2_l2nxb")
+metadata/_custom_type_script = "uid://br6336udj7lu6"

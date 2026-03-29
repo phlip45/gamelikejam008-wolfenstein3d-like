@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GunPickupData" format=3 uid="uid://cafs4ym4nsmop"]
+
+[ext_resource type="Resource" uid="uid://cdns7l11ld2ok" path="res://assets/guns/revolver.gun_data.tres" id="1_qap2f"]
+[ext_resource type="Script" uid="uid://b5240uddhgar4" path="res://pickups/gun.pickup_data.gd" id="2_v8l1b"]
+[ext_resource type="Texture2D" uid="uid://mx26tmwddeys" path="res://assets/pickups.png" id="3_ijxwf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ethxx"]
+atlas = ExtResource("3_ijxwf")
+region = Rect2(109, 121, 147, 135)
+
+[resource]
+script = ExtResource("2_v8l1b")
+gundata = ExtResource("1_qap2f")
+name = "Revolver"
+type = 1
+sprite_scale = 0.2
+texture = SubResource("AtlasTexture_ethxx")
+metadata/_custom_type_script = "uid://b5240uddhgar4"

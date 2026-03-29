@@ -29,6 +29,8 @@ func _update_sprite():
 		animated = false
 		sprite_3d.visible = true
 		animated_sprite_3d.visible = false
+	sprite_3d.scale = Vector3.ONE * pickup_data.sprite_scale
+	
 
 func die():
 	picked_up.emit()

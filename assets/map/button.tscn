@@ -9,12 +9,12 @@ length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Button:position:x")
+tracks/0/path = NodePath("Button:position:z")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0.12516794, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/1/type = "bezier"
@@ -31,12 +31,12 @@ tracks/1/keys = {
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Button:position:z")
+tracks/2/path = NodePath("Button:position:x")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.12516794, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 
@@ -46,12 +46,12 @@ length = 0.28
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Button:position:x")
+tracks/0/path = NodePath("Button:position:z")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(2, 2),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.046666667, 0, 0, 0),
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.12516794, -0.23630634, 0.09047212, 0.2, -0.0765719, -0.009573102, -0.08, 0.03292997, 0, 0),
 "times": PackedFloat32Array(0, 0.28)
 }
 tracks/1/type = "bezier"
@@ -61,19 +61,19 @@ tracks/1/path = NodePath("Button:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(2, 2),
+"handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.046666667, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.28)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Button:position:z")
+tracks/2/path = NodePath("Button:position:x")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(2, 2),
-"points": PackedFloat32Array(0.12516794, -0.23630634, 0.09047212, 0.2, -0.0765719, -0.009573102, -0.08, 0.03292997, 0, 0),
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.046666667, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.28)
 }
 
@@ -83,12 +83,12 @@ length = 0.28
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Button:position:x")
+tracks/0/path = NodePath("Button:position:z")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, -0.046666667, 0, 0, 0, 0, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-0.009573102, -0.08, 0.03292997, 0, 0, 0.12516794, -0.23630634, 0.09047212, 0.2, -0.0765719),
 "times": PackedFloat32Array(0, 0.26666668)
 }
 tracks/1/type = "bezier"
@@ -105,12 +105,12 @@ tracks/1/keys = {
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Button:position:z")
+tracks/2/path = NodePath("Button:position:x")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-0.009573102, -0.08, 0.03292997, 0, 0, 0.12516794, -0.23630634, 0.09047212, 0.2, -0.0765719),
+"points": PackedFloat32Array(0, -0.046666667, 0, 0, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.26666668)
 }
 
@@ -119,12 +119,12 @@ resource_name = "press"
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Button:position:x")
+tracks/0/path = NodePath("Button:position:z")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 2, 2),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.047878377, 0, 0.035850964, 0, 0, -0.08372934, 0, 0, 0),
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.12516794, -0.25, 0, 0.25, 0, -0.05154428, -0.25812688, 0.002405636, 0.275968, -0.0025719074, 0.12516794, -0.08372934, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.28727025, 0.502376)
 }
 tracks/1/type = "bezier"
@@ -134,19 +134,19 @@ tracks/1/path = NodePath("Button:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 2, 2),
+"handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.047878377, 0, 0.035850964, 0, 0, -0.08372934, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.28727025, 0.502376)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Button:position:z")
+tracks/2/path = NodePath("Button:position:x")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 2, 2),
-"points": PackedFloat32Array(0.12516794, -0.25, 0, 0.25, 0, -0.05154428, -0.25812688, 0.002405636, 0.275968, -0.0025719074, 0.12516794, -0.08372934, 0, 0, 0),
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.047878377, 0, 0.035850964, 0, 0, -0.08372934, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.28727025, 0.502376)
 }
 
@@ -158,39 +158,67 @@ _data = {
 &"press": SubResource("Animation_wnnts")
 }
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_jgtpu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jgtpu"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_th3bv"]
 _surfaces = [{
-"aabb": AABB(-0.9166667, -0.91666675, -0.87362075, 1.8333334, 1.8333335, 1.3536437),
+"aabb": AABB(-0.09991788, -0.0998989, -0.056039352, 0.19983745, 0.19981678, 0.11613095),
 "format": 34359742465,
-"index_count": 192,
-"index_data": PackedByteArray("EgATAAoAEgADABMAEwADAAsACAADABIACAALAAMAEwALAA0AEgAUAAgACgATAAYABgATAA0ACgAFABIAEgAFABQACgAGAA8ABgANABAADwAGABAADwAVAAoACgAVAAUAFQAWAAUABQAXABQABQAWABcAFQAYABYAGAAXABYADwAZABUAGQAYABUAAAAZAA8ADwAQAAAAGQAEABgAAAAQAAEAGgAEABkAAAAaABkABAAbABgAGAAbABcAGgAOAAQABAAOABsAHAAaAAAAAAABABwAEAAdAAEAHAABAB0AEAANAB0AHAARABoAEQAOABoAHAAdAAIAAgARABwADQAHAB0AAgAdAAcADQALAAcADAAHAAsAAgAHAAwADAALAAgAEQAeAA4AAgAfABEAHwAeABEADAAfAAIADgAeACAAHwAgAB4ADgAgABsADAAhAB8ACAAhAAwAIQAgAB8ACAAUACEAGwAgAAkAIQAJACAAFAAJACEAGwAJABcAFAAXAAkA"),
-"lods": [0.35228723, PackedByteArray("BQADAAoACgAEAAUACAADAAUABQAJAAgABAAJAAUACAALAAMADAALAAgACAAJAAwAAwALAA0ADgAJAAQACgADAAYABgADAA0ADwAEAAoACgAGAA8AAAAOAAQAAAAEAA8ADwAGABAADwAQAAAABgANABAAEQAOAAAADgARAAkAAAAQAAEAEAANAAEAAAABABEAAgAJABEAEQABAAIADAAJAAIADQAHAAEAAgABAAcAAgAHAAwADQALAAcADAAHAAsA"), 0.77352756, PackedByteArray("AAABAAIAAAAGAAEABgAHAAEAAgABAAcAAwAHAAYAAgAEAAAACAAHAAMAAgAHAAgABQADAAYABQAGAAAACAADAAUAAAAEAAUACAAJAAIABAACAAkABQAJAAgABAAJAAUA"), 1.2102021, PackedByteArray("AAABAAIAAAADAAEAAgAEAAAABQABAAMAAgABAAUABQADAAAABQAEAAIAAAAEAAUA")],
+"index_count": 78,
+"index_data": PackedByteArray("BQACAAYABwAGAAIABwACAAAABwAAAAkAAAADAAkACAADAAUACAAFAAYACAAJAAMACgAGAAcACgAHAAkABgALAAgACwAJAAgACgAMAAYABgAMAAsACQANAAoACwANAAkADQABAAoADAAEAAsACwAOAA0AAQANAA4ADgALAAQAAQAPAAoAAQAOAA8ACgAPAAwADgAEAA8ADwAEAAwA"),
+"lods": [0.11484137, PackedByteArray("BQACAAYABwAGAAIABwACAAAACAAFAAYACAADAAUABwABAAYABgAEAAgAAQAEAAYACAAEAAkAAQAJAAQACAAJAAMACQABAAcAAAADAAkABwAAAAkA"), 0.17226207, PackedByteArray("AAABAAIAAwABAAAAAQAEAAIAAQADAAQAAgAEAAUABQAEAAMA")],
 "name": "Material.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 34,
-"vertex_data": PackedByteArray("q6pqvwAAAAAAAACAAAAsvwEALD+cpV+/AAAAAKyqaj8AAACAAAAsPwEALL+cpV+/o3DXvqdw176OxfU+gygPP4QoD781jtY+AAAsvwEALL+cpV+/AAAsPwEALD+cpV+/q6pqPwAAAAAAAACAo3DXPqdw1z6OxfU+AAAAAKyqar8AAACAq6pqPwAAAACcpV+/AAAsPwEALD8AAACAAAAAAAAAQDGcpV+/gvcSv15iBjCOxfU+AAAsvwEALL8AAACAq6pqvwAAAACcpV+/gygPv4QoDz81jtY+AAAsPwEALL8AAACAAAAAAKyqar+cpV+/ElFDPwbyZC40jtY+AAAAABNRQ780jtY+o3DXPqdw176OxfU+gvcSP15iBjCOxfU+AAAAAIL3Er+OxfU+gygPv4QoD781jtY+ElFDvwbyZC40jtY+AAAAAHbXGTGOxfU+AAAsvwEALD8AAACAAAAAAKyqaj+cpV+/o3DXvqdw1z6OxfU+AAAAABNRQz80jtY+AAAAAIL3Ej+OxfU+gygPP4QoDz81jtY+")
+"vertex_count": 16,
+"vertex_data": PackedByteArray("sY7MPb+hzD0jgWW9oTaIPQAAAABJUls9v6HMvbCOzD0igWW9oqLMPcuXzL2FiWW9oTaIvQAAAABJUls9eIvMvWaXzL2+V2W9Cv+7vQr/uz3G5wE9Cv+7PQr/uz3F5wE9Cv+7vQr/u73F5wE9Cv+7PQr/u73G5wE9/TycPagPnD2M9XU96/mbvdkPnL2cInY9lDecvclNnD35ynU9m/WbPc5PnL1J5nU9AAAAAGTCe71jWVg9bBovo4IXNT3qg0Y9")
+}, {
+"aabb": AABB(-0.024850309, -0.041401938, 0.049520843, 0.05362796, 0.09031263, 0.0040994138),
+"format": 34359742465,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAwACAAQABQABAAAAAQAFAAYABgAHAAEABwAGAAgABgAFAAkABQAKAAkACwAJAAoA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("GvzGvBSVKb19LFo93sU5vICxCLt/mlA9+tw4vMgC87wbP1U9HL/rPKJxKb3qoFs9hsHpPOS58ry7s1g94JLLvJVWSD3eSVQ9lCY6vOxiGTwcrU49JPrVPNC9Brt4kFM9eCrWPNDfGTwVo1E94IpKvHcFGj1e1ko9sqHmPLM+SD3B/VU9AGvnPKt/GT0dyVI9")
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_th3bv"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_x0uvx"]
 resource_name = "button_Plane"
 _surfaces = [{
-"aabb": AABB(-0.9166667, -0.91666675, -0.87362075, 1.8333334, 1.8333335, 1.3536437),
-"attribute_data": PackedByteArray("IT1WP0AhXzzAyVY/AEb9O7lLWD+A9rY7ss1ZP8DPnzz/WVc/4MeNPPmMWT+guJc8wMlWP8DPnzyyzVk/AEb9O1FaWj9AIV88cz1ZP8CyIjy5S1g/oGOxPFFaWj9AIV88ss1ZPwBG/Tu5S1g/QCFfPO0BVz9AIV88wMlWP8DPnzwhPVY/QCFfPHkKVz9A0Q48ss1ZP8DPnzy5S1g/oGOxPAQCWj9AIV88uUtYPwBapjxzPVk/4MeNPIWVWT9AIV88uUtYPyDKmDx5Clc/oLiXPG6VVj9AIV88uUtYP0AhXzzAyVY/AEb9O7lLWD+A9rY7/1lXP8CyIjy5S1g/AB3jO7lLWD9Argw8+YxZP0DRDjw="),
+"aabb": AABB(-0.09991788, -0.0998989, -0.056039352, 0.19983745, 0.19981678, 0.11613095),
+"attribute_data": PackedByteArray("sc1ZPwBG/Tu6S1g/gGUXPLLNWT8ARv07ss1ZPwBG/Tu6S1g/gGUXPLLNWT8ARv07+YxZP0DRDjz5jFk/QNEOPPmMWT9A0Q48+YxZP0DRDjynPVk/QAkjPJs9WT9AAyM8fzxZP8CzIjw4PFk/AKsiPONUWT8AIV88UglZPwAhXzw="),
 "format": 34359742487,
-"index_count": 192,
-"index_data": PackedByteArray("EgATAAoAEgADABMAEwADAAsACAADABIACAALAAMAEwALAA0AEgAUAAgACgATAAYABgATAA0ACgAFABIAEgAFABQACgAGAA8ABgANABAADwAGABAADwAVAAoACgAVAAUAFQAWAAUABQAXABQABQAWABcAFQAYABYAGAAXABYADwAZABUAGQAYABUAAAAZAA8ADwAQAAAAGQAEABgAAAAQAAEAGgAEABkAAAAaABkABAAbABgAGAAbABcAGgAOAAQABAAOABsAHAAaAAAAAAABABwAEAAdAAEAHAABAB0AEAANAB0AHAARABoAEQAOABoAHAAdAAIAAgARABwADQAHAB0AAgAdAAcADQALAAcADAAHAAsAAgAHAAwADAALAAgAEQAeAA4AAgAfABEAHwAeABEADAAfAAIADgAeACAAHwAgAB4ADgAgABsADAAhAB8ACAAhAAwAIQAgAB8ACAAUACEAGwAgAAkAIQAJACAAFAAJACEAGwAJABcAFAAXAAkA"),
-"lods": [0.35228723, PackedByteArray("BQADAAoACgAEAAUACAADAAUABQAJAAgABAAJAAUACAALAAMADAALAAgACAAJAAwAAwALAA0ADgAJAAQACgADAAYABgADAA0ADwAEAAoACgAGAA8AAAAOAAQAAAAEAA8ADwAGABAADwAQAAAABgANABAAEQAOAAAADgARAAkAAAAQAAEAEAANAAEAAAABABEAAgAJABEAEQABAAIADAAJAAIADQAHAAEAAgABAAcAAgAHAAwADQALAAcADAAHAAsA"), 0.77352756, PackedByteArray("AAABAAIAAAAGAAEABgAHAAEAAgABAAcAAwAHAAYAAgAEAAAACAAHAAMAAgAHAAgABQADAAYABQAGAAAACAADAAUAAAAEAAUACAAJAAIABAACAAkABQAJAAgABAAJAAUA"), 1.2102021, PackedByteArray("AAABAAIAAAADAAEAAgAEAAAABQABAAMAAgABAAUABQADAAAABQAEAAIAAAAEAAUA")],
+"index_count": 78,
+"index_data": PackedByteArray("BQACAAYABwAGAAIABwACAAAABwAAAAkAAAADAAkACAADAAUACAAFAAYACAAJAAMACgAGAAcACgAHAAkABgALAAgACwAJAAgACgAMAAYABgAMAAsACQANAAoACwANAAkADQABAAoADAAEAAsACwAOAA0AAQANAA4ADgALAAQAAQAPAAoAAQAOAA8ACgAPAAwADgAEAA8ADwAEAAwA"),
+"lods": [0.11484137, PackedByteArray("BQACAAYABwAGAAIABwACAAAACAAFAAYACAADAAUABwABAAYABgAEAAgAAQAEAAYACAAEAAkAAQAJAAQACAAJAAMACQABAAcAAAADAAkABwAAAAkA"), 0.17226207, PackedByteArray("AAABAAIAAwABAAAAAQAEAAIAAQADAAQAAgAEAAUABQAEAAMA")],
 "material": ExtResource("1_xon0t"),
 "name": "Material.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 34,
-"vertex_data": PackedByteArray("q6pqvwAAAAAAAACAAAAsvwEALD+cpV+/AAAAAKyqaj8AAACAAAAsPwEALL+cpV+/o3DXvqdw176OxfU+gygPP4QoD781jtY+AAAsvwEALL+cpV+/AAAsPwEALD+cpV+/q6pqPwAAAAAAAACAo3DXPqdw1z6OxfU+AAAAAKyqar8AAACAq6pqPwAAAACcpV+/AAAsPwEALD8AAACAAAAAAAAAQDGcpV+/gvcSv15iBjCOxfU+AAAsvwEALL8AAACAq6pqvwAAAACcpV+/gygPv4QoDz81jtY+AAAsPwEALL8AAACAAAAAAKyqar+cpV+/ElFDPwbyZC40jtY+AAAAABNRQ780jtY+o3DXPqdw176OxfU+gvcSP15iBjCOxfU+AAAAAIL3Er+OxfU+gygPv4QoD781jtY+ElFDvwbyZC40jtY+AAAAAHbXGTGOxfU+AAAsvwEALD8AAACAAAAAAKyqaj+cpV+/o3DXvqdw1z6OxfU+AAAAABNRQz80jtY+AAAAAIL3Ej+OxfU+gygPP4QoDz81jtY+tBL/f7SS/7/uKBDX4+IKIf9/Su3///+/ENfuKP///781cjVyifAAwOymElnp/nyj7ijuKP///78Q1xDX////v0rt/3/+/1mJyY3Jjf3/usf/f7QS////v///9Ln///+/8bjxuDnxKZH//////v//P1tr/39a6/+/DUcNR1KinLgAAPS5////vxJZ7Kb6xnS/8bgNRznx1e70uQAA////v8fC/3/+/2Ph/383Pf7//7/JjTVy/f9EuKOU/3/+/621/39ba/7//78SWRJZ+saJwDc9/383vf+//3//f/7//78NR/G4UqJix/S5//////+/NXLJjYnw/r//f8fC/v//v/9/o5T+//+/7Kbspun+gdw=")
+"vertex_count": 16,
+"vertex_data": PackedByteArray("sY7MPb+hzD0jgWW9oTaIPQAAAABJUls9v6HMvbCOzD0igWW9oqLMPcuXzL2FiWW9oTaIvQAAAABJUls9eIvMvWaXzL2+V2W9Cv+7vQr/uz3G5wE9Cv+7PQr/uz3F5wE9Cv+7vQr/u73F5wE9Cv+7PQr/u73G5wE9/TycPagPnD2M9XU96/mbvdkPnL2cInY9lDecvclNnD35ynU9m/WbPc5PnL1J5nU9AAAAAGTCe71jWVg9bBovo4IXNT3qg0Y9krqZurO5LKLwYN2AlI16iWdFkLqwOS1il7puRak71JwRn+qAU1gb5mlFZUX///8/T02tsidSLV2wsriy////P0xNTk3///8/sbJXTfCtyiI+nhqeY657A2ZhXmFADsHW0GElngpymWmBnkxhpY7gFgqAPZjfOthX+X//cACPAIA=")
+}, {
+"aabb": AABB(-0.024850309, -0.041401938, 0.049520843, 0.05362796, 0.09031263, 0.0040994138),
+"attribute_data": PackedByteArray("jC46PgAAgD/pogs/AACAPy+66D4AAIA/6aKLPgAAgD+MLro+AACAP4wuuj0AAIA/XXRRPwAAgD+66CI/AACAP4wuOj8AAIA/L7poPwAAgD8AAAAAAACAPwAAgD8AAIA/"),
+"format": 34359742487,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAwACAAQABQABAAAAAQAFAAYABgAHAAEABwAGAAgABgAFAAkABQAKAAkACwAJAAoA"),
+"material": SubResource("StandardMaterial3D_jgtpu"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("GvzGvBSVKb19LFo93sU5vICxCLt/mlA9+tw4vMgC87wbP1U9HL/rPKJxKb3qoFs9hsHpPOS58ry7s1g94JLLvJVWSD3eSVQ9lCY6vOxiGTwcrU49JPrVPNC9Brt4kFM9eCrWPNDfGTwVo1E94IpKvHcFGj1e1ko9sqHmPLM+SD3B/VU9AGvnPKt/GT0dyVI9z4Tdh////z83iTiD////P6iCjIj///8/0H0uiP///z97fSWH////P7qKF3f///8/OY95hP///z+qffaE////P6p99oT///8/H4tnd////z9ce2h1////P4B6GHj///8/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_jgtpu")
+shadow_mesh = SubResource("ArrayMesh_th3bv")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x0uvx"]
 radius = 0.28270715
@@ -202,8 +230,8 @@ script = ExtResource("1_x0uvx")
 libraries/ = SubResource("AnimationLibrary_bkw47")
 
 [node name="Button" type="MeshInstance3D" parent="." unique_id=1200875405]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0.12516794)
-mesh = SubResource("ArrayMesh_th3bv")
+transform = Transform3D(2.4695015, 0, 0, 0, 2.4695015, 0, 0, 0, 2.4695015, 0, 0, 0.12516794)
+mesh = SubResource("ArrayMesh_x0uvx")
 
 [node name="ActivateArea" parent="." unique_id=2012155625 instance=ExtResource("2_0d1s8")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
