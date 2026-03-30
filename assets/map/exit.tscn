@@ -23,7 +23,7 @@ texture_filter = 0
 sprite_frames = ExtResource("1_8ovn7")
 animation = &"Inactive"
 autoplay = "Inactive"
-frame_progress = 0.4893793
+frame_progress = 0.70821047
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WalkOn" unique_id=1643664631]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80630624, 0)

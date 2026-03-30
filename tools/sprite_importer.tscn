@@ -5,4 +5,4 @@
 [node name="SpriteImporter" type="Node2D" unique_id=920173017]
 script = ExtResource("1_vftd0")
 save_path = "res://tools/sprite_importer_output"
-json_paths = Array[String](["res://assets/pickups/health.json"])
+json_paths = Array[String](["res://assets/UI/kessleroid_detector.json"])

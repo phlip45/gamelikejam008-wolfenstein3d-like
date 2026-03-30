@@ -3,9 +3,20 @@ extends Node
 var player:Player
 var ui:UI
 var level:Level
+var level_times:Dictionary[int, String] = {
+	1:"null",
+	2:"null",
+	3:"null",
+}
 var save_scenes:Dictionary[String, PackedScene]
 var save_resources:Dictionary[String, Resource]
 @onready var scene_changer: SceneChanger = $SceneChanger
+
+
+
+func _ready() -> void:
+	var player_scene:PackedScene = await load_resource("res://player.tscn")
+	player = player_scene.instantiate()
 
 func load_resource(resource_path:String) -> Resource:
 	if save_resources.has(resource_path):
@@ -58,6 +69,9 @@ func restart_level():
 	
 	scene_changer.change_scene.call_deferred("res://level_1.tscn")
 
+func finish_level():
+	
+	get_tree().change_scene_to_file.call_deferred("res://main_menu.tscn")
 
 class Settings:
 	static var mouse_sensitivity:float = 3.0

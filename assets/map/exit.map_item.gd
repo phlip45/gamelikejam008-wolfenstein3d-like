@@ -11,7 +11,8 @@ class_name Exit
 		update_sprite()
 
 func _ready():
-	Global.level.kessleroid_killed.connect(check_to_open)
+	if !Engine.is_editor_hint():
+		Global.level.kessleroid_killed.connect(check_to_open)
 	update_sprite()
 
 func update_sprite():
@@ -26,7 +27,7 @@ func _on_walk_on_trigger() -> void:
 		exit_level()
 
 func exit_level():
-	get_tree().change_scene_to_file.call_deferred("res://main_menu.tscn")
+	Global.finish_level()
 
 func activate():
 	if !active:

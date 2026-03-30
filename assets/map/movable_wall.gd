@@ -33,8 +33,7 @@ func move():
 		if one_shot:
 			locked = true
 	)
-	
-	
+
 func move_backwards():
 	if active: return
 	active = true

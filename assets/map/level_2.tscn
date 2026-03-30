@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d1vmwijkasmqf"]
+
+[ext_resource type="Environment" uid="uid://dntnb1yy4r0rv" path="res://assets/materials/foggy.environment.tres" id="1_owk8t"]
+
+[node name="Level2" type="Node3D" unique_id=1600285271]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=529086813]
+environment = ExtResource("1_owk8t")

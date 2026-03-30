@@ -1,0 +1,107 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://brup5e34sr8x6"]
+
+[ext_resource type="Texture2D" uid="uid://c031t8qrtqnis" path="res://assets/UI/kessleroid_detector.png" id="1_u5fs4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icyfa"]
+atlas = ExtResource("1_u5fs4")
+region = Rect2(0, 0, 54, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_keqsy"]
+atlas = ExtResource("1_u5fs4")
+region = Rect2(54, 0, 54, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvgde"]
+atlas = ExtResource("1_u5fs4")
+region = Rect2(108, 0, 54, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgbth"]
+atlas = ExtResource("1_u5fs4")
+region = Rect2(0, 14, 54, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxeew"]
+atlas = ExtResource("1_u5fs4")
+region = Rect2(54, 14, 54, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r08w3"]
+atlas = ExtResource("1_u5fs4")
+region = Rect2(108, 14, 54, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86kx2"]
+atlas = ExtResource("1_u5fs4")
+region = Rect2(0, 28, 54, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sa4b3"]
+atlas = ExtResource("1_u5fs4")
+region = Rect2(54, 28, 54, 14)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_icyfa")
+}],
+"loop": false,
+"name": &"0.ase",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_keqsy")
+}],
+"loop": false,
+"name": &"1.ase",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_mvgde")
+}],
+"loop": false,
+"name": &"2.ase",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_kgbth")
+}],
+"loop": false,
+"name": &"3.ase",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_gxeew")
+}],
+"loop": false,
+"name": &"4.ase",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_r08w3")
+}],
+"loop": false,
+"name": &"5.ase",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_86kx2")
+}],
+"loop": false,
+"name": &"6.ase",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_sa4b3")
+}],
+"loop": false,
+"name": &"7.ase",
+"speed": 60.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

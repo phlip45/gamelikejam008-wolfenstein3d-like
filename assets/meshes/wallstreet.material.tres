@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://5c4f1i86vqrc"]
+
+[ext_resource type="Texture2D" uid="uid://0dap8aqb8hxt" path="res://assets/meshes/wallstreet_CyberWallStreet.png" id="1_xw3fn"]
+
+[resource]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_xw3fn")
+texture_filter = 2

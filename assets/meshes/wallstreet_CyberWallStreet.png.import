@@ -2,18 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5pb1wetbjgug"
-path.s3tc="res://.godot/imported/example.png-b8a977156485651c8db9acd6e7ee75ec.s3tc.ctex"
-path.etc2="res://.godot/imported/example.png-b8a977156485651c8db9acd6e7ee75ec.etc2.ctex"
+uid="uid://0dap8aqb8hxt"
+path.s3tc="res://.godot/imported/wallstreet_CyberWallStreet.png-a778fee7afcf61ba28ac0e36a38440de.s3tc.ctex"
+path.etc2="res://.godot/imported/wallstreet_CyberWallStreet.png-a778fee7afcf61ba28ac0e36a38440de.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "28ec87fd5498d27b643610fbcec2dc66"
+}
 
 [deps]
 
-source_file="res://assets/animations/example.png"
-dest_files=["res://.godot/imported/example.png-b8a977156485651c8db9acd6e7ee75ec.s3tc.ctex", "res://.godot/imported/example.png-b8a977156485651c8db9acd6e7ee75ec.etc2.ctex"]
+source_file="res://assets/meshes/wallstreet_CyberWallStreet.png"
+dest_files=["res://.godot/imported/wallstreet_CyberWallStreet.png-a778fee7afcf61ba28ac0e36a38440de.s3tc.ctex", "res://.godot/imported/wallstreet_CyberWallStreet.png-a778fee7afcf61ba28ac0e36a38440de.etc2.ctex"]
 
 [params]
 
