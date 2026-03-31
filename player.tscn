@@ -31,7 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5798547, 0)
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=253313596]
 
 [node name="GunCloaca" type="Marker3D" parent="Head/Camera3D" unique_id=1851540836]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3122481, -0.4774545)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3122481, -0.2573663)
 
 [node name="RayCast3D2" type="RayCast3D" parent="Head/Camera3D" unique_id=1713062027]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07985473, 0)

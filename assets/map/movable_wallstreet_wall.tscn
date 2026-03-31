@@ -40,8 +40,9 @@ shadow_mesh = SubResource("ArrayMesh_vhs1e")
 [sub_resource type="BoxShape3D" id="BoxShape3D_500c1"]
 size = Vector3(4, 3, 1)
 
-[node name="MovableWallstreetWall" type="Node3D" unique_id=1854071023]
+[node name="MovableWallstreetWall" type="Node3D" unique_id=1854071023 node_paths=PackedStringArray("node_to_move")]
 script = ExtResource("1_msbru")
+node_to_move = NodePath("StaticBody3D")
 
 [node name="DebugFacing" type="MeshInstance3D" parent="." unique_id=467616721]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 0.17509007, 0, -1, -7.65343e-09, 1.5974207, 3.2987204, -1.814477)

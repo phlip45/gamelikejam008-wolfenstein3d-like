@@ -15,6 +15,9 @@ var save_resources:Dictionary[String, Resource]
 
 
 func _ready() -> void:
+	load_new_player()
+
+func load_new_player():
 	var player_scene:PackedScene = await load_resource("res://player.tscn")
 	player = player_scene.instantiate()
 
@@ -66,7 +69,7 @@ func restart_level():
 	level.queue_free()
 	ui.queue_free()
 	player.queue_free()
-	
+	load_new_player()
 	scene_changer.change_scene.call_deferred("res://level_1.tscn")
 
 func finish_level():

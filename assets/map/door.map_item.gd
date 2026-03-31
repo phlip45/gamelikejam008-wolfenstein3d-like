@@ -1,7 +1,11 @@
+@tool
 extends Node3D
 class_name Door
 
-@export var locked:bool = false
+@export var locked:bool = false:
+	set(value):
+		locked = value
+		update_door_material()
 @onready var door: MeshInstance3D = $DoorComplete/Skeleton3D/Door
 @onready var activate_area: Interactable = $ActivateArea
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -15,10 +19,19 @@ enum State{
 }
 
 func _ready() -> void:
-	if activate_area.toggled and activate_area.toggleable:
-		animation_player.play("interact")
-	purple_shader = await Global.load_resource(PORTAL_PURPLE_SHADER)
-	red_shader = await Global.load_resource(PORTAL_RED_SHADER)
+	if activate_area:
+		if activate_area.toggled and activate_area.toggleable:
+			animation_player.play("interact")
+	if !Engine.is_editor_hint():
+		purple_shader = await Global.load_resource(PORTAL_PURPLE_SHADER)
+		red_shader = await Global.load_resource(PORTAL_RED_SHADER)
+	else:
+		purple_shader = load(PORTAL_PURPLE_SHADER)
+		red_shader = load(PORTAL_RED_SHADER)
+	update_door_material()
+
+func update_door_material():
+	if !is_inside_tree(): return
 	if locked:
 		door.mesh.surface_set_material(1,red_shader)
 	else:
@@ -26,10 +39,8 @@ func _ready() -> void:
 
 func unlock():
 	locked = false
-	door.mesh.surface_set_material(1,purple_shader)
 
 func lock():
-	door.mesh.surface_set_material(1,red_shader)
 	locked = true
 
 func open(override:bool = false):

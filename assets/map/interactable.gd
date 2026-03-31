@@ -3,7 +3,7 @@ class_name Interactable
 
 @export var toggleable:bool
 @export var starting_value:bool
-var toggled:bool
+@export var toggled:bool
 
 signal used
 signal on

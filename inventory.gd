@@ -61,7 +61,6 @@ func pickup_gun(data:PickupData) -> bool:
 		var pickup_ammo_instead:AmmoPickupData = AmmoPickupData.new()
 		pickup_ammo_instead.amount = 10
 		return pickup_ammo(pickup_ammo_instead)
-	return false
 	
 func pickup_ammo(data:AmmoPickupData) -> bool:
 	if credit.x == credit.y:

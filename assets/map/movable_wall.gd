@@ -8,7 +8,7 @@ class_name MovableWall
 var locked:bool = false
 var active:bool = false
 var moved:bool = false
-@onready var static_body_3d: StaticBody3D = $StaticBody3D
+@export var node_to_move: Node3D
 
 func activate():
 	if locked: return
@@ -20,10 +20,10 @@ func activate():
 func move():
 	if active: return
 	active = true
-	static_body_3d.position = Vector3.ZERO
+	node_to_move.position = Vector3.ZERO
 	var tween:Tween = create_tween()
 	tween.tween_property(
-		static_body_3d,
+		node_to_move,
 		"position", 
 		Vector3(0,0,-distance), 
 		duration)
@@ -37,10 +37,10 @@ func move():
 func move_backwards():
 	if active: return
 	active = true
-	static_body_3d.position = Vector3(0,0,-distance)
+	node_to_move.position = Vector3(0,0,-distance)
 	var tween:Tween = create_tween()
 	tween.tween_property(
-		static_body_3d,
+		node_to_move,
 		"position", 
 		Vector3(0,0,0),
 		duration)

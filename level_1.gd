@@ -11,6 +11,7 @@ var fog_color_index:int = 0
 @export var player_start_location: Marker3D
 
 signal kessleroid_killed(remaining_kessleroids:int)
+signal all_kessleroid_killed
 
 enum LevelName{
 	NULL=0, 
@@ -27,9 +28,9 @@ func _ready() -> void:
 	Global.player.position = player_start_location.global_position
 	add_child(Global.player)
 	kessleroids_to_unlock_exit.x = kessleroids_to_unlock_exit.y
-	var spurt:PackedScene = await Global.load_scene("res://assets/effects/blood_spurt.tscn")
-	var real_spurt:BloodSpurt = spurt.instantiate()
-	add_child(real_spurt)
+	await Global.load_scene("res://assets/effects/blood_spurt.tscn")
+	#var real_spurt:BloodSpurt = spurt.instantiate()
+	#add_child(real_spurt)
 	cycle_colors()
 
 func _process(delta: float) -> void:
@@ -45,3 +46,5 @@ func kessleroid_died():
 	kessleroids_to_unlock_exit.x -= 1
 	print("Kesselroid Died: " , kessleroids_to_unlock_exit)
 	kessleroid_killed.emit(kessleroids_to_unlock_exit.x)
+	if kessleroids_to_unlock_exit.x == 0:
+		all_kessleroid_killed.emit()

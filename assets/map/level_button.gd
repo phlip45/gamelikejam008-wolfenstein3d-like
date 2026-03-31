@@ -1,5 +1,5 @@
 @tool
-extends Node3D
+extends Activateable
 class_name LevelButton
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -10,7 +10,10 @@ class_name LevelButton
 		play_button_animation()
 @export var active:bool = false:
 	set(value):
+		var old_active = active
 		active = value
+		if active != old_active:
+			active_changed.emit()
 		play_button_animation()
 var disabled:bool = false
 

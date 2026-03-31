@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://d31xovg6w2ev2"]
 
 [ext_resource type="Script" uid="uid://miucqn4adp7g" path="res://pickups/pickup.gd" id="1_0ketk"]
+[ext_resource type="Resource" uid="uid://dojuobjmnaty7" path="res://assets/pickups/ammo.pickup.tres" id="2_i5kuo"]
+[ext_resource type="SpriteFrames" uid="uid://eq8kq6t2vxir" path="res://assets/pickups/ammo.sprite_frames.tres" id="3_pbiw3"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0ketk"]
 radius = 0.7625359
@@ -86,6 +88,7 @@ _data = {
 
 [node name="Pickup" type="Area3D" unique_id=2051472674 node_paths=PackedStringArray("sprite_3d", "animated_sprite_3d")]
 script = ExtResource("1_0ketk")
+pickup_data = ExtResource("2_i5kuo")
 sprite_3d = NodePath("CollisionShape3D/Sprite3D")
 animated_sprite_3d = NodePath("CollisionShape3D/AnimatedSprite3D")
 
@@ -95,6 +98,7 @@ shape = SubResource("SphereShape3D_0ketk")
 
 [node name="Sprite3D" type="Sprite3D" parent="CollisionShape3D" unique_id=1173993398]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+visible = false
 pixel_size = 0.03
 billboard = 2
 texture_filter = 0
@@ -102,6 +106,9 @@ texture_filter = 0
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CollisionShape3D" unique_id=1285161797]
 billboard = 2
 texture_filter = 0
+sprite_frames = ExtResource("3_pbiw3")
+animation = &"Idle"
+frame_progress = 0.14619663
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1749460910]
 libraries/ = SubResource("AnimationLibrary_x6t5v")

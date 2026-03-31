@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dnaeg51h6qw2"]
+
+[ext_resource type="Script" uid="uid://dvrr4lqm1vvf1" path="res://assets/map/signal_combiner.gd" id="1_wj2ev"]
+
+[node name="SignalCombiner" type="Marker3D" unique_id=1669625843]
+script = ExtResource("1_wj2ev")
