@@ -35,9 +35,11 @@ func shoot(player:Player):
 	if reload.x > 0: 
 		push_error("Player tried shooting when reload wasn't ready")
 		return
+	player.play_sound(Player.SoundName.gun_shoot)
+	player.ray_cast_3d.rotation = Vector3.ZERO
 	var bullet:RevolverProjectile = projectile.instantiate()
-	player.get_tree().current_scene.add_child(bullet)
 	bullet.setup(player.gun_cloaca.global_position, player.rotation,null)
+	player.get_tree().current_scene.add_child(bullet)
 	reload.x = reload.y
 
 func change_state(new_state:State):

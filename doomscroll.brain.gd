@@ -131,7 +131,8 @@ func on_damaged(amount:int):
 		enemy.sprite.play("Hurt")
 		if !enemy.sprite.animation_finished.is_connected(back_to_idle):
 			enemy.sprite.animation_finished.connect(back_to_idle, CONNECT_ONE_SHOT)
-
+	enemy.play_sound(Enemy.SoundName.doomscroll_hurt)
+	
 func back_to_idle():
 	enemy.sprite.animation = anim_names[State.IDLE]
 	change_state(State.IDLE)
@@ -143,6 +144,8 @@ func on_death():
 	var tween:Tween = enemy.create_tween()
 	tween.tween_property(enemy.sprite,"modulate",Color.TRANSPARENT,0.9)
 	enemy.sprite.animation_finished.connect(enemy.die)
+	enemy.play_sound(Enemy.SoundName.doomscroll_die)
+
 
 func _on_anim_finished():
 	#wait.x = wait.y
@@ -176,12 +179,15 @@ func _on_sprite_frame_changed():
 func shoot():
 	last_decision = State.RANGED_ATTACK
 	change_state(State.RANGED_ATTACK)
+	
 	enemy.sprite.play(anim_names[State.RANGED_ATTACK])
 
 func spawn_missile():
 	if global_attack_cooldown.x > 0: return
 	var attack:PopupProjectile = ranged_projectile_scene.instantiate() as PopupProjectile
 	enemy.add_child(attack)
+	enemy.play_sound(Enemy.SoundName.doomscroll_shoot)
+	
 	attack.setup(enemy.projectile_cloaca.global_position,enemy.rotation, enemy)
 
 func run_away():

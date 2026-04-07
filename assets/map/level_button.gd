@@ -28,6 +28,7 @@ func _ready() -> void:
 func interact():
 	if disabled: return
 	if animation_player.is_playing(): return
+	Global.player.play_sound(Player.SoundName.button_press)
 	if toggleable:
 		active = !active
 	else:

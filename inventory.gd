@@ -75,8 +75,9 @@ func pull_trigger(player:Player):
 	#player.get_tree().current_scene.add_child(projectile)
 	#projectile.setup(player.gun_cloaca.global_position, player.camera_3d.rotation)
 
-func switch_weapons_by_number(gun_type:GunType):
-	if current_weapon.type == gun_type: return
+func switch_weapons_by_number(gun_type:GunType, override:bool = false):
+	if !current_weapon: return
+	if current_weapon.type == gun_type and !override: return
 	if owned_weapons.has(gun_type):
 		switch_weapons(owned_weapons[gun_type])
 

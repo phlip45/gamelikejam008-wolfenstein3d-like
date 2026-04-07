@@ -2,7 +2,9 @@
 extends Area3D
 class_name Pickup
 
-@export var pickup_data:PickupData:
+@onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@export var pickup_data:PickupData = null:
 	set(value):
 		pickup_data = value
 		_update_sprite.call_deferred()
@@ -10,9 +12,15 @@ class_name Pickup
 @export var animated_sprite_3d: AnimatedSprite3D
 var animated:bool = false
 signal picked_up
+var sounds:Dictionary[SoundName, AudioStream]
 
+enum SoundName{
+	pickup
+}
 func _ready() -> void:
 	_update_sprite.call_deferred()
+	if !Engine.is_editor_hint():
+		sounds[SoundName.pickup] = await Global.load_resource("res://sound/sfx/pickup.mp3")
 
 func _update_sprite():
 	if not is_inside_tree():
@@ -36,10 +44,18 @@ func _update_sprite():
 
 func die():
 	picked_up.emit()
-	queue_free()
+	visible = false
+	collision_shape_3d.disabled = true
+	play_sound(SoundName.pickup)
+	audio_stream_player_3d.finished.connect(queue_free)
 
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		var player = body as Player
 		if player.inventory.pickup(pickup_data):
 			die()
+
+func play_sound(soundname:SoundName):
+	audio_stream_player_3d.pitch_scale = randf_range(.9,1.1)
+	audio_stream_player_3d.stream = sounds[soundname]
+	audio_stream_player_3d.play()

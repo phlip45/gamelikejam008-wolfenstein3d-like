@@ -20,11 +20,18 @@ enum LevelName{
 	BEALE=3,
 }
 
+static var level_name_to_file:Dictionary[LevelName,String] = {
+	LevelName.BALLISTA: "res://assets/map/level_1.tscn",
+	LevelName.THE_LOOP: "res://assets/map/level_2.tscn",
+}
+
 func _init():
 	Global.level = self
 	
 func _ready() -> void:
 	Global.level = self
+	if !Global.player:
+		await Global.load_new_player()
 	Global.player.position = player_start_location.global_position
 	add_child(Global.player)
 	kessleroids_to_unlock_exit.x = kessleroids_to_unlock_exit.y

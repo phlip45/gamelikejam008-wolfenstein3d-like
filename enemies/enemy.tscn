@@ -31,19 +31,18 @@ autoplay = "Idle"
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=188573817]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-target_position = Vector3(0, 0, -10)
+target_position = Vector3(0, 0, -30)
 debug_shape_custom_color = Color(1, 0.85490197, 0, 1)
-debug_shape_thickness = 5
+debug_shape_thickness = 1
 
 [node name="NavAgent" type="NavigationAgent3D" parent="." unique_id=1911997036]
-debug_enabled = true
 
 [node name="DebugLabel" type="Label3D" parent="." unique_id=1206567599]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.047869682, 2.2487843, 0)
-billboard = 2
+billboard = 1
 no_depth_test = true
 fixed_size = true
-text = "This is example"
+text = "🏇"
 font_size = 16
 
 [node name="ProjectileCloaca" type="Marker3D" parent="." unique_id=428934726]
@@ -61,6 +60,10 @@ script = ExtResource("2_orwns")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DoorOpener" unique_id=2132988604]
 shape = SubResource("SphereShape3D_7frlh")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1253176938]
+attenuation_model = 3
+max_distance = 17.0
 
 [connection signal="area_entered" from="DoorOpener" to="DoorOpener" method="_on_area_entered"]
 [connection signal="area_exited" from="DoorOpener" to="DoorOpener" method="_on_area_exited"]

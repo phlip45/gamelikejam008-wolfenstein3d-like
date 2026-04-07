@@ -17,6 +17,8 @@ var state:State = State.CLOSED
 enum State{
 	OPEN, CLOSED
 }
+@onready var open_sound_player: AudioStreamPlayer3D = $OpenSoundPlayer
+@onready var close_sound_player: AudioStreamPlayer3D = $CloseSoundPlayer
 
 func _ready() -> void:
 	if activate_area:
@@ -50,6 +52,7 @@ func open(override:bool = false):
 		activate_area.toggled = false
 		return
 	state = State.OPEN
+	open_sound_player.play()
 	animation_player.play("interact")
 	
 func close(override:bool = false):
@@ -59,6 +62,8 @@ func close(override:bool = false):
 		activate_area.toggled = true
 		return
 	state = State.CLOSED
+	close_sound_player.play()
+	
 	animation_player.play_backwards("interact")
 
 func open_briefly(amount_of_time_to_open:float = 5):

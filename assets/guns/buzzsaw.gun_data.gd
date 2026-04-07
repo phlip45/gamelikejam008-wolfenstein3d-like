@@ -34,6 +34,7 @@ func shoot(player:Player):
 	if reload.x > 0: 
 		push_error("Player tried shooting when reload wasn't ready")
 		return
+	player.play_sound(Player.SoundName.buzzsaw_shoot)
 	var saw:BuzzsawProjectile = projectile.instantiate()
 	player.get_tree().current_scene.add_child(saw)
 	saw.setup(player.gun_cloaca.global_position, player.camera_3d.rotation)

@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_b02ix")
-amount = 25
+amount = 10
 name = "Health"
 type = 3
 sprite_frames = ExtResource("2_liq4c")

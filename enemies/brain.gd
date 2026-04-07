@@ -33,6 +33,8 @@ func shortest_rotation_path(from_rotation: Vector3, to_rotation: Vector3) -> Vec
 	delta.z = normalize_angle_diff.call(delta.z)
 	return from_rotation + delta
 
+
+
 func rotate_toward_target()-> void:
 	var next_location = enemy.nav_agent.get_next_path_position()
 	if !is_colinear_with_up(enemy.global_position,next_location) and !enemy.global_position.is_equal_approx(next_location):

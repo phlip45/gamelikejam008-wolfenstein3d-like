@@ -10,6 +10,7 @@ radius = 0.30664063
 [node name="SnotballProjectile" type="Area3D" unique_id=1548743355]
 script = ExtResource("1_7ixmv")
 speed = 15.0
+damage = Vector2(10, 15)
 sprite_frames = ExtResource("2_u64c3")
 metadata/_custom_type_script = "uid://cj76s6ioa6wm8"
 

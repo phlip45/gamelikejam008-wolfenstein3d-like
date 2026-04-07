@@ -29,11 +29,7 @@ func change_scene(scene:String) -> void:
 	await fade_in_screen()
 	
 func fade_out_screen():
-	blinder.modulate = Color.TRANSPARENT
-	var tween:Tween = create_tween()
-	tween.tween_property(blinder,"modulate",Color.BLACK,1)
-	tween.tween_callback(faded_out.emit)
-	await faded_out
+	blinder.modulate = Color.BLACK
 
 func fade_in_screen():
 	var tween:Tween = create_tween()

@@ -17,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 1
 
 [node name="ColorRect" type="ColorRect" parent="Menu/Control" unique_id=2124202191]
 modulate = Color(1.0588765e-06, 0.6149124, 0.59366333, 1)
@@ -26,6 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.0885599, 0.0885599, 0.0885599, 1)
 
 [node name="Play" type="Button" parent="Menu/Control" unique_id=1565482591]
@@ -36,12 +38,27 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -30.0
-offset_top = 25.0
+offset_top = -8.0
 offset_right = 28.874207
-offset_bottom = 62.0
+offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Play"
+
+[node name="Options" type="Button" parent="Menu/Control" unique_id=626204048]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = 37.0
+offset_right = 28.874207
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Options"
 
 [node name="CenterContainer" type="CenterContainer" parent="Menu/Control" unique_id=1171250851]
 layout_mode = 1
@@ -61,3 +78,4 @@ mouse_filter = 2
 texture = ExtResource("2_7vrkn")
 
 [connection signal="pressed" from="Menu/Control/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Menu/Control/Options" to="." method="_on_options_pressed"]

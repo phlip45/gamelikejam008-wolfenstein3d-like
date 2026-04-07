@@ -4,10 +4,12 @@ class_name Enemy
 var turn_speed:float
 var speed:float
 @export var data:EnemyData
+@export var stationary:bool
 @onready var ray_cast_3d: RayCast3D = $RayCast3D
 @onready var nav_agent: NavigationAgent3D = $NavAgent
 @onready var debug_label: Label3D = $DebugLabel
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 var brain:Brain
 var flesh:Flesh
 
@@ -19,6 +21,19 @@ var animation_sprites:Dictionary[EnemyData.Direction, SpriteFrames]
 
 @warning_ignore("unused_signal")
 signal damaged(amount:int)
+signal died
+
+var sounds:Dictionary[SoundName, AudioStream]
+
+enum SoundName{
+	doomscroll_hurt,
+	doomscroll_shoot,
+	doomscroll_die,
+	horse_hurt,
+	horse_shoot,
+	horse_die,
+	horse_melee,
+}
 
 func _ready() -> void:
 	speed = data.speed
@@ -28,8 +43,16 @@ func _ready() -> void:
 	if !get_tree().debug_collisions_hint:
 		debug_label.visible = false
 	brain.setup(self)
+	flesh.died.connect(func(): died.emit())
 	sprite.scale *= data.scale_override
 	collision_shape_3d.scale *= data.scale_override
+	sounds[SoundName.doomscroll_hurt] = await Global.load_resource("res://sound/sfx/doomscroll_hurt.mp3")
+	sounds[SoundName.doomscroll_shoot] = await Global.load_resource("res://sound/sfx/doomscroll_shoot.mp3")
+	sounds[SoundName.doomscroll_die] = await Global.load_resource("res://sound/sfx/doomscroll_death.mp3")
+	sounds[SoundName.horse_hurt] = await Global.load_resource("res://sound/sfx/horse_hurt.mp3")
+	sounds[SoundName.horse_shoot] = await Global.load_resource("res://sound/sfx/horse_shoot.mp3")
+	sounds[SoundName.horse_die] = await Global.load_resource("res://sound/sfx/horse_die.mp3")
+	sounds[SoundName.horse_melee] = await Global.load_resource("res://sound/sfx/horse_melee.mp3")
 
 func _process(delta: float) -> void:
 	#rotation.y += delta
@@ -80,7 +103,6 @@ func get_vector_to_camera() -> Vector2:
 	var vec:Vector3 = camera.global_position - global_position
 	return Vector2(vec.x,vec.z)
 
-
 func die():
 	queue_free()
 
@@ -90,3 +112,7 @@ func should_flinch(amount:float) -> bool:
 		return true
 	return false
 	
+func play_sound(soundname:SoundName):
+	audio_stream_player_3d.pitch_scale = randf_range(.9,1.1)
+	audio_stream_player_3d.stream = sounds[soundname]
+	audio_stream_player_3d.play()

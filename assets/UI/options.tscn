@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://b2rbonsbo5ejp"]
+
+[ext_resource type="Script" uid="uid://blg20q5hpt5tu" path="res://options.gd" id="1_j02cm"]
+[ext_resource type="Texture2D" uid="uid://0dap8aqb8hxt" path="res://assets/meshes/wallstreet_CyberWallStreet.png" id="2_x6l0q"]
+[ext_resource type="Texture2D" uid="uid://dnrx8ktupoxb8" path="res://icon.svg" id="3_v5bs6"]
+[ext_resource type="Texture2D" uid="uid://dkuukfmhh4seu" path="res://assets/UI/face.png" id="4_m17vn"]
+
+[sub_resource type="Gradient" id="Gradient_m17vn"]
+colors = PackedColorArray(0.18039216, 0.42352942, 0.18039216, 0.98039216, 0, 0, 0, 0.9137255)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fye2k"]
+gradient = SubResource("Gradient_m17vn")
+width = 256
+height = 256
+fill = 2
+fill_from = Vector2(0.5576923, 0.52350426)
+fill_to = Vector2(0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fye2k"]
+atlas = ExtResource("4_m17vn")
+region = Rect2(40.458096, 1.8413501, 17.980175, 26.978811)
+
+[node name="Options" type="Control" unique_id=950600381 node_paths=PackedStringArray("music_slider", "sfx_slider", "mouse_slider")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_j02cm")
+music_slider = NodePath("TextureRect2/MarginContainer/VBoxContainer/VBoxContainer/MusicSlider")
+sfx_slider = NodePath("TextureRect2/MarginContainer/VBoxContainer/VBoxContainer2/SFXSlider")
+mouse_slider = NodePath("TextureRect2/MarginContainer/VBoxContainer/VBoxContainer3/MouseSlider")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=649695465]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -35.0
+offset_right = 324.0
+offset_bottom = 221.0
+texture = ExtResource("2_x6l0q")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1652736641]
+clip_children = 1
+layout_mode = 0
+offset_left = -3.0
+offset_right = 241.0
+offset_bottom = 186.0
+texture = ExtResource("3_v5bs6")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2" unique_id=619676472]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -21.5
+offset_right = 9.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_fye2k")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect2" unique_id=1982284900]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -11.0
+offset_right = -4.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect2/MarginContainer" unique_id=731942044]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect2/MarginContainer/VBoxContainer" unique_id=137090898]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Music" type="RichTextLabel" parent="TextureRect2/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1821823433]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "Music"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="MusicSlider" type="HSlider" parent="TextureRect2/MarginContainer/VBoxContainer/VBoxContainer" unique_id=710345275]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_icons/grabber = SubResource("AtlasTexture_fye2k")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_fye2k")
+max_value = 1.0
+step = 0.001
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect2/MarginContainer/VBoxContainer" unique_id=1390283742]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SFX" type="RichTextLabel" parent="TextureRect2/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=1981412387]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "SFX"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="SFXSlider" type="HSlider" parent="TextureRect2/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=386268937]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_icons/grabber = SubResource("AtlasTexture_fye2k")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_fye2k")
+max_value = 1.0
+step = 0.001
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="TextureRect2/MarginContainer/VBoxContainer" unique_id=1086260701]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Mouse" type="RichTextLabel" parent="TextureRect2/MarginContainer/VBoxContainer/VBoxContainer3" unique_id=1644820939]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "Mouse Sensitivity"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="MouseSlider" type="HSlider" parent="TextureRect2/MarginContainer/VBoxContainer/VBoxContainer3" unique_id=1413254984]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_icons/grabber = SubResource("AtlasTexture_fye2k")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_fye2k")
+min_value = 1.0
+max_value = 8.0
+step = 0.01
+value = 1.0
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=632121875]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 131.0
+offset_right = 311.0
+offset_bottom = 160.0
+texture = SubResource("GradientTexture2D_fye2k")
+expand_mode = 1
+
+[node name="ResumeBtn" type="Button" parent="TextureRect3" unique_id=330382679]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "Resume
+"
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1882966531]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 54.0
+offset_right = 311.0
+offset_bottom = 101.0
+texture = SubResource("GradientTexture2D_fye2k")
+expand_mode = 1
+
+[node name="RestartLevelBtn" type="Button" parent="TextureRect4" unique_id=1311275363]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "Restart
+Level"
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=1296535748]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 2.0
+offset_right = 310.0
+offset_bottom = 49.0
+texture = SubResource("GradientTexture2D_fye2k")
+expand_mode = 1
+
+[node name="QuitBtn" type="Button" parent="TextureRect5" unique_id=120626534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "Quit to 
+Main"
+flat = true
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="TextureRect3/ResumeBtn" to="." method="_on_resume_btn_pressed"]
+[connection signal="pressed" from="TextureRect4/RestartLevelBtn" to="." method="_on_restart_level_btn_pressed"]
+[connection signal="pressed" from="TextureRect5/QuitBtn" to="." method="_on_quit_btn_pressed"]

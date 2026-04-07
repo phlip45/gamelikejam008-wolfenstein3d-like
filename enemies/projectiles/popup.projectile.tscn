@@ -9,7 +9,7 @@ size = Vector3(0.5839844, 1.4316406, 1)
 [node name="PopupProjectile" type="Area3D" unique_id=1548743355]
 script = ExtResource("1_h0j1u")
 speed = 15.0
-damage = Vector2(10, 100)
+damage = Vector2(10, 20)
 faction = 2
 sprite_frames = ExtResource("2_d6gi8")
 metadata/_custom_type_script = "uid://cj76s6ioa6wm8"

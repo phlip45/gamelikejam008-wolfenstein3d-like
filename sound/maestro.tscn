@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dywy2oys7rwo"]
+
+[ext_resource type="Script" uid="uid://bvoplf0yjpnxv" path="res://sound/maestro.gd" id="1_txyqq"]
+[ext_resource type="AudioStream" uid="uid://cbu0ewe3dtvon" path="res://sound/music/MainMenu.mp3" id="2_hpkgm"]
+[ext_resource type="AudioStream" uid="uid://bfiwetwrkiaj0" path="res://sound/sfx/ding.mp3" id="3_p87ye"]
+[ext_resource type="AudioStream" uid="uid://b6tpwwxrcoa40" path="res://sound/sfx/door_open.mp3" id="4_m5iji"]
+
+[node name="Maestro" type="Node" unique_id=77899972]
+script = ExtResource("1_txyqq")
+musics = Dictionary[String, AudioStreamMP3]({
+"main": ExtResource("2_hpkgm")
+})
+sounds = Dictionary[String, AudioStreamMP3]({
+"ding": ExtResource("3_p87ye"),
+"door_open": ExtResource("4_m5iji")
+})
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=2096909265]
+stream = ExtResource("2_hpkgm")
+autoplay = true
+bus = &"Music"
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="." unique_id=2079959479]
+stream = ExtResource("3_p87ye")
+bus = &"SFX"

@@ -9,6 +9,7 @@ func shoot(player:Player):
 	if reload.x > 0: 
 		push_error("Player tried shooting when reload wasn't ready")
 		return
+	player.play_sound(Player.SoundName.chop)
 	var cleaver:MeleeProjectile = projectile.instantiate()
 	if out_of_ammo:
 		cleaver.damage *= 0.5

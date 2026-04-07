@@ -5,4 +5,4 @@ class_name HealthPickupData
 @export var overheal_allowed:bool = false
 
 func heal(flesh:Flesh):
-	flesh.heal(amount, true)
+	flesh.heal(amount, overheal_allowed)

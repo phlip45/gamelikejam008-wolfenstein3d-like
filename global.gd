@@ -12,14 +12,19 @@ var save_scenes:Dictionary[String, PackedScene]
 var save_resources:Dictionary[String, Resource]
 @onready var scene_changer: SceneChanger = $SceneChanger
 
-
-
 func _ready() -> void:
 	load_new_player()
 
 func load_new_player():
 	var player_scene:PackedScene = await load_resource("res://player.tscn")
 	player = player_scene.instantiate()
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("F"):
+		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_WINDOWED:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func load_resource(resource_path:String) -> Resource:
 	if save_resources.has(resource_path):
@@ -66,15 +71,25 @@ func load_scene(scene:String) -> PackedScene:
 	return null
 
 func restart_level():
-	level.queue_free()
 	ui.queue_free()
 	player.queue_free()
-	load_new_player()
-	scene_changer.change_scene.call_deferred("res://level_1.tscn")
+	level.queue_free()
+	scene_changer.change_scene.call_deferred(Level.level_name_to_file[level.level_name])
+	load_new_player.call_deferred()
+	start_level.call_deferred()
+
+func start_level(reset_player:bool = false):
+	if reset_player:
+		load_new_player()
+	if player.inventory.owned_weapons.size() > 0:
+		player.inventory.switch_weapons(player.inventory.owned_weapons[1])
 
 func finish_level():
-	
-	get_tree().change_scene_to_file.call_deferred("res://main_menu.tscn")
+	if level.level_name == Level.LevelName.BALLISTA:
+		get_tree().change_scene_to_file.call_deferred("res://assets/map/level_2.tscn")
+	elif level.level_name == Level.LevelName.THE_LOOP:
+		get_tree().change_scene_to_file.call_deferred("res://main_menu.tscn")
+	start_level.call_deferred()
 
 class Settings:
 	static var mouse_sensitivity:float = 3.0

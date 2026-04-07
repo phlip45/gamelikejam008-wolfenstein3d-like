@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ppw4321b7c3v"]
 
-[ext_resource type="Script" uid="uid://ci6y4a2u7x4wk" path="res://level_1.gd" id="1_lm35n"]
+[ext_resource type="Script" uid="uid://ci6y4a2u7x4wk" path="res://assets/map/level.gd" id="1_lm35n"]
 [ext_resource type="Environment" uid="uid://dntnb1yy4r0rv" path="res://assets/materials/foggy.environment.tres" id="2_ka3ck"]
 [ext_resource type="PackedScene" uid="uid://b8nipyp6un0o4" path="res://assets/map/portal.tscn" id="3_o3f6e"]
 [ext_resource type="PackedScene" uid="uid://d31xovg6w2ev2" path="res://pickups/pickup.tscn" id="4_dhj1k"]
