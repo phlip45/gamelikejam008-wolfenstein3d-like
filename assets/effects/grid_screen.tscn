@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://shv0mite5704"]
+
+[ext_resource type="Script" uid="uid://rxd4ovma5uax" path="res://grid_screen.gd" id="1_re236"]
+[ext_resource type="Texture2D" uid="uid://b475ltsd3bfb4" path="res://assets/effects/grid.png" id="2_5jvlx"]
+
+[node name="GridScreen" type="Node3D" unique_id=1205791540]
+script = ExtResource("1_re236")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1986422650]
+transform = Transform3D(3.45, 0, 0, 0, 2.5629218, 0, 0, 0, 1, -0.0039863586, 1.5184721, 0)
+texture_filter = 0
+texture = ExtResource("2_5jvlx")

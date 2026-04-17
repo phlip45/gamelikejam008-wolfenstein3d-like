@@ -18,3 +18,4 @@ script = ExtResource("2_wnibr")
 attenuation_model = 3
 volume_db = -10.0
 max_distance = 5.0
+bus = &"SFX"

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjl0opqfnvoxv"]
 
-[ext_resource type="Script" uid="uid://3cdab0iisnlr" path="res://assets/map/movable_wall.gd" id="1_2uirv"]
+[ext_resource type="Script" uid="uid://kjuwxtxieb3n" path="res://assets/map/mover.gd" id="1_2uirv"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_8ey0l"]
 

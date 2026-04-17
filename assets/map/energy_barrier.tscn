@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://baebxtixus2gj"]
+
+[ext_resource type="PackedScene" uid="uid://bllm2kcvatn6v" path="res://assets/map/energy_barrier.glb" id="1_qlcva"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nrm4j"]
+size = Vector3(2, 3, 3)
+
+[node name="energy_barrier" unique_id=1568053323 instance=ExtResource("1_qlcva")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=635070704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -1)
+shape = SubResource("BoxShape3D_nrm4j")

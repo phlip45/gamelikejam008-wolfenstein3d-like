@@ -27,3 +27,6 @@ func _on_options_pressed() -> void:
 	var options:PackedScene = load("res://assets/UI/options.tscn")
 	var newmenu = options.instantiate()
 	menu.add_child(newmenu)
+
+func _on_portal_mouse_entered() -> void:
+	Input.warp_mouse($Menu/Control/Marker2D.position * 4)

@@ -72,7 +72,7 @@ func _input(event: InputEvent) -> void:
 		)
 		ui.add_child(options)
 	if event is InputEventMouseMotion and Engine.time_scale > 0:
-		var amount_to_add =  event.relative if event.relative.length() > 0.0 else Vector2.ZERO
+		var amount_to_add =  event.relative if event.relative.length() > 0.1 else Vector2.ZERO
 		mouse_move += amount_to_add * Global.Settings.mouse_sensitivity * .003
 	if event.is_action_pressed("pause"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -141,6 +141,7 @@ func move(_delta:float):
 	move_and_slide()
 
 func interact(_delta:float):
+	
 	if !Input.is_action_just_pressed("use"): return
 	print(interactables_nearby)
 	var interactable:Interactable = closest_interactable()
@@ -184,10 +185,24 @@ func closest_interactable() -> Interactable:
 			_closest_interactable = interactable
 	return _closest_interactable
 
+func _toggle_crosshair_interaction():
+	var should_be_on:bool = interactables_nearby.filter(func(a):
+		return a.influence_crosshair
+	).size() > 0
+	if ui.crosshair.modulate == Color.WHITE:
+		if should_be_on:
+			ui.highlight_crosshair()
+	else:
+		if !should_be_on:
+			ui.unhighlight_crosshair()
+
 func _on_interactable_detector_area_entered(area: Area3D) -> void:
 	if area.is_in_group("interactable"):
+		print(area.name)
 		var interactable = area as Interactable
 		interactables_nearby.append(interactable)
+		if interactable.influence_crosshair:
+			_toggle_crosshair_interaction()
 		interactable.tree_exiting.connect(func():
 			interactables_nearby.erase(interactable)
 			,CONNECT_ONE_SHOT)
@@ -195,6 +210,8 @@ func _on_interactable_detector_area_entered(area: Area3D) -> void:
 func _on_interactable_detector_area_exited(area: Area3D) -> void:
 	var interactable = area as Interactable
 	interactables_nearby.erase(interactable)
+	if area.is_in_group("interactable"):
+		_toggle_crosshair_interaction()
 
 func on_damage(_unused:float):
 	play_sound(SoundName.hurt)

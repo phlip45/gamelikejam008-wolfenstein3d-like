@@ -19,9 +19,11 @@ enum State{
 }
 @onready var open_sound_player: AudioStreamPlayer3D = $OpenSoundPlayer
 @onready var close_sound_player: AudioStreamPlayer3D = $CloseSoundPlayer
+@onready var locked_sound_player: AudioStreamPlayer3D = $LockedSoundPlayer
 
 func _ready() -> void:
 	if activate_area:
+		activate_area.influence_crosshair = !locked
 		if activate_area.toggled and activate_area.toggleable:
 			animation_player.play("interact")
 	if !Engine.is_editor_hint():
@@ -41,15 +43,18 @@ func update_door_material():
 
 func unlock():
 	locked = false
+	activate_area.influence_crosshair = !locked
 
 func lock():
 	locked = true
+	activate_area.influence_crosshair = !locked
 
 func open(override:bool = false):
 	print("Opening Door")
 	if state == State.OPEN: return
 	if locked and !override:
 		activate_area.toggled = false
+		locked_sound_player.play()
 		return
 	state = State.OPEN
 	open_sound_player.play()

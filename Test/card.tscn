@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bobb43oua6pr1"]
+
+[ext_resource type="Script" uid="uid://vxjj5b26naw8" path="res://Test/card.gd" id="1_4cpis"]
+
+[node name="Button" type="Button" unique_id=1548321497]
+offset_right = 31.0
+offset_bottom = 37.0
+script = ExtResource("1_4cpis")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=226710699]
+position = Vector2(32, 0)
+
+[connection signal="pressed" from="." to="." method="open_menu"]

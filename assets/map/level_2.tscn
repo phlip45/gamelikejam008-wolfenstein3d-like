@@ -32,6 +32,7 @@
 [ext_resource type="SpriteFrames" uid="uid://c8pfvecn86wxb" path="res://enemies/kessleroid/kessleroid.sprite_frames.tres" id="19_csb3w"]
 [ext_resource type="Resource" uid="uid://b8m0fdr0qc7kd" path="res://enemies/kessleroid/kessleroid.brain.tres" id="20_ouu8h"]
 [ext_resource type="Script" uid="uid://c8m6grebdt7f2" path="res://assets/map/oscillator.gd" id="32_0syw1"]
+[ext_resource type="PackedScene" uid="uid://baebxtixus2gj" path="res://assets/map/energy_barrier.tscn" id="33_6h347"]
 [ext_resource type="Script" uid="uid://c8w31xbshqev" path="res://assets/map/enemy_death_detector.gd" id="33_csb3w"]
 [ext_resource type="SpriteFrames" uid="uid://brpoxyk56c8ya" path="res://enemies/doomscroll/doomscroll_front.tres" id="35_7qvi1"]
 [ext_resource type="SpriteFrames" uid="uid://dlgaaqcun1jl" path="res://enemies/doomscroll/doomscroll_front_left.tres" id="36_6h347"]
@@ -122,7 +123,7 @@ shadow_mesh = SubResource("ArrayMesh_bng5b")
 [sub_resource type="BoxShape3D" id="BoxShape3D_kx008"]
 size = Vector3(1, 3, 1)
 
-[sub_resource type="Resource" id="Resource_7qvi1"]
+[sub_resource type="Resource" id="Resource_6h347"]
 resource_local_to_scene = true
 script = ExtResource("16_kwvch")
 name = "Kessleroid"
@@ -146,36 +147,6 @@ animation_sprite_frames = Dictionary[int, SpriteFrames]({
 6: ExtResource("19_csb3w"),
 7: ExtResource("19_csb3w"),
 8: ExtResource("19_csb3w")
-})
-metadata/_custom_type_script = "uid://bns6cm0drf1q5"
-
-[sub_resource type="Resource" id="Resource_6h347"]
-resource_local_to_scene = true
-script = ExtResource("16_kwvch")
-name = "horse"
-turn_speed = 10.0
-speed = 10.0
-health = Vector2i(100, 100)
-poise = 40.0
-field_of_view = 2.94
-type = 2
-brain = ExtResource("15_j41n2")
-animation_states = Dictionary[String, String]({
-"Death": "Death",
-"Hurt": "Hurt",
-"Idle": "Idle",
-"MeleeAttack": "MeleeAttack",
-"RangedAttack": "RangedAttack"
-})
-animation_sprite_frames = Dictionary[int, SpriteFrames]({
-1: ExtResource("7_aypsi"),
-2: ExtResource("8_2wnky"),
-3: ExtResource("9_wn3tx"),
-4: ExtResource("10_8iove"),
-5: ExtResource("11_5qhga"),
-6: ExtResource("12_0ry12"),
-7: ExtResource("13_r0ank"),
-8: ExtResource("14_2adls")
 })
 metadata/_custom_type_script = "uid://bns6cm0drf1q5"
 
@@ -422,27 +393,30 @@ metadata/_custom_type_script = "uid://bns6cm0drf1q5"
 [sub_resource type="Resource" id="Resource_fcb3j"]
 resource_local_to_scene = true
 script = ExtResource("16_kwvch")
-name = "Kessleroid"
-turn_speed = 0.0
-speed = 0.0
+name = "horse"
+turn_speed = 10.0
+speed = 10.0
 health = Vector2i(100, 100)
-poise = 30.0
-scale_override = 0.5
-type = 3
-brain = ExtResource("20_ouu8h")
+poise = 40.0
+field_of_view = 2.94
+type = 2
+brain = ExtResource("15_j41n2")
 animation_states = Dictionary[String, String]({
+"Death": "Death",
 "Hurt": "Hurt",
-"Idle": "Idle"
+"Idle": "Idle",
+"MeleeAttack": "MeleeAttack",
+"RangedAttack": "RangedAttack"
 })
 animation_sprite_frames = Dictionary[int, SpriteFrames]({
-1: ExtResource("19_csb3w"),
-2: ExtResource("19_csb3w"),
-3: ExtResource("19_csb3w"),
-4: ExtResource("19_csb3w"),
-5: ExtResource("19_csb3w"),
-6: ExtResource("19_csb3w"),
-7: ExtResource("19_csb3w"),
-8: ExtResource("19_csb3w")
+1: ExtResource("7_aypsi"),
+2: ExtResource("8_2wnky"),
+3: ExtResource("9_wn3tx"),
+4: ExtResource("10_8iove"),
+5: ExtResource("11_5qhga"),
+6: ExtResource("12_0ry12"),
+7: ExtResource("13_r0ank"),
+8: ExtResource("14_2adls")
 })
 metadata/_custom_type_script = "uid://bns6cm0drf1q5"
 
@@ -476,30 +450,27 @@ metadata/_custom_type_script = "uid://bns6cm0drf1q5"
 [sub_resource type="Resource" id="Resource_qur4u"]
 resource_local_to_scene = true
 script = ExtResource("16_kwvch")
-name = "horse"
-turn_speed = 10.0
-speed = 10.0
+name = "Kessleroid"
+turn_speed = 0.0
+speed = 0.0
 health = Vector2i(100, 100)
-poise = 40.0
-field_of_view = 2.94
-type = 2
-brain = ExtResource("15_j41n2")
+poise = 30.0
+scale_override = 0.5
+type = 3
+brain = ExtResource("20_ouu8h")
 animation_states = Dictionary[String, String]({
-"Death": "Death",
 "Hurt": "Hurt",
-"Idle": "Idle",
-"MeleeAttack": "MeleeAttack",
-"RangedAttack": "RangedAttack"
+"Idle": "Idle"
 })
 animation_sprite_frames = Dictionary[int, SpriteFrames]({
-1: ExtResource("7_aypsi"),
-2: ExtResource("8_2wnky"),
-3: ExtResource("9_wn3tx"),
-4: ExtResource("10_8iove"),
-5: ExtResource("11_5qhga"),
-6: ExtResource("12_0ry12"),
-7: ExtResource("13_r0ank"),
-8: ExtResource("14_2adls")
+1: ExtResource("19_csb3w"),
+2: ExtResource("19_csb3w"),
+3: ExtResource("19_csb3w"),
+4: ExtResource("19_csb3w"),
+5: ExtResource("19_csb3w"),
+6: ExtResource("19_csb3w"),
+7: ExtResource("19_csb3w"),
+8: ExtResource("19_csb3w")
 })
 metadata/_custom_type_script = "uid://bns6cm0drf1q5"
 
@@ -713,6 +684,36 @@ animation_sprite_frames = Dictionary[int, SpriteFrames]({
 })
 metadata/_custom_type_script = "uid://bns6cm0drf1q5"
 
+[sub_resource type="Resource" id="Resource_of1nm"]
+resource_local_to_scene = true
+script = ExtResource("16_kwvch")
+name = "horse"
+turn_speed = 10.0
+speed = 10.0
+health = Vector2i(100, 100)
+poise = 40.0
+field_of_view = 2.94
+type = 2
+brain = ExtResource("15_j41n2")
+animation_states = Dictionary[String, String]({
+"Death": "Death",
+"Hurt": "Hurt",
+"Idle": "Idle",
+"MeleeAttack": "MeleeAttack",
+"RangedAttack": "RangedAttack"
+})
+animation_sprite_frames = Dictionary[int, SpriteFrames]({
+1: ExtResource("7_aypsi"),
+2: ExtResource("8_2wnky"),
+3: ExtResource("9_wn3tx"),
+4: ExtResource("10_8iove"),
+5: ExtResource("11_5qhga"),
+6: ExtResource("12_0ry12"),
+7: ExtResource("13_r0ank"),
+8: ExtResource("14_2adls")
+})
+metadata/_custom_type_script = "uid://bns6cm0drf1q5"
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_0syw1"]
 _surfaces = [{
 "aabb": AABB(-0.5, 0, -0.5, 1, 3, 1),
@@ -766,27 +767,6 @@ shadow_mesh = SubResource("ArrayMesh_0syw1")
 [sub_resource type="BoxShape3D" id="BoxShape3D_0syw1"]
 size = Vector3(2, 3, 1)
 
-[sub_resource type="Resource" id="Resource_of1nm"]
-resource_local_to_scene = true
-script = ExtResource("16_kwvch")
-name = "doomscroll"
-health = Vector2i(100, 100)
-poise = 100.0
-scale_override = 0.75
-type = 4
-brain = ExtResource("43_ck82l")
-animation_sprite_frames = Dictionary[int, SpriteFrames]({
-1: ExtResource("35_7qvi1"),
-2: ExtResource("36_6h347"),
-3: ExtResource("37_3i4n0"),
-4: ExtResource("38_fwfni"),
-5: ExtResource("39_mnhmx"),
-6: ExtResource("40_tm1fk"),
-7: ExtResource("41_ydm2o"),
-8: ExtResource("42_68r21")
-})
-metadata/_custom_type_script = "uid://bns6cm0drf1q5"
-
 [sub_resource type="Resource" id="Resource_3dgj0"]
 resource_local_to_scene = true
 script = ExtResource("16_kwvch")
@@ -830,6 +810,27 @@ animation_sprite_frames = Dictionary[int, SpriteFrames]({
 metadata/_custom_type_script = "uid://bns6cm0drf1q5"
 
 [sub_resource type="Resource" id="Resource_d1tw7"]
+resource_local_to_scene = true
+script = ExtResource("16_kwvch")
+name = "doomscroll"
+health = Vector2i(100, 100)
+poise = 100.0
+scale_override = 0.75
+type = 4
+brain = ExtResource("43_ck82l")
+animation_sprite_frames = Dictionary[int, SpriteFrames]({
+1: ExtResource("35_7qvi1"),
+2: ExtResource("36_6h347"),
+3: ExtResource("37_3i4n0"),
+4: ExtResource("38_fwfni"),
+5: ExtResource("39_mnhmx"),
+6: ExtResource("40_tm1fk"),
+7: ExtResource("41_ydm2o"),
+8: ExtResource("42_68r21")
+})
+metadata/_custom_type_script = "uid://bns6cm0drf1q5"
+
+[sub_resource type="Resource" id="Resource_a1qww"]
 resource_local_to_scene = true
 script = ExtResource("16_kwvch")
 name = "doomscroll"
@@ -924,6 +925,7 @@ script = ExtResource("9_2adls")
 distance = 80.0
 duration = 0.0
 one_shot = true
+spawn_screen_on_move = true
 node_to_move = NodePath("StaticBody3D")
 
 [node name="DebugFacing" type="MeshInstance3D" parent="Choice/TopMovableWall" unique_id=467616721]
@@ -969,6 +971,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0
 script = ExtResource("9_2adls")
 distance = 80.0
 duration = 0.0
+spawn_screen_on_move = true
 node_to_move = NodePath("StaticBody3D")
 
 [node name="DebugFacing" type="MeshInstance3D" parent="Choice/BottomMovableWall" unique_id=2092235274]
@@ -1068,27 +1071,19 @@ pickup_data = ExtResource("16_kx008")
 
 [node name="Kessleroid" parent="Top" unique_id=1625287854 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4939346, 0, 2.6183891)
-data = SubResource("Resource_7qvi1")
+data = SubResource("Resource_6h347")
 
 [node name="Horse" parent="Top" unique_id=1213558642 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.903389, 0, -6.7670727)
-data = SubResource("Resource_6h347")
+data = SubResource("Resource_3i4n0")
 
 [node name="Horse2" parent="Top" unique_id=1399753673 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.346001, 0, 1.915247)
-data = SubResource("Resource_3i4n0")
+data = SubResource("Resource_fwfni")
 
 [node name="Horse3" parent="Top" unique_id=22649574 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7219162, 0, -6.965616)
-data = SubResource("Resource_fwfni")
-
-[node name="Door" parent="Top" unique_id=1576289958 instance=ExtResource("7_0ry12")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.3312378, 0, 1.9300652)
-locked = true
-
-[node name="Door2" parent="Top" unique_id=54466418 instance=ExtResource("7_0ry12")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.3312378, 0, 1.9300652)
-locked = true
+data = SubResource("Resource_mnhmx")
 
 [node name="MovableWall" parent="Top" unique_id=1193905038 instance=ExtResource("19_4hxql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
@@ -1099,6 +1094,12 @@ duration = 8.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.491886, 0, -1.39851)
 script = ExtResource("33_csb3w")
 enemies = [NodePath("../Horse"), NodePath("../Horse2"), NodePath("../Horse3")]
+
+[node name="energy_barrier" parent="Top" unique_id=153895447 instance=ExtResource("33_6h347")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.5288963, 0, 3)
+
+[node name="energy_barrier2" parent="Top" unique_id=1568053323 instance=ExtResource("33_6h347")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.5901947, 0, 3)
 
 [node name="Left" type="Node3D" parent="." unique_id=1125687603]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 1)
@@ -1118,50 +1119,53 @@ how_often = 2.0
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -6)
 distance = 9.0
 duration = 0.0
+spawn_screen_on_move = true
 
 [node name="MovableWallstreetWall3" parent="Left/Oscillator" unique_id=1992881081 instance=ExtResource("8_r0ank")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, 4)
 distance = 9.0
 duration = 0.0
+spawn_screen_on_move = true
 
 [node name="MovableWallstreetWall2" parent="Left/Oscillator" unique_id=1315646789 instance=ExtResource("8_r0ank")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, 3)
 distance = 9.0
 duration = 0.0
+spawn_screen_on_move = true
 
 [node name="Horse" parent="Left" unique_id=499745204 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5979958, 0, 0.49604177)
-data = SubResource("Resource_mnhmx")
+data = SubResource("Resource_tm1fk")
 stationary = true
 
 [node name="Horse2" parent="Left" unique_id=2011715682 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0186157, 0, 5.841665)
-data = SubResource("Resource_tm1fk")
+data = SubResource("Resource_ydm2o")
 stationary = true
 
 [node name="Horse4" parent="Left" unique_id=1698002970 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.559967, 0, 10.75351)
-data = SubResource("Resource_ydm2o")
+data = SubResource("Resource_68r21")
 stationary = true
 
 [node name="Horse5" parent="Left" unique_id=1751891963 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.132101, 0, 0.19580936)
-data = SubResource("Resource_68r21")
+data = SubResource("Resource_ck82l")
 stationary = true
 
 [node name="Horse6" parent="Left" unique_id=1803964152 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9042683, 0, 5.9022956)
-data = SubResource("Resource_ck82l")
+data = SubResource("Resource_has5a")
 stationary = true
 
 [node name="Horse8" parent="Left" unique_id=116787815 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.97974, 0, 10.684408)
-data = SubResource("Resource_has5a")
+data = SubResource("Resource_fcb3j")
 stationary = true
 
 [node name="Kessleroid" parent="Left" unique_id=727190648 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24108124, 0, 16.000832)
-data = SubResource("Resource_fcb3j")
+data = SubResource("Resource_ccuun")
 
 [node name="EnemyDeathDetector" type="Marker3D" parent="Left" unique_id=714132109 node_paths=PackedStringArray("enemies")]
 script = ExtResource("33_csb3w")
@@ -1204,7 +1208,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 13)
 
 [node name="Kessleroid" parent="Bottom" unique_id=944727002 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39618492, 0, 7.372013)
-data = SubResource("Resource_ccuun")
+data = SubResource("Resource_qur4u")
 
 [node name="Portal" parent="Bottom" unique_id=303622673 instance=ExtResource("10_2adls")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9508057, 0, -6.077408)
@@ -1261,35 +1265,35 @@ pickup_data = ExtResource("15_aefdo")
 
 [node name="Horse" parent="Bottom" unique_id=1826698780 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9794884, 0, 7.023508)
-data = SubResource("Resource_qur4u")
+data = SubResource("Resource_g3wff")
 
 [node name="Horse2" parent="Bottom" unique_id=2126568482 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1580524, 0, 7.100399)
-data = SubResource("Resource_g3wff")
+data = SubResource("Resource_0gg28")
 
 [node name="Horse3" parent="Bottom" unique_id=767846644 instance=ExtResource("6_l4k16")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.8419476, 0, -8.899601)
-data = SubResource("Resource_0gg28")
+data = SubResource("Resource_c0kyr")
 
 [node name="Horse4" parent="Bottom" unique_id=1436380654 instance=ExtResource("6_l4k16")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.8419476, 0, -8.899601)
-data = SubResource("Resource_c0kyr")
+data = SubResource("Resource_x0r3i")
 
 [node name="Horse5" parent="Bottom" unique_id=1018771520 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.841948, 0, -1.899601)
-data = SubResource("Resource_x0r3i")
+data = SubResource("Resource_kr1fo")
 
 [node name="Horse6" parent="Bottom" unique_id=887294172 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.841948, 0, 1.100399)
-data = SubResource("Resource_kr1fo")
+data = SubResource("Resource_ypot3")
 
 [node name="Horse7" parent="Bottom" unique_id=382291073 instance=ExtResource("6_l4k16")]
 transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 12.158052, 0, -3.899601)
-data = SubResource("Resource_ypot3")
+data = SubResource("Resource_pr816")
 
 [node name="Horse8" parent="Bottom" unique_id=239002373 instance=ExtResource("6_l4k16")]
 transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 12.158052, 0, 0.10039902)
-data = SubResource("Resource_pr816")
+data = SubResource("Resource_of1nm")
 
 [node name="Mover" parent="Bottom" unique_id=1364830694 node_paths=PackedStringArray("node_to_move") instance=ExtResource("5_mpeav")]
 transform = Transform3D(-4.371139e-08, -4.371139e-08, -1, 4.371139e-08, 1, -4.371139e-08, 1, -4.371139e-08, -4.3711385e-08, -10, 0, 0)
@@ -1481,19 +1485,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -24)
 
 [node name="Enemy" parent="Twitter" unique_id=955654595 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.487607, 9.536743e-07, -0.64286804)
-data = SubResource("Resource_of1nm")
+data = SubResource("Resource_3dgj0")
 
 [node name="Enemy2" parent="Twitter" unique_id=1801527137 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.004787, 0, 0.13958931)
-data = SubResource("Resource_3dgj0")
+data = SubResource("Resource_7djlo")
 
 [node name="Enemy3" parent="Twitter" unique_id=2030325530 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.562354, 0, 2.800064)
-data = SubResource("Resource_7djlo")
+data = SubResource("Resource_d1tw7")
 
 [node name="Enemy4" parent="Twitter" unique_id=709308008 instance=ExtResource("6_l4k16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5225763, 0, 2.9259815)
-data = SubResource("Resource_d1tw7")
+data = SubResource("Resource_a1qww")
 
 [node name="Pickup" parent="Twitter" unique_id=2047046390 instance=ExtResource("6_wn3tx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5225763, 0, 3.605936)
@@ -1542,8 +1546,8 @@ node_to_move = NodePath("Exit")
 [connection signal="pressed" from="Choice/LeftMoverMover/LeftButtonMover/LeftWallButton" to="Choice/LeftMoverMover" method="move"]
 [connection signal="pressed" from="Choice/BottomMovableWall/StaticBody3D/BottomButtonMover/Button" to="Choice/BottomMovableWall" method="move"]
 [connection signal="pressed" from="Top/Mover2/Button" to="Choice/LeftMoverMover/LeftButtonMover" method="move"]
-[connection signal="pressed" from="Top/Mover2/Button" to="Top/Portal" method="enable"]
 [connection signal="pressed" from="Top/Mover2/Button" to="Top/Mover2" method="move"]
+[connection signal="pressed" from="Top/Mover2/Button" to="Top/Portal" method="enable"]
 [connection signal="died" from="Top/Kessleroid" to="Hub/TopDoor" method="open" binds= [true]]
 [connection signal="active_changed" from="Top/EnemyDeathDetector" to="Top/MovableWall" method="move"]
 [connection signal="active_changed" from="Left/Oscillator" to="Left/Oscillator/MovableWallstreetWall" method="activate"]

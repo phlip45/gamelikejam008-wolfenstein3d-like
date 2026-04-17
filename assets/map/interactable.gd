@@ -4,6 +4,7 @@ class_name Interactable
 @export var toggleable:bool
 @export var starting_value:bool
 @export var toggled:bool
+@export var influence_crosshair:bool = true
 
 signal used
 signal on

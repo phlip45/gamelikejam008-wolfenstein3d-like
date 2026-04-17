@@ -1,16 +1,14 @@
 extends Node3D
-class_name MovableWall
+class_name Mover
 
 @export var distance:float = 5.0
 @export var duration:float = 1.0
 @export var move_up_instead:bool = false
 @export var one_shot:bool = false
-@export var spawn_screen_on_move:bool = false
 var locked:bool = false
 var active:bool = false
 var moved:bool = false
 @export var node_to_move: Node3D
-@onready var collision_shape_3d: CollisionShape3D = $StaticBody3D/CollisionShape3D
 
 func activate():
 	if locked: return
@@ -23,7 +21,6 @@ func move():
 	if active: return
 	active = true
 	node_to_move.position = Vector3.ZERO
-	spawn_grid_screen()
 	var tween:Tween = create_tween()
 	tween.tween_property(
 		node_to_move,
@@ -41,7 +38,6 @@ func move_backwards():
 	if active: return
 	active = true
 	node_to_move.position = Vector3(0,0,-distance)
-	spawn_grid_screen()
 	var tween:Tween = create_tween()
 	tween.tween_property(
 		node_to_move,
@@ -54,9 +50,3 @@ func move_backwards():
 		if one_shot:
 			locked = true
 	)
-
-func spawn_grid_screen():
-	if spawn_screen_on_move:
-		var pos_for_grid:Vector3 = collision_shape_3d.global_position
-		pos_for_grid.y = 0
-		GridScreen.spawn(pos_for_grid, rotation.y, 1.0)

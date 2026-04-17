@@ -1,20 +1,24 @@
 extends CanvasLayer
 class_name UI
 
+@export var crosshair_highlight_color:Color
+@export_category("References")
 @export var gun_sprite: AnimatedSprite2D
 @export var damage_mask: TextureRect
 @export var face: AnimatedSprite2D
-
 @export var health: RichTextLabel
 @export var ammo: RichTextLabel
 @export var time: RichTextLabel
 @export var signal_strength: AnimatedSprite2D
+@export var crosshair: TextureRect
+@export var crosshair_holder: Control
+@export var died_splash: ColorRect
 
 @onready var exit_opened_text: RichTextLabel = $Hud/VBoxContainer/GameView/ExitOpenedText
-@export var died_splash: ColorRect
 
 var tween:Tween
 var player:Player
+var crosshair_tween:Tween
 
 func _init() -> void:
 	Global.ui = self
@@ -39,6 +43,25 @@ func play_gun_anim(anim_name:String,backwards:bool = false ,frame:int = 0) -> An
 		gun_sprite.play(anim_name)
 	gun_sprite.frame = frame
 	return gun_sprite
+
+func highlight_crosshair():
+	crosshair.modulate = crosshair_highlight_color
+	if crosshair_tween:
+		crosshair_tween.kill()
+	crosshair_tween = create_tween()
+	crosshair_tween.tween_property(crosshair_holder, "rotation", PI/2, .25)
+	crosshair_tween.parallel()
+	crosshair_tween.tween_property(crosshair_holder, "scale", Vector2.ONE * 1.8, .25)
+
+func unhighlight_crosshair():
+	crosshair.modulate = Color.WHITE
+	if crosshair_tween:
+		crosshair_tween.kill()
+	crosshair_tween = create_tween()
+	crosshair_tween.tween_property(crosshair_holder, "rotation", 0, .25)
+	crosshair_tween.parallel()
+	crosshair_tween.tween_property(crosshair_holder, "scale", Vector2.ONE, .25)
+	
 
 func change_gun(data:GunData):
 	if gun_sprite.sprite_frames.has_animation("Holster"):

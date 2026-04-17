@@ -33,10 +33,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5798547, 0)
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=253313596]
 
 [node name="GunCloaca" type="Marker3D" parent="Head/Camera3D" unique_id=1851540836]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3122481, -0.2573663)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.23486435, -0.24411592)
 
 [node name="RayCast3D2" type="RayCast3D" parent="Head/Camera3D" unique_id=1713062027]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07985473, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0022499561, 0)
 target_position = Vector3(0, 0, -100)
 debug_shape_custom_color = Color(1, 0.85490197, 0, 1)
 debug_shape_thickness = 5
@@ -52,6 +52,7 @@ shape = SubResource("CylinderShape3D_4flbx")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=864164899]
 volume_db = -20.0
 max_polyphony = 10
+bus = &"SFX"
 
 [connection signal="area_entered" from="InteractableDetector" to="." method="_on_interactable_detector_area_entered"]
 [connection signal="area_exited" from="InteractableDetector" to="." method="_on_interactable_detector_area_exited"]

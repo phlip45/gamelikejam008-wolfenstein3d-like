@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bnyahkrndr3io"]
+
+[ext_resource type="Shader" uid="uid://bprnrh0k84vo1" path="res://assets/materials/window.material.gdshader" id="1_sckh5"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_sckh5")
+shader_parameter/albedo = Color(1, 1, 1, 0.2784314)
+shader_parameter/roughness = 0.32400001539
+shader_parameter/normal_strength = -7.5889996004775
+shader_parameter/edge_color = Color(0.72156864, 0, 0.72156864, 1)

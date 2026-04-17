@@ -2,6 +2,11 @@
 
 [ext_resource type="Script" uid="uid://jupyydtg86as" path="res://main_menu.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://bfco4i1v2ans6" path="res://assets/menus/logo.png" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://ctdon1xn2ulps" path="res://assets/projectiles/snot_bullet.png" id="3_fu7sn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jix8l"]
+atlas = ExtResource("3_fu7sn")
+region = Rect2(0, 0, 52, 58.5)
 
 [node name="MainMenu" type="Node3D" unique_id=1901269180]
 script = ExtResource("1_06t4h")
@@ -77,5 +82,29 @@ size_flags_horizontal = 3
 mouse_filter = 2
 texture = ExtResource("2_7vrkn")
 
+[node name="Portal" type="TextureRect" parent="Menu/Control" unique_id=2010454299]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 84.0
+offset_right = 66.0
+offset_bottom = 142.0
+texture = SubResource("AtlasTexture_jix8l")
+
+[node name="Portal2" type="TextureRect" parent="Menu/Control" unique_id=1322374483]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 88.0
+offset_right = 287.0
+offset_bottom = 146.0
+texture = SubResource("AtlasTexture_jix8l")
+
+[node name="Marker2D" type="Marker2D" parent="Menu/Control" unique_id=1105458243]
+position = Vector2(262, 121)
+
+[node name="Marker2D2" type="Marker2D" parent="Menu/Control" unique_id=22290314]
+position = Vector2(40, 118)
+
 [connection signal="pressed" from="Menu/Control/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Menu/Control/Options" to="." method="_on_options_pressed"]
+[connection signal="mouse_entered" from="Menu/Control/Portal" to="." method="_on_portal_mouse_entered"]
+[connection signal="mouse_entered" from="Menu/Control/Portal2" to="." method="_on_portal_2_mouse_entered"]
